@@ -22,11 +22,16 @@ struct categoryView : View {
                     
                     List(contentInfos, id: \.id) {
                         info in
-                        ContentList(contentInfo: info)
-                            .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                            .listRowBackground(Color.white)
-                            .listRowSeparator(.hidden)
-                            .padding(.leading, 3)
+                        NavigationLink(destination: EmptyView()){
+                            ContentList(contentInfo: info)
+                                .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                                .listRowBackground(Color.white)
+                                .listRowSeparator(.hidden)
+                                .padding(.trailing, 100)
+                        }
+                        .listRowSeparator(.hidden)
+                            .frame(width: 405, height: 78, alignment: .center)
+                        
                     }
                     .listStyle(.plain)
                     .background(Color.white)
@@ -59,7 +64,7 @@ let contentInfos = [
     ContentInfo(title: "홈 화면을 편집하는 방법", isComplete: false)
 ]
 
-// List에 들어갈 카테고리별 컨텐츠 목록 View
+// List에 들어갈 카테고리별 컨텐츠 목록 (버튼 + 체크아이콘)
 struct ContentList : View {
     var contentInfo : ContentInfo
     var body: some View{
