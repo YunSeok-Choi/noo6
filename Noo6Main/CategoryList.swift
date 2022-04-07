@@ -11,10 +11,16 @@ struct CategoryList: View {
     
     var body: some View {
             List(guideInfos, id: \.id) { info in
-                CategoryRow(guideInfo: info)
-                    .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    .listRowBackground(Color.white)
-                    .listRowSeparator(.hidden)
+                ZStack {
+                    CategoryRow(guideInfo: info)
+                        .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                        .listRowBackground(Color.white)
+                    NavigationLink(destination: Text("\(info.description)의 CategoryView")) {}
+                        .frame(width: 0)
+                        .opacity(0)
+                }
+                .padding(.horizontal, -20.0)
+                .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
             .background(Color.white)

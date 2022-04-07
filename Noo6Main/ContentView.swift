@@ -24,9 +24,16 @@ struct ContentView: View {
             }
             .padding()
 
-            .navigationBarItems(trailing: Text("업적이동버튼"))
-
-            
+            .navigationBarItems(
+                trailing:
+                    NavigationLink(
+                        destination:HonorView(),
+                        label:{
+                            Image(systemName: "archivebox")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                        })
+            )     
         }
     }
 }
@@ -34,5 +41,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct HonorView: View {
+    var body: some View {
+       Text("HonorView")
     }
 }
