@@ -10,8 +10,6 @@ import SwiftUI
 struct CategoryList: View {
     
     var body: some View {
-        ZStack {
-            Color.white
             List(guideInfos, id: \.id) { info in
                 CategoryRow(guideInfo: info)
                     .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
@@ -22,7 +20,6 @@ struct CategoryList: View {
             .background(Color.white)
             .edgesIgnoringSafeArea(.all)
             .padding(.horizontal, 0)
-        }
     }
 }
                 
