@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    let title: String = """
+안녕하세요,
+어떤 도움이 필요하신가요?
+"""
+        
     var body: some View {
-        Text("Hello, world!")
+        NavigationView {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(title)
+                    .font(.system(size: 30.0, weight: .semibold))
+                CategoryList()
+                    .padding(.trailing, -10)
+                
+            }
             .padding()
+
+            .navigationBarItems(trailing: Text("업적이동버튼"))
+
+            
+        }
     }
 }
 
