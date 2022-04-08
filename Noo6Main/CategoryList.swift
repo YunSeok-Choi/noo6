@@ -10,16 +10,16 @@ import SwiftUI
 struct CategoryList: View {
     
     var body: some View {
-            List(guideInfos, id: \.id) { info in
+        List(guideInfos, id: \.id) { info in
+            // ZStack을 이용해 각각의 한 Row에 CatergoryRow와 NavigationLink를 올림
                 ZStack {
                     CategoryRow(guideInfo: info)
-                        .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                         .listRowBackground(Color.white)
                     NavigationLink(destination: Text("\(info.description)의 CategoryView")) {}
-                        .frame(width: 0)
-                        .opacity(0)
+                        .frame(width: 0)   // NavigationLink 화살표 제거를 위함 1
+                        .opacity(0)        // NavigationLink 화살표 제거를 위함 1
                 }
-                .padding(.horizontal, -20.0)
+                .padding(EdgeInsets(top: 5, leading: -20, bottom: 5, trailing: -20))
                 .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
@@ -28,7 +28,8 @@ struct CategoryList: View {
             .padding(.horizontal, 0)
     }
 }
-                
+
+// 임시 가이드 정보 struct
 struct GuideInfo: Identifiable {
     let id = UUID()
     let description: String
@@ -38,6 +39,7 @@ struct GuideInfo: Identifiable {
     let isAllCleared: Bool
 }
 
+// 임의 가이드 정보 struct test array
 let guideInfos = [
     GuideInfo(description: "아이폰 초보자 가이드", largeTitle: "아이폰이 처음이신가요?", compledtedNumber: 4, allNumber: 4, isAllCleared: true),
     GuideInfo(description: "알면 유용한 기능", largeTitle: "알림을 없애볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),

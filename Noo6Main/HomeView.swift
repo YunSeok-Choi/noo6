@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HoewView.swift
 //  Noo6Main
 //
 //  Created by 최윤석 on 2022/04/06.
@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // 2줄의 title을 편하게 구성하기 위함
     let title: String = """
 안녕하세요,
 어떤 도움이 필요하신가요?
@@ -15,9 +17,10 @@ struct ContentView: View {
         
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 20) {
                 Text(title)
                     .font(.system(size: 30.0, weight: .semibold))
+                // List 하단의 Row 잘리는 현상 해결필요
                 CategoryList()
                     .padding(.trailing, -10)
                 
@@ -33,7 +36,7 @@ struct ContentView: View {
                                 .resizable()
                                 .frame(width: 30, height: 30)
                         })
-            )     
+            )
         }
     }
 }

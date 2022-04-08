@@ -12,6 +12,7 @@ struct CategoryRow: View {
     
     var body: some View {
         HStack(spacing: 15.0) {
+//          Category별 이미지 확정 시 데이터를 받아 이미지를 얻도록 변경 필요
             Image("dog")
                 .resizable()
                 .frame(width: 75.0, height: 75.0)
@@ -19,6 +20,7 @@ struct CategoryRow: View {
             VStack(alignment: .leading, spacing: 10.0) {
                 HStack {
                     Text("\(guideInfo.description) (\(guideInfo.compledtedNumber)/\(guideInfo.allNumber))")
+                    // 가이드를 모두 완료했을 경우 왕관 이미지 생성됨
                     if guideInfo.isAllCleared {
                         Image(systemName: "crown")
                             .frame(width: 20.0, height: 20.0)
