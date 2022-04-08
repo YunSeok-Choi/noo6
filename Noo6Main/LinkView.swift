@@ -5,10 +5,6 @@
 //  Created by Seyoung Choi on 2022/04/08.
 //
 
-
-//HonorDetailView를 링크해주는 뷰입니다
-//HonorView가 대체합니다
-
 import SwiftUI
 
 struct LinkView: View {
