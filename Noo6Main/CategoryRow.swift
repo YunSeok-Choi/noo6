@@ -19,7 +19,7 @@ struct CategoryRow: View {
                 .cornerRadius(15)
             VStack(alignment: .leading, spacing: 10.0) {
                 HStack {
-                    Text("\(guideInfo.description) (\(guideInfo.compledtedNumber)/\(guideInfo.allNumber))")
+                    Text("\(guideInfo.guideName) (\(guideInfo.compledtedNumber)/\(guideInfo.allNumber))")
                     // 가이드를 모두 완료했을 경우 왕관 이미지 생성됨
                     if guideInfo.isAllCleared {
                         Image(systemName: "crown")

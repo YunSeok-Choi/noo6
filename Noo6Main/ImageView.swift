@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImageView: View {
+struct GuideImageView: View {
     @State var currentPage: Int = 0
     var body: some View {
         VStack {
