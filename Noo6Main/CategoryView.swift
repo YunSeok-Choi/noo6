@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 struct CategoryView : View {
+    var guideName: String
 
     var body: some View{
         VStack {
-            NavigationView{
                 VStack{
                     // 임시 안내 문구 삽입 -> 데이터 받아온 후 데이터에 맞는 문구로 수정 필요
-                    Text("아이폰 초보자 가이드에서 \n어떤 가이드를 받아 볼까요?")
+                    Text("\(guideName)에서 \n어떤 가이드를 받아 볼까요?")
                         .frame(width: 342)
                         .font(.system(size: 30))
                         .padding(.bottom, 40)
@@ -25,7 +25,7 @@ struct CategoryView : View {
                     List(contentInfos, id: \.id) {
                         info in
                         // 버튼 누를 시 임시로 EmptyView로 이동 -> merge 후 가이드뷰로 이동하도록 수정 필요
-                        NavigationLink(destination: EmptyView()){
+                        NavigationLink(destination: GuideView()){
                             ContentList(contentInfo: info)
                                 .listRowBackground(Color.white)
                                 .listRowSeparator(.hidden)
@@ -38,8 +38,6 @@ struct CategoryView : View {
                     
                     Spacer() // 화면 상단에 List를 보여주기 위해 공백 삽입
                 }
-                
-            }
             
         }.padding([.leading, .trailing], 16)
     }
@@ -90,6 +88,6 @@ struct ContentList : View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView()
+        CategoryView(guideName: "아이폰 초보자 가이드")
     }
 }

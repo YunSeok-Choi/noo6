@@ -15,7 +15,7 @@ let honorMemo = 0
 
 
 
-struct honorView: View {
+struct HonorView: View {
     var body: some View {
         VStack {
         ScrollView {
@@ -98,6 +98,6 @@ struct honorView: View {
 
 struct honorView_Previews: PreviewProvider {
     static var previews: some View {
-        honorView()
+        HonorView()
     }
 }

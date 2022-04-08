@@ -13,7 +13,7 @@ struct GuideView: View {
             
             VStack{
                 
-                ImageView()
+                GuideImageView()
                 Bottom()
                 NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
                     //Text("맨 마지막에서 버튼")

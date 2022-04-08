@@ -29,7 +29,7 @@ struct HomeView: View {
             .navigationBarItems(
                 trailing:
                     NavigationLink(
-                        destination:HonorView(),
+                        destination: HonorView(),
                         label:{
                             Image(systemName: "archivebox")
                                 .resizable()
@@ -43,11 +43,5 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-    }
-}
-
-struct HonorView: View {
-    var body: some View {
-       Text("HonorView")
     }
 }

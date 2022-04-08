@@ -15,7 +15,7 @@ struct CategoryList: View {
                 ZStack {
                     CategoryRow(guideInfo: info)
                         .listRowBackground(Color.white)
-                    NavigationLink(destination: Text("\(info.description)의 CategoryView")) {}
+                    NavigationLink(destination: CategoryView(guideName: info.guideName)) {}
                         .frame(width: 0)   // NavigationLink 화살표 제거를 위함 1
                         .opacity(0)        // NavigationLink 화살표 제거를 위함 1
                 }
@@ -32,7 +32,7 @@ struct CategoryList: View {
 // 임시 가이드 정보 struct
 struct GuideInfo: Identifiable {
     let id = UUID()
-    let description: String
+    let guideName: String
     let largeTitle: String
     let compledtedNumber: Int
     let allNumber: Int
@@ -41,13 +41,13 @@ struct GuideInfo: Identifiable {
 
 // 임의 가이드 정보 struct test array
 let guideInfos = [
-    GuideInfo(description: "아이폰 초보자 가이드", largeTitle: "아이폰이 처음이신가요?", compledtedNumber: 4, allNumber: 4, isAllCleared: true),
-    GuideInfo(description: "알면 유용한 기능", largeTitle: "알림을 없애볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),
-    GuideInfo(description: "캘린더", largeTitle: "일정을 관리해볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),
-    GuideInfo(description: "사진", largeTitle: "사진을 편집해볼까요?", compledtedNumber: 1, allNumber: 4, isAllCleared: false),
-    GuideInfo(description: "건강", largeTitle: "건강 데이터를 확인할까요?", compledtedNumber: 4, allNumber: 4, isAllCleared: true),
-    GuideInfo(description: "카메라", largeTitle: "다양한 사진을 찍어볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),
-    GuideInfo(description: "메모", largeTitle: "메모장이 필요하신가요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false)
+    GuideInfo(guideName: "아이폰 초보자 가이드", largeTitle: "아이폰이 처음이신가요?", compledtedNumber: 4, allNumber: 4, isAllCleared: true),
+    GuideInfo(guideName: "알면 유용한 기능", largeTitle: "알림을 없애볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),
+    GuideInfo(guideName: "캘린더", largeTitle: "일정을 관리해볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),
+    GuideInfo(guideName: "사진", largeTitle: "사진을 편집해볼까요?", compledtedNumber: 1, allNumber: 4, isAllCleared: false),
+    GuideInfo(guideName: "건강", largeTitle: "건강 데이터를 확인할까요?", compledtedNumber: 4, allNumber: 4, isAllCleared: true),
+    GuideInfo(guideName: "카메라", largeTitle: "다양한 사진을 찍어볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),
+    GuideInfo(guideName: "메모", largeTitle: "메모장이 필요하신가요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false)
 ]
 
 struct CategoryList_Previews: PreviewProvider {

@@ -15,7 +15,7 @@ struct HonorDetailView: View {
                 Text("당신은 사진찍기 전문가!")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
-        ImageView()
+        HonorImageView()
         Text("어쩌구 저쩌구 설명 설명")
             .padding()
             .font(.system(size: 20))
@@ -28,7 +28,7 @@ struct HonorDetailView: View {
 
 
 //짤이 들어갈 이미지 뷰입니다
-struct ImageView: View {
+struct HonorImageView: View {
     var body: some View {
         Image("Test")
             .resizable()
