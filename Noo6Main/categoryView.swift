@@ -14,29 +14,27 @@ struct categoryView : View {
         VStack {
             NavigationView{
                 VStack{
+                    // 임시 안내 문구 삽입 -> 데이터 받아온 후 데이터에 맞는 문구로 수정 필요
                     Text("아이폰 초보자 가이드에서 \n어떤 가이드를 받아 볼까요?")
                         .frame(width: 342)
                         .font(.system(size: 30))
                         .padding(.bottom, 40)
                         .multilineTextAlignment(.center)
                     
+                    // 받은 리스트(contentInfos)의 정보에 따라 List에 이동할 버튼 생성
                     List(contentInfos, id: \.id) {
                         info in
+                        // 버튼 누를 시 임시로 EmptyView로 이동 -> merge 후 가이드뷰로 이동하도록 수정 필요
                         NavigationLink(destination: EmptyView()){
                             ContentList(contentInfo: info)
-                                .listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                                 .listRowBackground(Color.white)
                                 .listRowSeparator(.hidden)
-                                .padding(.trailing, 100)
                         }
                         .listRowSeparator(.hidden)
-                            .frame(width: 405, height: 78, alignment: .center)
                         
                     }
                     .listStyle(.plain)
                     .background(Color.white)
-                    .edgesIgnoringSafeArea(.all)
-                    .padding()
                     
                     Spacer() // 화면 상단에 List를 보여주기 위해 공백 삽입
                 }
@@ -55,8 +53,8 @@ struct ContentInfo: Identifiable {
     let isComplete: Bool
 
 }
-
-// List에 들어갈 Array에 데이터 넣기
+ 
+// List에 들어갈 Array에 Test 데이터 넣기
 let contentInfos = [
     ContentInfo(title: "잠금화면 제스처", isComplete: false),
     ContentInfo(title: "앱 페이지의 기본 제스처", isComplete: true),
@@ -74,9 +72,8 @@ struct ContentList : View {
                     .font(.system(size: 24))
                     .foregroundColor(.black)
                     .padding(.leading, 20)
-                    //.background(Color.white).cornerRadius(15)
                 Spacer()
-                if contentInfo.isComplete{
+                if contentInfo.isComplete{  // 해당 컨텐츠를 이전에 끝까지 완료했는지 확인
                     Image(systemName: "checkmark.circle")
                         .resizable()
                         .frame(width: 30, height: 30)
