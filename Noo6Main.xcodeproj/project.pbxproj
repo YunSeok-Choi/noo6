@@ -16,6 +16,8 @@
 		7953083627FD7E79000D40DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7953083527FD7E79000D40DB /* Preview Assets.xcassets */; };
 		D42F483827FED4C9009FECA0 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F483727FED4C9009FECA0 /* CategoryView.swift */; };
 		E901BB9528006550003AF610 /* HonorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E901BB9428006550003AF610 /* HonorView.swift */; };
+		E901BB9828006915003AF610 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E901BB9628006915003AF610 /* LinkView.swift */; };
+		E901BB9928006915003AF610 /* HonorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E901BB9728006915003AF610 /* HonorDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		7953083527FD7E79000D40DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D42F483727FED4C9009FECA0 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		E901BB9428006550003AF610 /* HonorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HonorView.swift; sourceTree = "<group>"; };
+		E901BB9628006915003AF610 /* LinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		E901BB9728006915003AF610 /* HonorDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HonorDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,9 @@
 				552605BB27FED8EE0028C141 /* CategoryRow.swift */,
 				552605BD27FF17FE0028C141 /* CategoryList.swift */,
 				79373AFE28006D7400CDAD04 /* ClearView.swift */,
+
+				E901BB9728006915003AF610 /* HonorDetailView.swift */,
+				E901BB9628006915003AF610 /* LinkView.swift */,
 				7953083227FD7E79000D40DB /* Assets.xcassets */,
 				7953083427FD7E79000D40DB /* Preview Content */,
 			);
@@ -157,7 +164,9 @@
 				552605BC27FED8EE0028C141 /* CategoryRow.swift in Sources */,
 				7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */,
 				552605C028005F630028C141 /* HomeView.swift in Sources */,
+				E901BB9928006915003AF610 /* HonorDetailView.swift in Sources */,
 				552605BE27FF17FE0028C141 /* CategoryList.swift in Sources */,
+				E901BB9828006915003AF610 /* LinkView.swift in Sources */,
 				E901BB9528006550003AF610 /* HonorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
