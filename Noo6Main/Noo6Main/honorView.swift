@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+
+//honor 변수는 임시로 생성했음. 가이드 완료시에 +1 되는 변수임.
 let honorBasic = 5
 let honorUseful = 1
 let honorPhoto = 0
