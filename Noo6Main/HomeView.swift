@@ -2,13 +2,12 @@
 //  HomeView.swift
 //  Noo6Main
 //
-//  Created by 최윤석 on 2022/04/06.
+//  Created by 이재웅 on 2022/04/08.
 //
 
 import SwiftUI
 
 struct HomeView: View {
-    
     // 2줄의 title을 편하게 구성하기 위함
     let title: String = """
 안녕하세요,
@@ -41,7 +40,7 @@ struct HomeView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
