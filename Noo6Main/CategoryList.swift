@@ -15,7 +15,7 @@ struct CategoryList: View {
                 ZStack {
                     CategoryRow(guideInfo: info)
                         .listRowBackground(Color.white)
-                    NavigationLink(destination: Text("\(info.guideName)의 CategoryView")) {}
+                    NavigationLink(destination: CategoryView(guideName: info.guideName)) {}
                         .frame(width: 0)   // NavigationLink 화살표 제거를 위함 1
                         .opacity(0)        // NavigationLink 화살표 제거를 위함 1
                 }

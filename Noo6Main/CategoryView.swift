@@ -9,13 +9,14 @@ import Foundation
 import SwiftUI
 
 struct CategoryView : View {
+    var guideName: String
 
     var body: some View{
         VStack {
             NavigationView{
                 VStack{
                     // 임시 안내 문구 삽입 -> 데이터 받아온 후 데이터에 맞는 문구로 수정 필요
-                    Text("아이폰 초보자 가이드에서 \n어떤 가이드를 받아 볼까요?")
+                    Text("\(guideName)에서 \n어떤 가이드를 받아 볼까요?")
                         .frame(width: 342)
                         .font(.system(size: 30))
                         .padding(.bottom, 40)
@@ -90,6 +91,6 @@ struct ContentList : View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView()
+        CategoryView(guideName: "아이폰 초보자 가이드")
     }
 }

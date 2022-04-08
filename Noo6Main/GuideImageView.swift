@@ -46,6 +46,6 @@ let guidelists = [
 ]
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView()
+        GuideImageView()
     }
 }
