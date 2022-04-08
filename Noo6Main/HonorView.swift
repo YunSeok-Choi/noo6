@@ -19,6 +19,7 @@ struct honorView: View {
     var body: some View {
         VStack {
         ScrollView {
+            //**********************************************
             Text("아이폰 기초 \(honorBasic) / 5")
             VStack {
                 HStack {
@@ -31,6 +32,8 @@ struct honorView: View {
                     RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
                     RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0).hidden()//업적이 5개여서 여기서부터 hidden 시킴
                         }
+                    }
+            //********************************************
             Text("유용한 기능 \(honorUseful) / 5")
             VStack {
                 HStack {
@@ -44,6 +47,7 @@ struct honorView: View {
                     RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0).hidden()//업적이 5개여서 여기서부터 hidden 시킴
                         }
                     }
+            //********************************************
             Text("사진 앱 \(honorPhoto) / 4")
             VStack {
                 HStack {
@@ -57,6 +61,7 @@ struct honorView: View {
                     RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0).hidden()
                         }
                     }
+            //********************************************
                 Text("카메라 앱 \(honorCam) / 4")
                 VStack {
                     HStack {
@@ -70,6 +75,7 @@ struct honorView: View {
                         RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0).hidden()
                             }
                         }
+            //********************************************
                 Text("캘린더 앱 \(honorCalender) / 4")
                 VStack {
                     HStack {
@@ -83,12 +89,10 @@ struct honorView: View {
                         RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0).hidden()
                             }
                         }
-                
-
-                
-                }
-            }
-        }
+            //********************************************
+            
+                } //ScrollViewEnd
+            }  //VStackEnd
     }
 }
 
