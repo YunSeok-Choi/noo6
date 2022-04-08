@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct categoryView : View {
+struct CategoryView : View {
 
     var body: some View{
         VStack {
@@ -88,8 +88,8 @@ struct ContentList : View {
 }
 
 
-struct categoryView_Previews: PreviewProvider {
+struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        categoryView()
+        CategoryView()
     }
 }
