@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//전체적인 업적 디테일 뷰입니다
 struct HonorDetailView: View {
     var body: some View {
         VStack{
@@ -25,6 +26,7 @@ struct HonorDetailView: View {
 }
 
 
+//짤이 들어갈 이미지 뷰입니다
 struct ImageView: View {
     var body: some View {
         Image("Test")
@@ -35,6 +37,7 @@ struct ImageView: View {
                 }
             }
 
+//저장하기 버튼 뷰입니다
 struct ButtonView: View {
     var body: some View {
             Button(action: {
