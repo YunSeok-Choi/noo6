@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71B82EDC2800446600720395 /* HonorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B82EDB2800446600720395 /* HonorView.swift */; };
 		7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953082E27FD7E78000D40DB /* Noo6MainApp.swift */; };
 		7953083127FD7E78000D40DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953083027FD7E78000D40DB /* ContentView.swift */; };
 		7953083327FD7E79000D40DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7953083227FD7E79000D40DB /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71B82EDB2800446600720395 /* HonorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HonorView.swift; sourceTree = "<group>"; };
 		7953082B27FD7E78000D40DB /* Noo6Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noo6Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7953082E27FD7E78000D40DB /* Noo6MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noo6MainApp.swift; sourceTree = "<group>"; };
 		7953083027FD7E78000D40DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				7953082E27FD7E78000D40DB /* Noo6MainApp.swift */,
 				7953083027FD7E78000D40DB /* ContentView.swift */,
+				71B82EDB2800446600720395 /* HonorView.swift */,
 				7953083227FD7E79000D40DB /* Assets.xcassets */,
 				7953083427FD7E79000D40DB /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				7953083127FD7E78000D40DB /* ContentView.swift in Sources */,
 				7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */,
+				71B82EDC2800446600720395 /* HonorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
