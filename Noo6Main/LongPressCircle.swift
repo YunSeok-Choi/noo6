@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-// 제스쳐 사용 예시
-struct GuideGesture: View {
+// 제스쳐 사용 예시 View
+struct LongPressTestView: View {
     @State private var isLongPressed: Bool = false
     
     var body: some View {
         VStack {
             ZStack {
-                // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
-                Text("'1초이상 눌러주세요' 애니메이션")
-                
                 // LongPressCircle 사용예시
                 LongPressCircle(isLongPressed: $isLongPressed, width: 100, height: 100, opacity: 0.01)
+                
+                // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
+                Text("'1초이상 눌러주세요' 애니메이션")
             }
             Text(isLongPressed ? "다음버튼을 눌러주세요!" : "다음버튼 안내애니메이션 작동전...")
         }
@@ -27,7 +27,7 @@ struct GuideGesture: View {
 
 struct GuideGesture_Previews: PreviewProvider {
     static var previews: some View {
-        GuideGesture()
+        LongPressTestView()
     }
 }
 
