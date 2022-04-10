@@ -12,6 +12,7 @@ struct GuideView: View {
         NavigationView{
             
             VStack{
+                
                 GuideImageView()
                 Bottom()
                 NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
@@ -24,8 +25,8 @@ struct GuideView: View {
                     }, label: {
                        Image(systemName: "square.and.arrow.up")
                     })
+                    
                 }
-                
             }
         }
 

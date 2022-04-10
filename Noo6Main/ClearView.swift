@@ -16,7 +16,6 @@ func shareButton() {
 
 struct ClearView: View {
     var body: some View {
-        NavigationView{
         VStack{
             VStack{
                 Text("사진 편집 방법을 배웠습니다.")
@@ -34,7 +33,7 @@ struct ClearView: View {
             Button(action: {
                 print("가이드 카테고리로 갑니다.")
             }, label: {
-                NavigationLink(destination: GuideView()){
+                NavigationLink(destination: CategoryView(guideName: "아이폰 초보자 가이드")){
                     Text("다른 가이드 배우기")
                         .foregroundColor(Color.white)
                 }
@@ -43,6 +42,7 @@ struct ClearView: View {
             .padding()
             .background(Color(red: 0, green: 0.5, blue: 1))
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
+            
             
             Button(action: shareButton){
                 Text("이미지를 다른 사람에게 공유하기")
@@ -62,7 +62,6 @@ struct ClearView: View {
                 }
             })
             .padding()
-        }
         }
         .navigationBarHidden(true)
     }
