@@ -46,12 +46,10 @@ struct Bottom: View {
                 Text("/")
                 Text("\(pages)")
                 Spacer()
-                ScrollViewReader{ proxy in
-                    Button("다음 단계 >") {withAnimation(.spring()){
-                        proxy.scrollTo(3,anchor: .top)
-                    }
+                Button("다음 단계 >"){
+                
                 }
-                }
+                
                 
         }
     }
