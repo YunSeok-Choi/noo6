@@ -13,90 +13,119 @@ let honorWidget = 0
 let honorCalender = 0
 let honorMemo = 0
 
-
+struct RR{
+    
+}
 
 struct HonorView: View {
+    
+    let columns: [GridItem] = [
+        GridItem(.flexible(), spacing: 6, alignment: nil),
+        GridItem(.flexible(), spacing: 6, alignment: nil),
+        GridItem(.flexible(), spacing: 6, alignment: nil)
+    ]
+    
     var body: some View {
-        VStack {
         ScrollView {
-            //**********************************************
-            Text("아이폰 기초 \(honorBasic) / 5")
-            VStack {
-                HStack {
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0)
-                        }
-                HStack {
-                    RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0).hidden()//업적이 5개여서 여기서부터 hidden 시킴
+    
+                
+            LazyVGrid(
+                columns: columns,
+                alignment: .center,
+                spacing: 6,
+                pinnedViews: [.sectionHeaders],
+                content: {
+             
+                    Section(header:
+                                Text("아이폰 기초 \(honorBasic) / 4")
+                                .font(.title)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                               
+                    ) {
+                        ForEach(0..<4) { index in
+                            Button(action: {}) {
+                                            Image("Rectangle")
+                            }                        }
+                    }
+                    Section(header:
+                                Text("사진 앱 \(honorPhoto) / 5")
+                                .font(.title)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                                
+                               
+                    ) {
+                        ForEach(0..<5) { index in
+                            Button(action: {}) {
+                                            Image("Rectangle")
+                            }
                         }
                     }
-            //********************************************
-            Text("유용한 기능 \(honorUseful) / 5")
-            VStack {
-                HStack {
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0)
-                        }
-                HStack {
-                    RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius: /*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0).hidden()//업적이 5개여서 여기서부터 hidden 시킴
+                    
+                    Section(header:
+                                Text("카메라 앱 \(honorCam) / 6")
+                                .font(.title)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                               
+                    ) {
+                        ForEach(0..<6) { index in
+                            Button(action: {}) {
+                                            Image("Rectangle")
+                            }
                         }
                     }
-            //********************************************
-            Text("사진 앱 \(honorPhoto) / 4")
-            VStack {
-                HStack {
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                        }
-                HStack {
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0).hidden()//업적이 4개까지여서 이 뒤로는 hidden 시킴
-                    RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0).hidden()
+                    
+                    Section(header:
+                                Text("메모 앱 \(honorMemo) / 6")
+                                .font(.title)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                               
+                    ) {
+                        ForEach(0..<6) { index in
+                            Button(action: {}) {
+                                            Image("Rectangle")
+                            }
                         }
                     }
-            //********************************************
-                Text("카메라 앱 \(honorCam) / 4")
-                VStack {
-                    HStack {
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                            }
-                    HStack {
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0).hidden()//업적이 4개까지여서 이 뒤로는 hidden 시킴
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0).hidden()
+                    Section(header:
+                                Text("위젯 앱 \(honorWidget) / 6")
+                                .font(.title)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                               
+                    ) {
+                        ForEach(0..<6) { index in
+                            Button(action: {}) {
+                                            Image("Rectangle")
                             }
                         }
-            //********************************************
-                Text("캘린더 앱 \(honorCalender) / 4")
-                VStack {
-                    HStack {
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                            }
-                    HStack {
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0)
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=Corner Radius@*/10.0).frame(width: 100.0, height: 100.0).hidden()//업적이 4개까지여서 이 뒤로는 hidden 시킴
-                        RoundedRectangle(cornerRadius:/*@PLACEHOLDER=CornerRadius@*/10.0).frame(width: 100.0, height: 100.0).hidden()
+                    }
+                    Section(header:
+                                Text("캘린더 앱 \(honorCalender) / 6")
+                                .font(.title)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                               
+                    ) {
+                        ForEach(0..<6) { index in
+                            Button(action: {}) {
+                                            Image("Rectangle")
                             }
                         }
-            //********************************************
-            
-                } //ScrollViewEnd
-            }  //VStackEnd
+                    }
+
+                    
+                    
+                })
+        }
     }
 }
 
-struct honorView_Previews: PreviewProvider {
+
+struct HonorView_Previews: PreviewProvider {
     static var previews: some View {
         HonorView()
     }
