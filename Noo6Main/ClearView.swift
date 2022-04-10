@@ -16,52 +16,52 @@ func shareButton() {
 
 struct ClearView: View {
     var body: some View {
-        VStack{
+        NavigationView{
             VStack{
-                Text("사진 편집 방법을 배웠습니다.")
-                    .font(.title)
-                Text("이제 멋진 프로필 사진을")
-                    .font(.title)
-                Text("만드실 수 있습니다!")
-                    .font(.title)
-            }
-            .padding()
-            
-            Image("어르신짤1")
+                VStack{
+                    Text("사진 편집 방법을 배웠습니다.")
+                        .font(.title)
+                    Text("이제 멋진 프로필 사진을")
+                        .font(.title)
+                    Text("만드실 수 있습니다!")
+                        .font(.title)
+                }
+                
+                Image("어르신짤1")
+                    .padding()
+                
+                Button(action: {
+                    print("가이드 카테고리로 갑니다.")
+                }, label: {
+                    NavigationLink(destination: CategoryView(guideName: "아이폰 초보자 가이드")){
+                        Text("다른 가이드 배우기")
+                            .foregroundColor(Color.white)
+                    }
+                })
+                .frame(width: 300, height: 18, alignment: .center)
                 .padding()
-            
-            Button(action: {
-                print("가이드 카테고리로 갑니다.")
-            }, label: {
-                NavigationLink(destination: CategoryView(guideName: "아이폰 초보자 가이드")){
-                    Text("다른 가이드 배우기")
+                .background(Color(red: 0, green: 0.5, blue: 1))
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
+                
+                Button(action: shareButton){
+                    Text("이미지를 다른 사람에게 공유하기")
                         .foregroundColor(Color.white)
                 }
-            })
-            .frame(width: 300, height: 18, alignment: .center)
-            .padding()
-            .background(Color(red: 0, green: 0.5, blue: 1))
-            .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
-            
-            
-            Button(action: shareButton){
-                Text("이미지를 다른 사람에게 공유하기")
-                    .foregroundColor(Color.white)
+                .frame(width: 300, height: 18, alignment: .center)
+                .padding()
+                .background(Color(red: 0, green: 0.5, blue: 1))
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
+     
+                Button(action: {
+                    print("홈으로 갑니다.")
+                }, label: {
+                    NavigationLink(destination: HomeView()){
+                        Text("홈으로 돌아가기")
+                            .foregroundColor(Color.blue)
+                    }
+                })
+                .padding()
             }
-            .frame(width: 300, height: 18, alignment: .center)
-            .padding()
-            .background(Color(red: 0, green: 0.5, blue: 1))
-            .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
-            
-            Button(action: {
-                print("홈으로 갑니다.")
-            }, label: {
-                NavigationLink(destination: HomeView()){
-                    Text("홈으로 돌아가기")
-                        .foregroundColor(Color.blue)
-                }
-            })
-            .padding()
         }
         .navigationBarHidden(true)
     }

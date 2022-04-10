@@ -37,6 +37,7 @@ struct HomeView: View {
                         })
             )
         }
+        .navigationBarHidden(true)
     }
 }
 

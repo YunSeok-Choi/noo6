@@ -6,10 +6,31 @@
 //
 
 import SwiftUI
+import AVKit
+
+var player: AVAudioPlayer?
+var voice = ["Cow-moo-sound"]
+
+func playSound(sound: String){
+    
+    guard let url = Bundle.main.url(forResource: sound, withExtension: ".mp3") else {
+        return
+    }
+    
+    do{
+        player = try AVAudioPlayer(contentsOf: url)
+        player?.play()
+        
+    }catch let error {
+        print("재생 오류 \(error.localizedDescription)")
+    }
+}
 
 struct GuideView: View {
     @State private var currentPage: Int = 0
+    @State var now: Bool = true
     private let pages = guidelists.count
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -28,31 +49,32 @@ struct GuideView: View {
                 
                 VStack {    //BottomView
                     HStack{
-                        Button(action:{
-                            
-                        },label:{
-                            Image(systemName: "speaker.wave.2.fill")
+                        Button(action: {
+                            if now { player?.stop() }
+                            now.toggle()
+                        }){
+                            Image(systemName: now ? "speaker.wave.1.fill" : "speaker.slash.fill")
                                 .clipShape(Circle())
-                                .padding(5.0)
-                                .overlay(Circle().stroke(Color.gray, lineWidth: 1)) //아이콘 주변 원 ver.1
-                                .frame(height: 35)
-                            
-                        })
-                        .foregroundColor(.gray)
+                                .padding(5)
+                                .overlay(Circle().stroke(Color.blue,lineWidth: 2))
+                                .frame(height: 60)
+                                .imageScale(.large)
+                                .font(.title)
+                        }.onAppear(){
+                            now ? playSound(sound: voice[0]) : player?.stop()
+                        }
                         
                         Spacer()
-                        ZStack{//아이콘 주변 원 ver.2
-                            Circle()
-                                .strokeBorder(.gray,lineWidth: 1)
-                                .frame(width: 30, height: 30)
-                            Button(action:{
-                                
-                            },label:{
-                                Image(systemName: "repeat")
-                            })
-                            .foregroundColor(.gray)
+                        
+                        Button(action: {
+                            now ? playSound(sound: voice[0]) : player?.stop()
+                        }){
+                            Image(systemName: "repeat")
+                                .imageScale(.large)
+                                .font(.title)
                         }
                     }.padding(.horizontal)
+                    
                     ProgressView(value: 0.2)
                     HStack {
                         Button("< 이전 단계") {
@@ -70,9 +92,6 @@ struct GuideView: View {
                         Text("/")
                         Text("\(pages)")
                         Spacer()
-                        NavigationLink(destination: ClearView()){
-                            Text("끝")
-                        }
                         Button("다음 단계 >") {
                             if (currentPage == guidelists.count-1) {
                                 currentPage = 0
@@ -81,7 +100,6 @@ struct GuideView: View {
                                 currentPage += 1
                             }
                         }
-                        
                         
                     }
                 }
