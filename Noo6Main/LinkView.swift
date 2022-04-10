@@ -10,7 +10,7 @@ import SwiftUI
 struct LinkView: View {
     var body: some View {
                 NavigationView{
-                NavigationLink(destination: HonorDetailView()){
+                 NavigationLink(destination: HonorDetailView()){
                     Text("Hello")
                     .navigationTitle("업적 모음집")
                     

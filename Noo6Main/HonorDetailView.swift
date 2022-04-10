@@ -9,35 +9,36 @@
 import SwiftUI
 
 //전체적인 업적 디테일 뷰입니다
+
 struct HonorDetailView: View {
     var body: some View {
-        VStack{
-                Text("당신은 사진찍기 전문가!")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
-        HonorImageView()
-        Text("어쩌구 저쩌구 설명 설명")
-            .padding()
-            .font(.system(size: 20))
-            Spacer()
-        ButtonView()
-            Spacer()
+            HonorDetailView1_1()
         }
     }
-}
 
 
-//짤이 들어갈 이미지 뷰입니다
-struct HonorImageView: View {
-    var body: some View {
+struct HonorDetailView1_1: View {
+var body: some View {
+    VStack{
+        Text("당신은 사진찍기 전문가!")
+        .font(.largeTitle)
+        .fontWeight(.semibold)
         Image("Test")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 300, height: 300)
             .padding()
-                }
-            }
+      Text("어쩌구 저쩌구 설명 설명")
+        .padding()
+        .font(.system(size: 20))
+        Spacer()
+      ButtonView()
+         Spacer()
+    }
+}
+}
 
+    
 //저장하기 버튼 뷰입니다
 struct ButtonView: View {
     var body: some View {
