@@ -10,6 +10,8 @@
 		552605BC27FED8EE0028C141 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605BB27FED8EE0028C141 /* CategoryRow.swift */; };
 		552605BE27FF17FE0028C141 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605BD27FF17FE0028C141 /* CategoryList.swift */; };
 		552605C028005F630028C141 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605BF28005F630028C141 /* HomeView.swift */; };
+		552605DC2801B2FC0028C141 /* LongPressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605DB2801B2FC0028C141 /* LongPressCircle.swift */; };
+		552605E228020FE30028C141 /* DragCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605E128020FE30028C141 /* DragCircle.swift */; };
 		79373AFF28006D7400CDAD04 /* ClearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373AFE28006D7400CDAD04 /* ClearView.swift */; };
 		7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953082E27FD7E78000D40DB /* Noo6MainApp.swift */; };
 		7953083327FD7E79000D40DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7953083227FD7E79000D40DB /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		552605BB27FED8EE0028C141 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		552605BD27FF17FE0028C141 /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
 		552605BF28005F630028C141 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		552605DB2801B2FC0028C141 /* LongPressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressCircle.swift; sourceTree = "<group>"; };
+		552605E128020FE30028C141 /* DragCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCircle.swift; sourceTree = "<group>"; };
 		79373AFE28006D7400CDAD04 /* ClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearView.swift; sourceTree = "<group>"; };
 		7953082B27FD7E78000D40DB /* Noo6Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noo6Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7953082E27FD7E78000D40DB /* Noo6MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noo6MainApp.swift; sourceTree = "<group>"; };
@@ -54,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552605E3280210860028C141 /* GuideGesture */ = {
+			isa = PBXGroup;
+			children = (
+				552605DB2801B2FC0028C141 /* LongPressCircle.swift */,
+				552605E128020FE30028C141 /* DragCircle.swift */,
+			);
+			path = GuideGesture;
+			sourceTree = "<group>";
+		};
 		7953082227FD7E78000D40DB = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +99,7 @@
 				E901BB9628006915003AF610 /* LinkView.swift */,
 				E901BB9728006915003AF610 /* HonorDetailView.swift */,
 				798DC1182802A4C50064168B /* Cow-moo-sound.mp3 */,
+				552605E3280210860028C141 /* GuideGesture */,
 				7953083227FD7E79000D40DB /* Assets.xcassets */,
 				7953083427FD7E79000D40DB /* Preview Content */,
 			);
@@ -172,11 +186,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2CEDFC28006F08003401D6 /* GuideImageView.swift in Sources */,
+				552605E228020FE30028C141 /* DragCircle.swift in Sources */,
 				D42F483827FED4C9009FECA0 /* CategoryView.swift in Sources */,
 				79373AFF28006D7400CDAD04 /* ClearView.swift in Sources */,
 				552605BC27FED8EE0028C141 /* CategoryRow.swift in Sources */,
 				7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */,
 				552605C028005F630028C141 /* HomeView.swift in Sources */,
+				552605DC2801B2FC0028C141 /* LongPressCircle.swift in Sources */,
 				BF2CEDFA28006ECB003401D6 /* GuideView.swift in Sources */,
 				E901BB9928006915003AF610 /* HonorDetailView.swift in Sources */,
 				552605BE27FF17FE0028C141 /* CategoryList.swift in Sources */,
