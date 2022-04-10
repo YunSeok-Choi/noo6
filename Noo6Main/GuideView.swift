@@ -35,6 +35,7 @@ struct GuideView: View {
                                 .clipShape(Circle())
                                 .padding(5.0)
                                 .overlay(Circle().stroke(Color.gray, lineWidth: 1)) //아이콘 주변 원 ver.1
+                                .frame(height: 35)
                             
                         })
                         .foregroundColor(.gray)
@@ -69,6 +70,9 @@ struct GuideView: View {
                         Text("/")
                         Text("\(pages)")
                         Spacer()
+                        NavigationLink(destination: ClearView()){
+                            Text("끝")
+                        }
                         Button("다음 단계 >") {
                             if (currentPage == guidelists.count-1) {
                                 currentPage = 0
