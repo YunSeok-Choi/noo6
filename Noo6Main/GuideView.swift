@@ -30,6 +30,7 @@ struct GuideView: View {
     @State private var currentPage: Int = 0
     @State var now: Bool = true
     private let pages = guidelists.count
+    
     var body: some View {
         NavigationView{
             VStack{
