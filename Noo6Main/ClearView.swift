@@ -46,6 +46,12 @@ struct ClearView: View {
                 
                 Button(action: shareButton){
                     Text("이미지를 다른 사람에게 공유하기")
+            
+            Button(action: {
+                print("가이드 카테고리로 갑니다.")
+            }, label: {
+                NavigationLink(destination: CategoryView(guideName: "아이폰 초보자")){
+                    Text("다른 가이드 배우기")
                         .foregroundColor(Color.white)
                 }
                 .frame(width: 300, height: 18, alignment: .center)
