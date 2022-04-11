@@ -121,7 +121,7 @@ struct GuideView: View {
                 }.navigationBarTitle("가이드 제목",displayMode: .inline)
                     .toolbar{
                         Button(action: {
-                            //공유하기 기능 넣기
+                            shareButton()
                         }, label: {
                             Image(systemName: "square.and.arrow.up")
                         })
