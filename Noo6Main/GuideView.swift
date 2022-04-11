@@ -81,6 +81,7 @@ struct GuideView: View {
                             Image(systemName: "repeat")
                                 .clipShape(Circle())
                                 .padding(5)
+                                .frame(height: 60)
                                 .overlay(Circle().stroke(Color.blue, lineWidth:  2))
                                 .imageScale(.large)
                                 .font(.title)
