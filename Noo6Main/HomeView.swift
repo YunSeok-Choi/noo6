@@ -22,7 +22,6 @@ struct HomeView: View {
                 // List 하단의 Row 잘리는 현상 해결필요
                 CategoryList()
                     .padding(.trailing, -10)
-                
             }
             .padding()
 

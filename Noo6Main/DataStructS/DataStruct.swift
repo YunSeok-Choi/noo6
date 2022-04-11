@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 struct HomeData : Codable, Identifiable {
     let id : Int
     let title : String
@@ -29,6 +31,21 @@ struct CategoryInfo : Codable, Identifiable {
     let isComplete : Bool
 }
 
+//GuideView에서 사용할 데이터
+struct dataStruct2: Codable, Identifiable{
+    var id : Int
+    var guideTitle : String
+    var isSound : Bool
+    var gideInfo : [GideInfo]
+}
+
+struct GideInfo: Codable, Identifiable{
+    var id : Int
+    var guideView : [String]
+    var guideMessage : [String]
+    var totalPage : Double
+    var voice : [String]
+}
 
 
 // ClearView에서 사용할 데이터
