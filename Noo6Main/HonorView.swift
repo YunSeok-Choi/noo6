@@ -86,318 +86,317 @@ struct HonorView: View {
     
     //******************** 메인 뷰 *********************//
     var body: some View {
-        NavigationView{
-            ScrollView {
-                LazyVGrid(
-                    columns: columns,
-                    alignment: .center, // 가운데 정렬
-                    spacing: 6,
-                    pinnedViews: [.sectionHeaders], // 섹션 구현시 고정해준다.
-                    content: {
-                        
-                        //****************** 유용한 기능 *******************//
-                        Section(header:
-                                    Text("유용한 기능 \(honorUseful) / 6")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity)
-                                
-                        ) {
+        
+        ScrollView {
+            LazyVGrid(
+                columns: columns,
+                alignment: .center, // 가운데 정렬
+                spacing: 6,
+                pinnedViews: [.sectionHeaders], // 섹션 구현시 고정해준다.
+                content: {
+                    
+                    //****************** 유용한 기능 *******************//
+                    Section(header:
+                                Text("유용한 기능 \(honorUseful) / 6")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
                             
-                            
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockUsefulOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockUsefulTwo.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockUsefulThree.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockUsefulFour.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockUsefulFive.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockUsefulSix.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
+                    ) {
+                        
+                        
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockUsefulOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
                         }
-                        
-                        //****************** 아이폰 기초 *******************//
-                        
-                        Section(header:
-                                    Text("아이폰 기초 \(honorBasic) / 4")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity)
-                        ) {
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockUsefulTwo.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
                         }
-                        
-                        //****************** 사진 *******************//
-                        
-                        Section(header:
-                                    Text("사진 앱 \(honorPhoto) / 5")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity)
-                        ) {
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoTwo.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoThree.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoFour.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoFive.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockUsefulThree.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
                         }
-                        
-                        //****************** 카메라 *******************//
-                        Section(header:
-                                    Text("카메라 앱 \(honorCam) / 6")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity)
-                        ) {
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoTwo.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoThree.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoFour.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoFive.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockPhotoSix.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockUsefulFour.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
                         }
-                        
-                        //****************** 메모 *******************//
-                        Section(header:
-                                    Text("메모 앱 \(honorMemo) / 6")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity)
-                        ) {
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockMemoOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockMemoTwo.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockMemoThree.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockMemoFour.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockMemoFive.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockMemoSix.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockUsefulFive.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
                         }
-                        //****************** 위젯 *******************//
-                        Section(header:
-                                    Text("위젯 앱 \(honorWidget) / 6")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity)
-                        ) {
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockWidgetOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockWidgetTwo.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockWidgetThree.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockWidgetFour.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockWidgetFive.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockWidgetSix.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockUsefulSix.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
                         }
-                        
-                        //****************** 캘린더 *******************//
-                        
-                        Section(header:
-                                    Text("캘린더 앱 \(honorCalender) / 6")
-                            .font(.title)
-                            .foregroundColor(.black)
-                            .frame(maxWidth: .infinity)
-                        ) {
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockCalenderOne.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockCalenderTwo.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockCalenderThree.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockCalenderFour.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockCalenderFive.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
-                            ZStack{
-                                NavigationLink(destination: HonorDetailView()) {
-                                    Image("Rectangle")
-                                }.zIndex(unlockCalenderSix.value) // ZStack의 Depth 변경
-                                Image("LockedRectangle")
-                            }
+                    }
+                    
+                    //****************** 아이폰 기초 *******************//
+                    
+                    Section(header:
+                                Text("아이폰 기초 \(honorBasic) / 4")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                    ) {
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
                         }
-                    })
-            }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockBasicOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                    }
+                    
+                    //****************** 사진 *******************//
+                    
+                    Section(header:
+                                Text("사진 앱 \(honorPhoto) / 5")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                    ) {
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoTwo.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoThree.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoFour.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoFive.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                    }
+                    
+                    //****************** 카메라 *******************//
+                    Section(header:
+                                Text("카메라 앱 \(honorCam) / 6")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                    ) {
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoTwo.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoThree.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoFour.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoFive.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockPhotoSix.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                    }
+                    
+                    //****************** 메모 *******************//
+                    Section(header:
+                                Text("메모 앱 \(honorMemo) / 6")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                    ) {
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockMemoOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockMemoTwo.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockMemoThree.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockMemoFour.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockMemoFive.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockMemoSix.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                    }
+                    //****************** 위젯 *******************//
+                    Section(header:
+                                Text("위젯 앱 \(honorWidget) / 6")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                    ) {
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockWidgetOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockWidgetTwo.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockWidgetThree.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockWidgetFour.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockWidgetFive.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockWidgetSix.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                    }
+                    
+                    //****************** 캘린더 *******************//
+                    
+                    Section(header:
+                                Text("캘린더 앱 \(honorCalender) / 6")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .frame(maxWidth: .infinity)
+                    ) {
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockCalenderOne.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockCalenderTwo.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockCalenderThree.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockCalenderFour.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockCalenderFive.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                        ZStack{
+                            NavigationLink(destination: HonorDetailView()) {
+                                Image("Rectangle")
+                            }.zIndex(unlockCalenderSix.value) // ZStack의 Depth 변경
+                            Image("LockedRectangle")
+                        }
+                    }
+                })
         }
     }
 }
