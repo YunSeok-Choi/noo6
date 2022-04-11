@@ -20,7 +20,9 @@ struct Unlock{
     var value: Double  = 0
 }
 
-
+struct RR{
+    
+}
 
 //****************** 업적뷰 구현 *******************//
 struct HonorView: View {
@@ -31,6 +33,7 @@ struct HonorView: View {
         GridItem(.flexible(), spacing: 6, alignment: nil)
     ]
     
+
     //****************** 객체 생성(각 가이드 완료시 생성되는 객체임, 추후 위치 이동 필요) *******************//
     
     var unlockUsefulOne : Unlock = Unlock(value: 1)

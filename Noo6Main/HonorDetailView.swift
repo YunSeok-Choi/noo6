@@ -8,42 +8,46 @@
 
 import SwiftUI
 
-//전체적인 업적 디테일 뷰입니다
-struct HonorDetailView: View {
-    var body: some View {
+struct HonorDetailView : View {
+    var body: some View{
         VStack{
-                Text("당신은 사진찍기 전문가!")
+            Text("\(HonorDetialView1_1.title)")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
-        HonorImageView()
-        Text("어쩌구 저쩌구 설명 설명")
-            .padding()
-            .font(.system(size: 20))
+            Image("\(HonorDetialView1_1.image)")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300, height: 300)
+                .padding()
+            Text("\(HonorDetialView1_1.text)")
+                .padding()
+                .font(.system(size: 20))
             Spacer()
-        ButtonView()
+            ButtonView()
             Spacer()
         }
     }
 }
 
 
-//짤이 들어갈 이미지 뷰입니다
-struct HonorImageView: View {
-    var body: some View {
-        Image("Test")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 300, height: 300)
-            .padding()
-                }
-            }
+// HonorDetialView 정보 구조 (테스트용)
+struct HonorDetailInfo: Identifiable {
+    let id = UUID()
+    let title: String
+    let image: String
+    let text: String
+}
+
+
+let HonorDetialView1_1 = HonorDetailInfo(title: "당신은 사진찍기 전문가!", image: "Test" , text: "어쩌구 저쩌구 설명 설명")
+
+
 
 //저장하기 버튼 뷰입니다
 struct ButtonView: View {
     var body: some View {
-            Button(action: {
-            print("버튼 클릭")
-        }){Text("이미지 저장하기")
+            Button(action: {//사진 저장
+            }){Text("이미지 저장하기")
                 .frame(width: 352, height: 50)
                 .font(.system(size:20, weight: .regular))
                 .foregroundColor(.white)
