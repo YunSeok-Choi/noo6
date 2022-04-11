@@ -38,7 +38,6 @@ struct GuideView: View {
     private let pages = guidelists.count
     
     var body: some View {
-        NavigationView{
             VStack{
                 VStack{ //guideView
                     TabView(selection: $currentPage){
@@ -129,7 +128,7 @@ struct GuideView: View {
                         
                     }
             }
-        }
+        
         
     }
 }
