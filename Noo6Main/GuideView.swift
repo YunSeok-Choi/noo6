@@ -32,7 +32,6 @@ struct GuideView: View {
     private let pages = guidelists.count
     
     var body: some View {
-        NavigationView{
             VStack{
                 VStack{ //guideView
                     TabView(selection: $currentPage){
@@ -70,6 +69,10 @@ struct GuideView: View {
                             now ? playSound(sound: voice[0]) : player?.stop()
                         }){
                             Image(systemName: "repeat")
+                                .clipShape(Circle())
+                                .padding(5)
+                                .overlay(Circle().stroke(Color.blue,lineWidth: 2))
+                                .frame(height: 60)
                                 .imageScale(.large)
                                 .font(.title)
                         }
@@ -116,7 +119,7 @@ struct GuideView: View {
                         
                     }
             }
-        }
+        
         
     }
 }
