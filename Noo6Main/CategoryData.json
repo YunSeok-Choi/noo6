@@ -2,8 +2,9 @@
 [
     {
         id : 0,
-        categoryTitle : "메모"
+        categoryTitle : "캘린더"
         categoryIcon : "image1",
+        isAllCleared : false,
         categoryInfo : [
             {
                 id : 0,
