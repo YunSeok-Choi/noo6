@@ -44,8 +44,16 @@ struct GuideView: View {
                         ForEach(guidelists){i in
                             VStack{
                                 Text(i.explain)
+                                    .font(.system(size: 30))
+                                    .frame(width: 358, height: 120)
+                                    .multilineTextAlignment(.center)
                                 Image(i.image)
                                     .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: 480)
+                                    .cornerRadius(24)
+                                    .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
+                                    
                             }
                         }
                     }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
@@ -61,8 +69,10 @@ struct GuideView: View {
                             Image(systemName: now ? "speaker.wave.1.fill" : "speaker.slash.fill")
                                 .clipShape(Circle())
                                 .padding(5)
-                                .overlay(Circle().stroke(Color.blue,lineWidth: 2))
-                                .frame(height: 60)
+                                .frame(width: 50, height: 50)
+                                .background(Color.white)
+                                .cornerRadius(350)
+                                .shadow(color: Color.gray, radius: 2, x: 0, y: 0)
                                 .imageScale(.large)
                                 .font(.title)
                         }.onAppear(){
@@ -77,8 +87,10 @@ struct GuideView: View {
                             Image(systemName: "repeat")
                                 .clipShape(Circle())
                                 .padding(5)
-                                .frame(height: 60)
-                                .overlay(Circle().stroke(Color.blue, lineWidth:  2))
+                                .frame(width: 50, height: 50)
+                                .background(Color.white)
+                                .cornerRadius(350)
+                                .shadow(color: Color.gray, radius: 2, x: 0, y: 0)
                                 .imageScale(.large)
                                 .font(.title)
                         }
@@ -94,6 +106,7 @@ struct GuideView: View {
                                 currentPage -= 1
                             }
                         }
+                        .padding(.leading, 20.0)
                         
                         Spacer()
                         Text("\(currentPage+1)")
@@ -113,6 +126,7 @@ struct GuideView: View {
                                     currentPage += 1
                                 }
                             }
+                            .padding(.trailing, 20.0)
                         }
                     }
                 }
@@ -141,7 +155,7 @@ struct GuideList: Identifiable, Hashable{//가이드리스트 구조체, 이미�
 }
 
 let guidelists = [
-    GuideList(id: 0,image: "image1",explain: "explain1." ),
+    GuideList(id: 0,image: "Test2",explain: "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest." ),
     GuideList(id: 1,image: "image2",explain: "explain2." ),
     GuideList(id: 2,image: "image3",explain: "explain3." ),
     GuideList(id: 3,image: "dog",explain: "explain4." )

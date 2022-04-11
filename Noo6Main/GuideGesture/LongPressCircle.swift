@@ -14,11 +14,9 @@ struct LongPressTestView: View {
     var body: some View {
         VStack {
             
-                // LongPressCircle 사용예시
-            LongPressCircle(isLongPressed: $isLongPressed, width: 80, height: 80, opacity: 0.5)
-                
-                // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
-            Text(isLongPressed ? "다음버튼을 눌러주세요!" : "다음버튼 안내애니메이션 작동전...")
+            // LongPressCircle 사용예시
+            LongPressCircle(isLongPressed: $isLongPressed, width: 80, height: 80, opacity: 0.6)
+            // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
         }
     }
 }
@@ -33,13 +31,14 @@ struct GuideGesture_Previews: PreviewProvider {
 struct LongPressCircle: View {
     @GestureState private var isDetectingLongPress = false
     @Binding var isLongPressed: Bool
+    @State private var animationAmount: CGFloat = 1
     
     let width: CGFloat
     let height: CGFloat
     let opacity: Double // opacity 0 으로 설정시 터치작동 x (권장 opcaity = 0.01)
     
     var longPress: some Gesture {
-        LongPressGesture(minimumDuration: 1)
+        LongPressGesture(minimumDuration: 2)
             .updating($isDetectingLongPress) { currentState, gestureState, transaction in
                 gestureState = currentState
             }
@@ -51,15 +50,29 @@ struct LongPressCircle: View {
     var body: some View {
         Circle()
             .fill(self.isDetectingLongPress ?
-                  Color.gray:
-                    (self.isLongPressed ? Color.green : Color.blue))
+                  Color.green:
+                    (self.isLongPressed ? Color.gray : Color.blue))
             .frame(width: 50, height: 50, alignment: .center)
             .gesture(longPress)
             .padding(5.0)
-            .overlay(Circle().stroke(isLongPressed ? Color.green : Color.blue, lineWidth: 2))
-            .opacity(opacity)
         
-                     }
-
+        //원이 깜빡이는 애니메이션
+            .overlay(
+                Circle()
+                    .stroke(Color.green, lineWidth: 2)
+                    .scaleEffect(animationAmount)
+                //animationAmount가 1이면 불투명이 1이고, 2이면 불투명도가 0이다
+                    .opacity(Double(2 - animationAmount))
+                    .animation(Animation.easeInOut(duration: 1)
+                        .repeatForever(autoreverses: false))
+                //제스쳐를 따라하고나서는 애니메이션이 사라짐
+                    .opacity(self.isLongPressed ? 0 : 1)
+            )
+            .onAppear {
+                self.animationAmount = 2
+            }
+            .opacity(opacity)
+    }
+    
 }
 
