@@ -9,11 +9,11 @@ import SwiftUI
 import AVKit
 
 var player: AVAudioPlayer?
-var voice = ["Cow-moo-sound"]
+var voice = ["audio_5_카메라"]
 
 func playSound(sound: String){
     
-    guard let url = Bundle.main.url(forResource: sound, withExtension: ".mp3") else {
+    guard let url = Bundle.main.url(forResource: sound, withExtension: ".wav") else {
         return
     }
     
@@ -44,8 +44,12 @@ struct GuideView: View {
                         ForEach(guidelists){i in
                             VStack{
                                 Text(i.explain)
+                                    .font(.system(size: 30))
+                                    .frame(height: 120)
+                                    
                                 Image(i.image)
                                     .resizable()
+                                    
                             }
                         }
                     }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
@@ -93,6 +97,7 @@ struct GuideView: View {
                                 currentPage -= 1
                             }
                         }
+                        .padding(.leading, 20.0)
                         
                         Spacer()
                         Text("\(currentPage+1)")
@@ -112,6 +117,7 @@ struct GuideView: View {
                                     currentPage += 1
                                 }
                             }
+                            .padding(.trailing, 20.0)
                         }
                     }
                 }
@@ -140,7 +146,7 @@ struct GuideList: Identifiable, Hashable{//가이드리스트 구조체, 이미�
 }
 
 let guidelists = [
-    GuideList(id: 0,image: "image1",explain: "explain1." ),
+    GuideList(id: 0,image: "image1",explain: "맨아래쪽을 1초 이상              천천히 끌어당기면 사용했던              앱 내역이 나옵니다" ),
     GuideList(id: 1,image: "image2",explain: "explain2." ),
     GuideList(id: 2,image: "image3",explain: "explain3." ),
     GuideList(id: 3,image: "dog",explain: "explain4." )

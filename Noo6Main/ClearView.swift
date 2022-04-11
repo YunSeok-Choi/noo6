@@ -29,6 +29,8 @@ struct ClearView: View {
                 
                 Image("어르신짤1")
                     .padding()
+                    
+                    
                 
                 Button(action: {
                     print("가이드 카테고리로 갑니다.")
