@@ -29,6 +29,12 @@ func playSound(sound: String){
 struct GuideView: View {
     @State private var currentPage: Int = 0
     @State var now: Bool = true
+    
+    // progressUp: progressView 게이지 상태
+    // isGuideComplete : 가이드 끝 단계인지 알려주는 변수
+    @State var progressUp : Double = 1/Double(guidelists.count)
+    @State var isGuideComplete : Bool = false
+    
     private let pages = guidelists.count
     
     var body: some View {
@@ -70,37 +76,44 @@ struct GuideView: View {
                             now ? playSound(sound: voice[0]) : player?.stop()
                         }){
                             Image(systemName: "repeat")
+                                .clipShape(Circle())
+                                .padding(5)
+                                .overlay(Circle().stroke(Color.blue, lineWidth:  2))
                                 .imageScale(.large)
                                 .font(.title)
                         }
                     }.padding(.horizontal)
                     
-                    ProgressView(value: 0.2)
+                    ProgressView(value: progressUp)
+                    
                     HStack {
+                        // 현재 단계가 1 이상일 때만 이전 단계 작동
                         Button("< 이전 단계") {
-                            if currentPage == 0 {
-                                currentPage = guidelists.count-1
-                                //return
-                            }else{
+                            if (currentPage > 0) {
+                                progressUp -= 1/Double(guidelists.count)
                                 currentPage -= 1
                             }
                         }
                         
                         Spacer()
-                        
                         Text("\(currentPage+1)")
                         Text("/")
                         Text("\(pages)")
                         Spacer()
-                        Button("다음 단계 >") {
-                            if (currentPage == guidelists.count-1) {
-                                currentPage = 0
-                                //return
-                            }else{
-                                currentPage += 1
+                        
+                        // 다음단계 및 ClearView로 가는 Button
+                        NavigationLink(destination: ClearView(), isActive: $isGuideComplete){
+                            // 현재 가이드의 끝일 때에만 ClearView로 이동하도록 isActive
+                            Button("다음 단계 >") {
+                                if(progressUp >= 0.95){
+                                    isGuideComplete = true
+                                }
+                                else{
+                                    progressUp += 1/Double(guidelists.count)
+                                    currentPage += 1
+                                }
                             }
                         }
-                        
                     }
                 }
                 NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
