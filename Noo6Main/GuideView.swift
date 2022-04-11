@@ -6,12 +6,38 @@
 //
 
 import SwiftUI
+import AVKit
+
+var player: AVAudioPlayer?
+var voice = ["Cow-moo-sound"]
+
+func playSound(sound: String){
+    
+    guard let url = Bundle.main.url(forResource: sound, withExtension: ".mp3") else {
+        return
+    }
+    
+    do{
+        player = try AVAudioPlayer(contentsOf: url)
+        player?.play()
+        
+    }catch let error {
+        print("재생 오류 \(error.localizedDescription)")
+    }
+}
 
 struct GuideView: View {
     @State private var currentPage: Int = 0
+    @State var now: Bool = true
+    
+    // progressUp: progressView 게이지 상태
+    // isGuideComplete : 가이드 끝 단계인지 알려주는 변수
+    @State var progressUp : Double = 1/Double(guidelists.count)
+    @State var isGuideComplete : Bool = false
+    
     private let pages = guidelists.count
+    
     var body: some View {
-        NavigationView{
             VStack{
                 VStack{ //guideView
                     TabView(selection: $currentPage){
@@ -28,57 +54,65 @@ struct GuideView: View {
                 
                 VStack {    //BottomView
                     HStack{
-                        Button(action:{
-                            
-                        },label:{
-                            Image(systemName: "speaker.wave.2.fill")
+                        Button(action: {
+                            if now { player?.stop() }
+                            now.toggle()
+                        }){
+                            Image(systemName: now ? "speaker.wave.1.fill" : "speaker.slash.fill")
                                 .clipShape(Circle())
-                                .padding(5.0)
-                                .overlay(Circle().stroke(Color.gray, lineWidth: 1)) //아이콘 주변 원 ver.1
-                            
-                        })
-                        .foregroundColor(.gray)
+                                .padding(5)
+                                .overlay(Circle().stroke(Color.blue,lineWidth: 2))
+                                .frame(height: 60)
+                                .imageScale(.large)
+                                .font(.title)
+                        }.onAppear(){
+                            now ? playSound(sound: voice[0]) : player?.stop()
+                        }
                         
                         Spacer()
-                        ZStack{//아이콘 주변 원 ver.2
-                            Circle()
-                                .strokeBorder(.gray,lineWidth: 1)
-                                .frame(width: 30, height: 30)
-                            Button(action:{
-                                
-                            },label:{
-                                Image(systemName: "repeat")
-                            })
-                            .foregroundColor(.gray)
+                        
+                        Button(action: {
+                            now ? playSound(sound: voice[0]) : player?.stop()
+                        }){
+                            Image(systemName: "repeat")
+                                .clipShape(Circle())
+                                .padding(5)
+                                .overlay(Circle().stroke(Color.blue, lineWidth:  2))
+                                .imageScale(.large)
+                                .font(.title)
                         }
                     }.padding(.horizontal)
-                    ProgressView(value: 0.2)
+                    
+                    ProgressView(value: progressUp)
+                    
                     HStack {
+                        // 현재 단계가 1 이상일 때만 이전 단계 작동
                         Button("< 이전 단계") {
-                            if currentPage == 0 {
-                                currentPage = guidelists.count-1
-                                //return
-                            }else{
+                            if (currentPage > 0) {
+                                progressUp -= 1/Double(guidelists.count)
                                 currentPage -= 1
                             }
                         }
                         
                         Spacer()
-                        
                         Text("\(currentPage+1)")
                         Text("/")
                         Text("\(pages)")
                         Spacer()
-                        Button("다음 단계 >") {
-                            if (currentPage == guidelists.count-1) {
-                                currentPage = 0
-                                //return
-                            }else{
-                                currentPage += 1
+                        
+                        // 다음단계 및 ClearView로 가는 Button
+                        NavigationLink(destination: ClearView(), isActive: $isGuideComplete){
+                            // 현재 가이드의 끝일 때에만 ClearView로 이동하도록 isActive
+                            Button("다음 단계 >") {
+                                if(progressUp >= 0.95){
+                                    isGuideComplete = true
+                                }
+                                else{
+                                    progressUp += 1/Double(guidelists.count)
+                                    currentPage += 1
+                                }
                             }
                         }
-                        
-                        
                     }
                 }
                 NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
@@ -87,14 +121,14 @@ struct GuideView: View {
                 }.navigationBarTitle("가이드 제목",displayMode: .inline)
                     .toolbar{
                         Button(action: {
-                            //공유하기 기능 넣기
+                            shareButton()
                         }, label: {
                             Image(systemName: "square.and.arrow.up")
                         })
                         
                     }
             }
-        }
+        
         
     }
 }
