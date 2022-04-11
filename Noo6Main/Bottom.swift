@@ -6,6 +6,25 @@
 //
 
 import SwiftUI
+import AVKit
+
+var player: AVAudioPlayer?
+var voice = ["Cow-moo-sound"]
+
+func playSound(sound: String){
+    
+    guard let url = Bundle.main.url(forResource: sound, withExtension: ".mp3") else {
+        return
+    }
+
+    do{
+        player = try AVAudioPlayer(contentsOf: url)
+        player?.play()
+        
+    }catch let error {
+        print("재생 오류 \(error.localizedDescription)")
+    }
+}
 
 struct Bottom: View {
     private let pages = guidelists.count
@@ -46,12 +65,10 @@ struct Bottom: View {
                 Text("/")
                 Text("\(pages)")
                 Spacer()
-                ScrollViewReader{ proxy in
-                    Button("다음 단계 >") {withAnimation(.spring()){
-                        proxy.scrollTo(3,anchor: .top)
-                    }
+                Button("다음 단계 >"){
+                
                 }
-                }
+                
                 
         }
     }
