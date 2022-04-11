@@ -17,7 +17,6 @@ struct DataTestView: View {
                             .font(.largeTitle)
                         Text(grade.grade)
                             .font(.headline)
-                        
                     }
                 }
     }
