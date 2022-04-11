@@ -13,13 +13,11 @@ struct LongPressTestView: View {
     
     var body: some View {
         VStack {
-            ZStack {
+            
                 // LongPressCircle 사용예시
-                LongPressCircle(isLongPressed: $isLongPressed, width: 100, height: 100, opacity: 0.01)
+            LongPressCircle(isLongPressed: $isLongPressed, width: 80, height: 80, opacity: 0.5)
                 
                 // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
-                Text("'1초이상 눌러주세요' 애니메이션")
-            }
             Text(isLongPressed ? "다음버튼을 눌러주세요!" : "다음버튼 안내애니메이션 작동전...")
         }
     }
@@ -41,7 +39,7 @@ struct LongPressCircle: View {
     let opacity: Double // opacity 0 으로 설정시 터치작동 x (권장 opcaity = 0.01)
     
     var longPress: some Gesture {
-        LongPressGesture(minimumDuration: 0.5)
+        LongPressGesture(minimumDuration: 1)
             .updating($isDetectingLongPress) { currentState, gestureState, transaction in
                 gestureState = currentState
             }
@@ -52,9 +50,16 @@ struct LongPressCircle: View {
     
     var body: some View {
         Circle()
-            .frame(width: width, height: height)
+            .fill(self.isDetectingLongPress ?
+                  Color.gray:
+                    (self.isLongPressed ? Color.green : Color.blue))
+            .frame(width: 50, height: 50, alignment: .center)
             .gesture(longPress)
+            .padding(5.0)
+            .overlay(Circle().stroke(isLongPressed ? Color.green : Color.blue, lineWidth: 2))
             .opacity(opacity)
-    }
+        
+                     }
+
 }
 
