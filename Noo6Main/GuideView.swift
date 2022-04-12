@@ -32,7 +32,7 @@ struct GuideView: View {
     
     // progressUp: progressView 게이지 상태
     // isGuideComplete : 가이드 끝 단계인지 알려주는 변수
-    @State var progressUp : Double = 1/Double(guidelists.count)
+    @State var progressUp : Double = 1/Double(guidelist.count)
     @State var isGuideComplete : Bool = false
     
     var guideId : Int
@@ -103,7 +103,7 @@ struct GuideView: View {
                         // 현재 단계가 1 이상일 때만 이전 단계 작동
                         Button("< 이전 단계") {
                             if (currentPage > 0) {
-                                progressUp -= 1/Double(guidelists.count)
+                                progressUp -= 1/Double(guidelist[guideId].count)
                                 currentPage -= 1
                             }
                         }
@@ -160,15 +160,18 @@ struct GuideView_Previews: PreviewProvider {
         GuideView(guideId: 0)
     }
 }
-let guidelist = [guidelists, guidelists1, guidelists2, guidelists3, guidelists4]
 
-let guidelists = [
+// ---------------------- MemoGuide --------------------
+
+let guidelist = [memoList0, memoList1, memoList2, memoList3, memoList4]
+
+let memoList0 = [
     GuideList(id: 0,image: "MemoWriting1", explain: "홈 화면에 있는 메모앱을 터치하세요." ),
     GuideList(id: 1,image: "MemoWriting2", explain: "우측 하단의 작성버튼을 터치하세요." ),
     GuideList(id: 2,image: "MemoWriting3", explain: "메모의 제목을 적은 다음 메모할 내용을 작성하세요." ),
 ]
 
-let guidelists1 = [
+let memoList1 = [
     GuideList(id: 0,image: "MemoFolder1",explain: "메모앱 좌측 상단의 '<폴더'를 터치하세요" ),
     GuideList(id: 1,image: "MemoFolder2",explain: "좌측 하단의 아이콘을 터치하세요." ),
     GuideList(id: 2,image: "MemoFolder3",explain: "'새로운 폴더'를 터치하세요." ),
@@ -177,14 +180,14 @@ let guidelists1 = [
     GuideList(id: 5,image: "MemoFolder6",explain: "새로운 폴더가 완성되었습니다. 메모를 작성해보세요!" )
 ]
 
-let guidelists2 = [
+let memoList2 = [
     GuideList(id: 0,image: "MemoMove1",explain: "다른 폴더로 이동시킬 메모에서 우측 상단의 􀍡를 터치하세요." ),
     GuideList(id: 1,image: "MemoMove2",explain: "하단 메뉴의 '메모 이동'을 터치하세요." ),
     GuideList(id: 2,image: "MemoMove3",explain: "이동시킬 폴더를 터치하세요."),
     GuideList(id: 3,image: "MemoMove4",explain: "폴더를 확인하면 메모가 이동한 것을 확인할 수 있습니다.")
 ]
 
-let guidelists3 = [
+let memoList3 = [
     GuideList(id: 0,image: "MemoMakingWidget1",explain: "배경화면의 빈공간을 1초 이상 눌러주세요." ),
     GuideList(id: 1,image: "MemoMakingWidget2",explain: "좌측 상단의 +버튼을 터치하세요." ),
     GuideList(id: 2,image: "MemoMakingWidget3",explain: "메모앱 위젯을 터치해주세요." ),
@@ -192,7 +195,7 @@ let guidelists3 = [
     GuideList(id: 4,image: "MemoMakingWidget5",explain: "위젯을 원하는 위치로 옮긴 후 우측상단의 ‘완료’버튼을 터치하세요." )
 ]
 
-let guidelists4 = [
+let memoList4 = [
     GuideList(id: 0,image: "MemoAddPicture1",explain: "키보드 위에 있는 􀌞버튼을 터치해주세요" ),
     GuideList(id: 1,image: "MemoAddPicture2",explain: "'사진 또는 비디오 선택'을 터치하세요'." ),
     GuideList(id: 2,image: "MemoAddPicture3",explain: "원하는 사진 또는 비디오를 선택하세요." ),
@@ -200,7 +203,7 @@ let guidelists4 = [
     GuideList(id: 4,image: "MemoAddPicture5", explain: "다음과 같이 사진이 추가되었습니다." )
 ]
 
-//----------------------- GuideView ---------------------------
+//----------------------- SimulationViews ---------------------------
 
 let memoWriting: [String: AnyView] = ["MemoWriting1": AnyView(MemoWriting1()), "MemoWriting2": AnyView(MemoWriting2()), "MemoWriting3": AnyView(MemoWriting3())]
 
