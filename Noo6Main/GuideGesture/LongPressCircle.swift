@@ -16,7 +16,7 @@ struct LongPressTestView: View {
         VStack {
             
             // LongPressCircle 사용예시
-            LongPressCircle(isLongPressed: $isLongPressed, player: AVPlayer() width: 80, height: 80, opacity: 0.6)
+            LongPressCircle(isLongPressed: $isLongPressed, player: AVPlayer() ,width: 80, height: 80, opacity: 0.6)
             // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
         }
     }
