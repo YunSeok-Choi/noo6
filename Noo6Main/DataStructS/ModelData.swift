@@ -24,7 +24,7 @@ func load<T: Decodable> (_ filename: String) -> T {
     }catch{
         fatalError("Couldn't find  \(filename) from main bundle:\n\(error)")
     }
-                   
+    
     do{
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: data)

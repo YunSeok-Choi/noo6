@@ -27,11 +27,14 @@ func playSound(sound: String){
 }
 
 struct GuideView: View {
+    var guide : GuideStorage
+    
     @State private var currentPage: Int = 0
-    @State var now: Bool = true
+    @State var isSound: Bool = true
     
     // progressUp: progressView 게이지 상태
     // isGuideComplete : 가이드 끝 단계인지 알려주는 변수
+    
     @State var progressUp : Double = 1/Double(guidelists.count)
     @State var isGuideComplete : Bool = false
     
@@ -41,20 +44,21 @@ struct GuideView: View {
             VStack{
                 VStack{ //guideView
                     TabView(selection: $currentPage){
-                        ForEach(guidelists){i in
+                        
+                        ForEach(guide.gideInfo[0]){i in
                             VStack{
-                                Text(i.explain)
+                                Text(i.guideMessage[0])
                                     .font(.system(size: 30))
                                     .frame(width: 358, height: 120)
                                     .multilineTextAlignment(.center)
-                                Image(i.image)
+                                Image("\(i.guideView[0])")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: 480)
                                     .cornerRadius(24)
                                     .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
-                                    
                             }
+                            
                         }
                     }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
                     
@@ -63,10 +67,10 @@ struct GuideView: View {
                 VStack {    //BottomView
                     HStack{
                         Button(action: {
-                            if now { player?.stop() }
-                            now.toggle()
+                            if isSound { player?.stop() }
+                            isSound.toggle()
                         }){
-                            Image(systemName: now ? "speaker.wave.1.fill" : "speaker.slash.fill")
+                            Image(systemName: isSound ? "speaker.wave.1.fill" : "speaker.slash.fill")
                                 .clipShape(Circle())
                                 .padding(5)
                                 .frame(width: 50, height: 50)
@@ -76,13 +80,14 @@ struct GuideView: View {
                                 .imageScale(.large)
                                 .font(.title)
                         }.onAppear(){
-                            now ? playSound(sound: voice[0]) : player?.stop()
+                            isSound = guide.isSound
+                            isSound ? playSound(sound: voice[0]) : player?.stop()
                         }
                         
                         Spacer()
                         
                         Button(action: {
-                            now ? playSound(sound: voice[0]) : player?.stop()
+                            isSound ? playSound(sound: voice[0]) : player?.stop()
                         }){
                             Image(systemName: "repeat")
                                 .clipShape(Circle())
@@ -133,7 +138,8 @@ struct GuideView: View {
                 NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
                     //Text("맨 마지막에서 버튼")
                     
-                }.navigationBarTitle("가이드 제목",displayMode: .inline)
+                }.navigationBarTitle("\(guide.guideTitle)",displayMode: .inline)
+                // 데이터 받아옴
                     .toolbar{
                         Button(action: {
                             shareButton()
@@ -161,8 +167,9 @@ let guidelists = [
     GuideList(id: 3,image: "dog",explain: "explain4." )
     //똑같이 리스트로 추가
 ]
+
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView()
+        GuideView(guide: guidedata[0])
     }
 }
