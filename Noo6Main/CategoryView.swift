@@ -26,7 +26,7 @@ struct CategoryView : View {
                     List(listInfos, id: \.id) {
                         info in
                         // 버튼 누를 시 임시로 EmptyView로 이동 -> merge 후 가이드뷰로 이동하도록 수정 필요
-                        NavigationLink(destination: GuideView()){
+                        NavigationLink(destination: GuideView(guideId: info.id)){
                             ContentList(contentInfo: info)
                                 .listRowBackground(Color.white)
                                 .listRowSeparator(.hidden)
@@ -89,6 +89,6 @@ struct ContentList : View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(guideName: "아이폰 초보자 가이드", listInfos: categorydata[2].categoryInfo)
+        CategoryView(guideName: "아이폰 초보자 가이드", listInfos: categorydata[5].categoryInfo)
     }
 }
