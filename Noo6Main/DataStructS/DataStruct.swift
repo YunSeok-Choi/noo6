@@ -9,14 +9,18 @@ import Foundation
 
 
 
-
+struct HomeData : Codable, Identifiable {
+    let id : Int
+    let title : String
+    let isAllCleared : Bool
+}
 // HomeView와 CategoryView에서 사용할 데이터
 struct CategoryStorage : Codable, Identifiable {
     let id : Int
     let categoryTitle : String
     let categoryIcon : String
     let isAllCleared : Bool
-    let categoryInfo : [CategoryInfo]
+    let guideInfo : Array<CategoryInfo>
     let completedNumber : Int
     let allNumber : Int
 }

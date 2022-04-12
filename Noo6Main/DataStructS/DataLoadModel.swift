@@ -25,68 +25,6 @@ class GradeStore : ObservableObject {
     
 }
 
-var testData : [Test] = loadJson("testData.json")
-
-struct Test : Codable, Identifiable {
-    let id : Int
-    let age : [String]
-}
-
-struct nameData :  Codable {
-    let name : String
-    let nickname : String
-}
-
-class TestStore : ObservableObject {
-    @Published var tests : [Test]
-    init (tests : [Test] = []) {
-        self.tests = tests
-    }
-}
-
-let JSON = """
-[
-    {
-        "id" : "0",
-        "categoryTitle" : "캘린더"
-        "categoryIcon" : "image1",
-        "isAllCleared" : "false",
-        "categoryInfo" : [
-            {
-                "id" : "0",
-                "guideName" : "일정 이동 방법",
-                "isComplete" : "false"
-            },{
-                "id" : "1",
-                "guideName" : "일정 추가",
-                "isComplete" : "false"
-            },{
-                "id" : "2",
-                "guideName" : "일정 알림 설정"
-                "isComplete" : "false"
-            },{
-                "id" : "3",
-                "guideName" : "일정 반복 설정",
-                "isComplete" : "false"
-            }
-        ],
-        "completedNumber" : "0",
-        "allNumber" : "4"
-    }
-]
-"""
-// 데이터 불러오기 코드 UIKit?
-let sodeul = try? JSONDecoder().decode([CategoryStorage].self, from: JSON.data(using: .utf8)!)
-
-class Category : ObservableObject {
-    
-    @Published var categories : [CategoryStorage] = MockParser.load(type: [CategoryStorage].self, fileName: "CategoryData") ?? []
-    
-    init (categories: [CategoryStorage] = []) {
-        print(self.categories)
-    }
-    
-}
 
 func loadJson<T: Decodable>(_ filename: String) -> T {
     let data: Data

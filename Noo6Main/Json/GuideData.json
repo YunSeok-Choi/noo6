@@ -1,38 +1,38 @@
 [
-    "id" : 0,
-    "guideTitle" : "일정 타이틀",
-    "isSound" : "true",
-    "gideInfo" : [
+    id : 0,
+    guideTitle : "일정 타이틀",
+    isSound : true,
+    gideInfo : [
         {
-            "id" : 0,
-            "guideImage" : ["AnyView(MemoWriting1())","AnyView(MemoWriting2())","AnyView(MemoWriting3())"],
-            "guideMessage" : ["Message1","Message2"],
-            "totalPage" : 4,
-            "voice" : ["moo-sound-moo","moo-sound-moo"]
+            id : 0,
+            guideImage : ["AnyView(MemoWriting1())","AnyView(MemoWriting2())","AnyView(MemoWriting3())"],
+            guideMessage : ["Message1","Message2"],
+            totalPage : 4,
+            voice : ["moo-sound-moo","moo-sound-moo"]
         },
         {
             
-            "id" : 1,
-            "guideImage" : ["Test","Image1"],
-            "guideMessage" : ["Message1","Message2"],
-            "totalPage" : 4,
-            "voice" : ["moo-sound-moo","moo-sound-moo"]
+            id : 1,
+            guideImage : ["Test","Image1"],
+            guideMessage : ["Message1","Message2"],
+            totalPage : 4,
+            voice : ["moo-sound-moo","moo-sound-moo"]
 
         },
         {
-            "id" : 2,
-            "guideImage" : ["Image1","Image2"],
-            "guideMessage" : ["Message1","Message2"],
-            "totalPage" : 4,
-            "voice" : ["moo-sound-moo","moo-sound-moo"]
+            id : 2,
+            guideImage : ["Image1","Image2"],
+            guideMessage : ["Message1","Message2"],
+            totalPage : 4,
+            voice : ["moo-sound-moo","moo-sound-moo"]
 
         },
         {
-            "id": 3,
-            "guideImage" : ["Image1","Image2"],
-            "guideMessage" : ["Message1","Message2"],
-            "totalPage" : 4,
-            "voice" : ["moo-sound-moo","moo-sound-moo"]
+            id : 3,
+            guideImage : ["Image1","Image2"],
+            guideMessage : ["Message1","Message2"],
+            totalPage : 4,
+            voice : ["moo-sound-moo","moo-sound-moo"]
 
         }
     ]
