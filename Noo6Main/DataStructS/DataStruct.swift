@@ -19,17 +19,17 @@ struct HomeData : Codable, Identifiable {
 struct CategoryStorage : Codable, Identifiable {
     let id : Int
     let categoryTitle : String
+    let categorySubTitle : String
     let categoryIcon : String
     let isAllCleared : Bool
-    let guideInfo : Array<CategoryInfo>
+    let categoryInfo : Array<CategoryInfo>
     let completedNumber : Int
     let allNumber : Int
-
-    struct CategoryInfo : Codable, Identifiable {
-        let id : Int
-        let guideName : String
-        let isComplete : Bool
-    }
+}
+struct CategoryInfo : Codable, Identifiable {
+    let id : Int
+    let guideName : String
+    let isComplete : Bool
 }
 
 //GuideView에서 사용할 데이터
