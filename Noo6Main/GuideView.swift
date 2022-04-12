@@ -45,7 +45,7 @@ struct GuideView: View {
                 VStack{ //guideView
                     TabView(selection: $currentPage){
                         
-                        ForEach(guide.gideInfo[0]){i in
+                        ForEach(guide.gideInfo){i in
                             VStack{
                                 Text(i.guideMessage[0])
                                     .font(.system(size: 30))
