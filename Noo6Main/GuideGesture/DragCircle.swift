@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct DragTestView: View {
     @State private var isMovedOnPoint = false
     
     var body: some View {
         VStack {
-            DragCircle(isMovedOnPoint: $isMovedOnPoint, xPoint: 100.0, yPoint: 100.0, startOpacity: 0.8, endOpacity: 0.4)
+            DragCircle(isMovedOnPoint: $isMovedOnPoint, player: AVPlayer(), xPoint: 100.0, yPoint: 100.0, startOpacity: 0.8, endOpacity: 0.4)
             Text(isMovedOnPoint ? "드래그 성공!" : "올바른 위치로 드래그해주세요.")
         }
     }
@@ -31,7 +32,7 @@ struct DragCircle: View {
     @Binding var isMovedOnPoint: Bool   // 상위 View에서 사용할 Bool타입 변수를 바인딩 시켜 사용
     @State private var animationAmount: CGFloat = 1
     
-    
+    let player: AVPlayer?
     var xPoint: CGFloat         // 드래그 시킬 offset xPoint (왼쪽 - / 오른쪽 +)
     var yPoint: CGFloat         // 드래그 시킬 offset yPoint (위 - / 아래 +)
     var gap: CGFloat = 30.0     // x, yPoint와의 오차범위 / 기본설정 권장 (변경가능)
@@ -51,6 +52,9 @@ struct DragCircle: View {
                 
                 if offset.width > xPoint - gap, offset.width < xPoint + gap, offset.height > yPoint - gap, offset.height < yPoint + gap{
                     isMovedOnPoint = true
+                    if let player = player {
+                        player.play()
+                    }
                 } else {
                     isMovedOnPoint = false
                 }
