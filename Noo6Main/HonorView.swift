@@ -14,7 +14,7 @@ var honorCam = 0
 var honorWidget = 0
 var honorCalender = 0
 var honorMemo = 0
-
+//CategoryData의 completedNumber를 이용하면 될듯 함.
 //****************** 업적뷰 구현 *******************//
 struct HonorView: View {
     
