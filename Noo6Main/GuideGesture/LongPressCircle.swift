@@ -38,7 +38,7 @@ struct LongPressCircle: View {
     let opacity: Double // opacity 0 으로 설정시 터치작동 x (권장 opcaity = 0.01)
     
     var longPress: some Gesture {
-        LongPressGesture(minimumDuration: 2)
+        LongPressGesture(minimumDuration: 1)
             .updating($isDetectingLongPress) { currentState, gestureState, transaction in
                 gestureState = currentState
             }
