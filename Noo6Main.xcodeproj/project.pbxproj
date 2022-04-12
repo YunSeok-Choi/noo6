@@ -17,6 +17,7 @@
 		55DE0FD328055C3100BF10BD /* MemoMakingWidget in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FD028055C3100BF10BD /* MemoMakingWidget */; };
 		55DE0FD428055C3100BF10BD /* MemoMove in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FD128055C3100BF10BD /* MemoMove */; };
 		55DE0FD528055C3100BF10BD /* MemoAddPicture in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FD228055C3100BF10BD /* MemoAddPicture */; };
+		55DE0FD828055CC700BF10BD /* TouchCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0FD728055CC700BF10BD /* TouchCircle.swift */; };
 		79373AFF28006D7400CDAD04 /* ClearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373AFE28006D7400CDAD04 /* ClearView.swift */; };
 		7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953082E27FD7E78000D40DB /* Noo6MainApp.swift */; };
 		7953083327FD7E79000D40DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7953083227FD7E79000D40DB /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		55DE0FD028055C3100BF10BD /* MemoMakingWidget */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoMakingWidget; sourceTree = "<group>"; };
 		55DE0FD128055C3100BF10BD /* MemoMove */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoMove; sourceTree = "<group>"; };
 		55DE0FD228055C3100BF10BD /* MemoAddPicture */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoAddPicture; sourceTree = "<group>"; };
+		55DE0FD728055CC700BF10BD /* TouchCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchCircle.swift; sourceTree = "<group>"; };
 		79373AFE28006D7400CDAD04 /* ClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearView.swift; sourceTree = "<group>"; };
 		7953082B27FD7E78000D40DB /* Noo6Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noo6Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7953082E27FD7E78000D40DB /* Noo6MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noo6MainApp.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				552605DB2801B2FC0028C141 /* LongPressCircle.swift */,
 				552605E128020FE30028C141 /* DragCircle.swift */,
+				55DE0FD728055CC700BF10BD /* TouchCircle.swift */,
 			);
 			path = GuideGesture;
 			sourceTree = "<group>";
@@ -134,9 +137,9 @@
 				79A06FEC28046E4C00EF1A34 /* DataStructS */,
 				79A06FEB28046DD000EF1A34 /* Json */,
 				552605E3280210860028C141 /* GuideGesture */,
+				55DE0FD628055C9500BF10BD /* Videos */,
 				798DC11A2802BD560064168B /* Cow-moo-sound.mp3 */,
 				7953083227FD7E79000D40DB /* Assets.xcassets */,
-				55DE0FD628055C9500BF10BD /* Videos */,
 				7953083427FD7E79000D40DB /* Preview Content */,
 			);
 			path = Noo6Main;
@@ -253,6 +256,7 @@
 			files = (
 				D4B55B2C28042318009BD1B4 /* DataTestView.swift in Sources */,
 				552605E228020FE30028C141 /* DragCircle.swift in Sources */,
+				55DE0FD828055CC700BF10BD /* TouchCircle.swift in Sources */,
 				D42F483827FED4C9009FECA0 /* CategoryView.swift in Sources */,
 				79373AFF28006D7400CDAD04 /* ClearView.swift in Sources */,
 				D4B55B2A280420B7009BD1B4 /* DataLoadModel.swift in Sources */,
