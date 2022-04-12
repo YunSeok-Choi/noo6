@@ -36,7 +36,7 @@ struct GuideView: View {
     @State var isGuideComplete : Bool = false
     
     private let pages = guidelists.count
-    var guideId : Int
+    
     var body: some View {
             VStack{
                 VStack{ //guideView
@@ -163,6 +163,6 @@ let guidelists = [
 ]
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView(guideId: 5)
+        GuideView()
     }
 }
