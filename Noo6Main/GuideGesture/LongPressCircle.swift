@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 // 제스쳐 사용 예시 View
 struct LongPressTestView: View {
@@ -15,7 +16,7 @@ struct LongPressTestView: View {
         VStack {
             
             // LongPressCircle 사용예시
-            LongPressCircle(isLongPressed: $isLongPressed, width: 80, height: 80, opacity: 0.6)
+            LongPressCircle(isLongPressed: $isLongPressed, player: AVPlayer() width: 80, height: 80, opacity: 0.6)
             // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
         }
     }
@@ -33,6 +34,7 @@ struct LongPressCircle: View {
     @Binding var isLongPressed: Bool
     @State private var animationAmount: CGFloat = 1
     
+    let player: AVPlayer?
     let width: CGFloat
     let height: CGFloat
     let opacity: Double // opacity 0 으로 설정시 터치작동 x (권장 opcaity = 0.01)
@@ -44,6 +46,9 @@ struct LongPressCircle: View {
             }
             .onEnded { value in
                 isLongPressed = true
+                if let player = player {
+                    player.play()
+                }
             }
     }
     
