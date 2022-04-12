@@ -15,19 +15,17 @@ func shareButton() {
 }
 
 struct ClearView: View {
+    var clear: ClearStorage
+    
     var body: some View {
         NavigationView{
             VStack{
                 VStack{
-                    Text("사진 편집 방법을 배웠습니다.")
-                        .font(.title)
-                    Text("이제 멋진 프로필 사진을")
-                        .font(.title)
-                    Text("만드실 수 있습니다!")
+                    Text("\(clear.clearInfo[0].clearMessage)")
                         .font(.title)
                 }
                 
-                Image("어르신짤1")
+                Image("\(clear.clearInfo[0].clearImage)")
                     .padding()
                 
                 Button(action: {
@@ -69,6 +67,6 @@ struct ClearView: View {
 
 struct ClearView_Previews: PreviewProvider {
     static var previews: some View {
-        ClearView()
+        ClearView(clear: cleardata[0] )
     }
 }
