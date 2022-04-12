@@ -89,6 +89,18 @@
 			path = GuideGesture;
 			sourceTree = "<group>";
 		};
+		55DE0FD628055C9500BF10BD /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				55DE0FCC28055C2100BF10BD /* MemoWriting */,
+				55DE0FCE28055C2A00BF10BD /* MemoFolder */,
+				55DE0FD228055C3100BF10BD /* MemoAddPicture */,
+				55DE0FD028055C3100BF10BD /* MemoMakingWidget */,
+				55DE0FD128055C3100BF10BD /* MemoMove */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		7953082227FD7E78000D40DB = {
 			isa = PBXGroup;
 			children = (
@@ -121,14 +133,10 @@
 				D4B55B2B28042318009BD1B4 /* DataTestView.swift */,
 				79A06FEC28046E4C00EF1A34 /* DataStructS */,
 				79A06FEB28046DD000EF1A34 /* Json */,
-				798DC11A2802BD560064168B /* Cow-moo-sound.mp3 */,
 				552605E3280210860028C141 /* GuideGesture */,
+				798DC11A2802BD560064168B /* Cow-moo-sound.mp3 */,
 				7953083227FD7E79000D40DB /* Assets.xcassets */,
-				55DE0FCC28055C2100BF10BD /* MemoWriting */,
-				55DE0FCE28055C2A00BF10BD /* MemoFolder */,
-				55DE0FD228055C3100BF10BD /* MemoAddPicture */,
-				55DE0FD028055C3100BF10BD /* MemoMakingWidget */,
-				55DE0FD128055C3100BF10BD /* MemoMove */,
+				55DE0FD628055C9500BF10BD /* Videos */,
 				7953083427FD7E79000D40DB /* Preview Content */,
 			);
 			path = Noo6Main;
