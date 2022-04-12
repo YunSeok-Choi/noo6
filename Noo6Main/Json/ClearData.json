@@ -1,26 +1,26 @@
 [
     {
-        id : 0,
-        clearInfo : [
+        "id" : 0,
+        "clearInfo" : [
             {
-                id : 0,
-                clearImage : "Test",
-                clearMessage : "축하합니다! 당신은 이제 일정 이동의 고수!"
+                "id" : 0,
+                "clearImage" : "어르신짤1",
+                "clearMessage" : "축하합니다! 당신은 이제 일정 이동의 고수!"
             },
             {
-                id : 1,
-                clearImage: "image2",
-                clearMessage : "축하합니다! 당신은 일정 추가의 고수"
+                "id": 1,
+                "clearImage": "image2",
+                "clearMessage": "축하합니다! 당신은 일정 추가의 고수"
             },
             {
-                id : 2,
-                clearImage : "image3",
-                clearMessage : "축하합니다! 당신은 일정 알림의 고수!!"
+                "id": 2,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 당신은 일정 알림의 고수!!"
             },
             {
-                id : 3,
-                clearImage : "image1",
-                clearMessage : "축하링"
+                "id" : 3,
+                "clearImage" : "image1",
+                "clearMessage" : "축하링"
             }
         ]
     
