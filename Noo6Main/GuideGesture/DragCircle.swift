@@ -29,6 +29,8 @@ struct DragCircle: View {
     @State private var isDragging = false
     @State private var offset: CGSize = .zero
     @Binding var isMovedOnPoint: Bool   // 상위 View에서 사용할 Bool타입 변수를 바인딩 시켜 사용
+    @State private var animationAmount: CGFloat = 1
+    
     
     var xPoint: CGFloat         // 드래그 시킬 offset xPoint (왼쪽 - / 오른쪽 +)
     var yPoint: CGFloat         // 드래그 시킬 offset yPoint (위 - / 아래 +)
@@ -60,12 +62,29 @@ struct DragCircle: View {
         VStack {
             ZStack {
                 Circle()
-                    .frame(width: 50, height: 50, alignment: .center)
+                    .fill(self.isMovedOnPoint ? Color.gray : Color.blue)
+                    .frame(width: 50, height: 50)
                     .offset(x: offset.width, y: offset.height)
                     .opacity(startOpacity)
                     .gesture(drag)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.blue, lineWidth: 2)
+                            .scaleEffect(animationAmount)
+                        //animationAmount가 1이면 불투명이 1이고, 2이면 불투명도가 0이다
+                            .opacity(Double(2 - animationAmount))
+                            .animation(Animation.easeInOut(duration: 1.2)
+                                .repeatForever(autoreverses: false))
+                        //제스쳐를 따라하고나서는 애니메이션이 사라짐
+                            .opacity(self.isMovedOnPoint ? 0 : 1)
+                    )
+                    .onAppear {
+                        self.animationAmount = 2
+
+                    }
                 Circle()
-                    .frame(width: 50, height: 50, alignment: .center)
+                    .fill(self.isMovedOnPoint ? Color.gray : Color.blue)
+                    .frame(width: 50, height: 50)
                     .opacity(endOpacity)
                     .offset(x: xPoint, y: yPoint)
             }
