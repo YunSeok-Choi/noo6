@@ -15,7 +15,6 @@ var honorWidget = 0
 var honorCalender = 0
 var honorMemo = 0
 
-
 //****************** 업적뷰 구현 *******************//
 struct HonorView: View {
     
@@ -115,4 +114,3 @@ struct HonorView_Previews: PreviewProvider {
         HonorView()
     }
 }
-
