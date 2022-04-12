@@ -12,11 +12,6 @@
 		552605C028005F630028C141 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605BF28005F630028C141 /* HomeView.swift */; };
 		552605DC2801B2FC0028C141 /* LongPressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605DB2801B2FC0028C141 /* LongPressCircle.swift */; };
 		552605E228020FE30028C141 /* DragCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605E128020FE30028C141 /* DragCircle.swift */; };
-		55DE0FCD28055C2100BF10BD /* MemoWriting in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FCC28055C2100BF10BD /* MemoWriting */; };
-		55DE0FCF28055C2A00BF10BD /* MemoFolder in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FCE28055C2A00BF10BD /* MemoFolder */; };
-		55DE0FD328055C3100BF10BD /* MemoMakingWidget in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FD028055C3100BF10BD /* MemoMakingWidget */; };
-		55DE0FD428055C3100BF10BD /* MemoMove in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FD128055C3100BF10BD /* MemoMove */; };
-		55DE0FD528055C3100BF10BD /* MemoAddPicture in Resources */ = {isa = PBXBuildFile; fileRef = 55DE0FD228055C3100BF10BD /* MemoAddPicture */; };
 		55DE0FD828055CC700BF10BD /* TouchCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0FD728055CC700BF10BD /* TouchCircle.swift */; };
 		55DE0FDC28055E6E00BF10BD /* MemoWriting3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0FD928055E6E00BF10BD /* MemoWriting3.swift */; };
 		55DE0FDD28055E6E00BF10BD /* MemoWriting1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0FDA28055E6E00BF10BD /* MemoWriting1.swift */; };
@@ -42,6 +37,29 @@
 		55DE100A28055EF400BF10BD /* MemoAddPicture3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE100528055EF300BF10BD /* MemoAddPicture3.swift */; };
 		55DE100B28055EF400BF10BD /* MemoAddPicture2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE100628055EF400BF10BD /* MemoAddPicture2.swift */; };
 		55DE100C28055EF400BF10BD /* MemoAddPicture5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE100728055EF400BF10BD /* MemoAddPicture5.swift */; };
+		55DE101D2805716700BF10BD /* MemoWriting2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE101A2805716700BF10BD /* MemoWriting2.mov */; };
+		55DE101F2805716700BF10BD /* MemoWriting3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE101C2805716700BF10BD /* MemoWriting3.mov */; };
+		55DE1026280571E700BF10BD /* MemoFolder5.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE1020280571E700BF10BD /* MemoFolder5.mov */; };
+		55DE1027280571E700BF10BD /* MemoFolder6.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE1021280571E700BF10BD /* MemoFolder6.mov */; };
+		55DE1028280571E700BF10BD /* MemoFolder2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE1022280571E700BF10BD /* MemoFolder2.mov */; };
+		55DE1029280571E700BF10BD /* MemoFolder4.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE1023280571E700BF10BD /* MemoFolder4.mov */; };
+		55DE102A280571E700BF10BD /* MemoFolder3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE1024280571E700BF10BD /* MemoFolder3.mov */; };
+		55DE102B280571E700BF10BD /* MemoFolder1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE1025280571E700BF10BD /* MemoFolder1.mov */; };
+		55DE10302805720600BF10BD /* MemoMove3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE102C2805720600BF10BD /* MemoMove3.mov */; };
+		55DE10312805720600BF10BD /* MemoMove2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE102D2805720600BF10BD /* MemoMove2.mov */; };
+		55DE10322805720600BF10BD /* MemoMove4.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE102E2805720600BF10BD /* MemoMove4.mov */; };
+		55DE10332805720600BF10BD /* MemoMove1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE102F2805720600BF10BD /* MemoMove1.mov */; };
+		55DE103A2805721B00BF10BD /* MemoMakingWidget5.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10342805721A00BF10BD /* MemoMakingWidget5.mov */; };
+		55DE103C2805721B00BF10BD /* MemoMakingWidget4.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10362805721A00BF10BD /* MemoMakingWidget4.mov */; };
+		55DE103D2805721B00BF10BD /* MemoMakingWidget1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10372805721B00BF10BD /* MemoMakingWidget1.mov */; };
+		55DE103E2805721B00BF10BD /* MemoMakingWidget3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10382805721B00BF10BD /* MemoMakingWidget3.mov */; };
+		55DE103F2805721B00BF10BD /* MemoMakingWidget2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10392805721B00BF10BD /* MemoMakingWidget2.mov */; };
+		55DE10452805722D00BF10BD /* MemoAddPicture3.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10402805722D00BF10BD /* MemoAddPicture3.mov */; };
+		55DE10462805722D00BF10BD /* MemoAddPicture5.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10412805722D00BF10BD /* MemoAddPicture5.mov */; };
+		55DE10472805722D00BF10BD /* MemoAddPicture1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10422805722D00BF10BD /* MemoAddPicture1.mov */; };
+		55DE10482805722D00BF10BD /* MemoAddPicture4.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10432805722D00BF10BD /* MemoAddPicture4.mov */; };
+		55DE10492805722D00BF10BD /* MemoAddPicture2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10442805722D00BF10BD /* MemoAddPicture2.mov */; };
+		55DE10532805CFF700BF10BD /* MemoWriting1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10522805CFF700BF10BD /* MemoWriting1.mov */; };
 		79373AFF28006D7400CDAD04 /* ClearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373AFE28006D7400CDAD04 /* ClearView.swift */; };
 		7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953082E27FD7E78000D40DB /* Noo6MainApp.swift */; };
 		7953083327FD7E79000D40DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7953083227FD7E79000D40DB /* Assets.xcassets */; };
@@ -68,11 +86,6 @@
 		552605BF28005F630028C141 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		552605DB2801B2FC0028C141 /* LongPressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressCircle.swift; sourceTree = "<group>"; };
 		552605E128020FE30028C141 /* DragCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCircle.swift; sourceTree = "<group>"; };
-		55DE0FCC28055C2100BF10BD /* MemoWriting */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoWriting; sourceTree = "<group>"; };
-		55DE0FCE28055C2A00BF10BD /* MemoFolder */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoFolder; sourceTree = "<group>"; };
-		55DE0FD028055C3100BF10BD /* MemoMakingWidget */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoMakingWidget; sourceTree = "<group>"; };
-		55DE0FD128055C3100BF10BD /* MemoMove */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoMove; sourceTree = "<group>"; };
-		55DE0FD228055C3100BF10BD /* MemoAddPicture */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MemoAddPicture; sourceTree = "<group>"; };
 		55DE0FD728055CC700BF10BD /* TouchCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchCircle.swift; sourceTree = "<group>"; };
 		55DE0FD928055E6E00BF10BD /* MemoWriting3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoWriting3.swift; sourceTree = "<group>"; };
 		55DE0FDA28055E6E00BF10BD /* MemoWriting1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoWriting1.swift; sourceTree = "<group>"; };
@@ -98,6 +111,29 @@
 		55DE100528055EF300BF10BD /* MemoAddPicture3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoAddPicture3.swift; sourceTree = "<group>"; };
 		55DE100628055EF400BF10BD /* MemoAddPicture2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoAddPicture2.swift; sourceTree = "<group>"; };
 		55DE100728055EF400BF10BD /* MemoAddPicture5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoAddPicture5.swift; sourceTree = "<group>"; };
+		55DE101A2805716700BF10BD /* MemoWriting2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoWriting2.mov; sourceTree = "<group>"; };
+		55DE101C2805716700BF10BD /* MemoWriting3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoWriting3.mov; sourceTree = "<group>"; };
+		55DE1020280571E700BF10BD /* MemoFolder5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoFolder5.mov; sourceTree = "<group>"; };
+		55DE1021280571E700BF10BD /* MemoFolder6.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoFolder6.mov; sourceTree = "<group>"; };
+		55DE1022280571E700BF10BD /* MemoFolder2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoFolder2.mov; sourceTree = "<group>"; };
+		55DE1023280571E700BF10BD /* MemoFolder4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoFolder4.mov; sourceTree = "<group>"; };
+		55DE1024280571E700BF10BD /* MemoFolder3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoFolder3.mov; sourceTree = "<group>"; };
+		55DE1025280571E700BF10BD /* MemoFolder1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoFolder1.mov; sourceTree = "<group>"; };
+		55DE102C2805720600BF10BD /* MemoMove3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMove3.mov; sourceTree = "<group>"; };
+		55DE102D2805720600BF10BD /* MemoMove2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMove2.mov; sourceTree = "<group>"; };
+		55DE102E2805720600BF10BD /* MemoMove4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMove4.mov; sourceTree = "<group>"; };
+		55DE102F2805720600BF10BD /* MemoMove1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMove1.mov; sourceTree = "<group>"; };
+		55DE10342805721A00BF10BD /* MemoMakingWidget5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMakingWidget5.mov; sourceTree = "<group>"; };
+		55DE10362805721A00BF10BD /* MemoMakingWidget4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMakingWidget4.mov; sourceTree = "<group>"; };
+		55DE10372805721B00BF10BD /* MemoMakingWidget1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMakingWidget1.mov; sourceTree = "<group>"; };
+		55DE10382805721B00BF10BD /* MemoMakingWidget3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMakingWidget3.mov; sourceTree = "<group>"; };
+		55DE10392805721B00BF10BD /* MemoMakingWidget2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoMakingWidget2.mov; sourceTree = "<group>"; };
+		55DE10402805722D00BF10BD /* MemoAddPicture3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoAddPicture3.mov; sourceTree = "<group>"; };
+		55DE10412805722D00BF10BD /* MemoAddPicture5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoAddPicture5.mov; sourceTree = "<group>"; };
+		55DE10422805722D00BF10BD /* MemoAddPicture1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoAddPicture1.mov; sourceTree = "<group>"; };
+		55DE10432805722D00BF10BD /* MemoAddPicture4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoAddPicture4.mov; sourceTree = "<group>"; };
+		55DE10442805722D00BF10BD /* MemoAddPicture2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoAddPicture2.mov; sourceTree = "<group>"; };
+		55DE10522805CFF700BF10BD /* MemoWriting1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoWriting1.mov; sourceTree = "<group>"; };
 		79373AFE28006D7400CDAD04 /* ClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearView.swift; sourceTree = "<group>"; };
 		7953082B27FD7E78000D40DB /* Noo6Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noo6Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7953082E27FD7E78000D40DB /* Noo6MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noo6MainApp.swift; sourceTree = "<group>"; };
@@ -140,19 +176,7 @@
 			path = GuideGesture;
 			sourceTree = "<group>";
 		};
-		55DE0FD628055C9500BF10BD /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-				55DE0FCC28055C2100BF10BD /* MemoWriting */,
-				55DE0FCE28055C2A00BF10BD /* MemoFolder */,
-				55DE0FD228055C3100BF10BD /* MemoAddPicture */,
-				55DE0FD028055C3100BF10BD /* MemoMakingWidget */,
-				55DE0FD128055C3100BF10BD /* MemoMove */,
-			);
-			path = Videos;
-			sourceTree = "<group>";
-		};
-		55DE0FE128055E9F00BF10BD /* MemoWriting */ = {
+		55DE104A2805CF4D00BF10BD /* MemoWriting */ = {
 			isa = PBXGroup;
 			children = (
 				55DE0FDA28055E6E00BF10BD /* MemoWriting1.swift */,
@@ -162,7 +186,7 @@
 			path = MemoWriting;
 			sourceTree = "<group>";
 		};
-		55DE0FEE28055EB400BF10BD /* MemoFolder */ = {
+		55DE104B2805CF5600BF10BD /* MemoFolder */ = {
 			isa = PBXGroup;
 			children = (
 				55DE0FE428055EAF00BF10BD /* MemoFolder1.swift */,
@@ -175,7 +199,7 @@
 			path = MemoFolder;
 			sourceTree = "<group>";
 		};
-		55DE0FF728055EC800BF10BD /* MemoMove */ = {
+		55DE104C2805CF5E00BF10BD /* MemoMove */ = {
 			isa = PBXGroup;
 			children = (
 				55DE0FF028055EC500BF10BD /* MemoMove1.swift */,
@@ -186,7 +210,7 @@
 			path = MemoMove;
 			sourceTree = "<group>";
 		};
-		55DE100228055EE000BF10BD /* MemoMakingWidget */ = {
+		55DE104D2805CF6600BF10BD /* MemoMakingWidget */ = {
 			isa = PBXGroup;
 			children = (
 				55DE0FFC28055ED800BF10BD /* MemoMakingWidget1.swift */,
@@ -198,7 +222,7 @@
 			path = MemoMakingWidget;
 			sourceTree = "<group>";
 		};
-		55DE100D28055EF600BF10BD /* MemoAddPicture */ = {
+		55DE104E2805CF7100BF10BD /* MemoAddPicture */ = {
 			isa = PBXGroup;
 			children = (
 				55DE100328055EF300BF10BD /* MemoAddPicture1.swift */,
@@ -210,24 +234,102 @@
 			path = MemoAddPicture;
 			sourceTree = "<group>";
 		};
-		55DE100E28055F0400BF10BD /* Memo */ = {
+		55DE104F2805CF8A00BF10BD /* GuideSimulation */ = {
 			isa = PBXGroup;
 			children = (
-				55DE0FE128055E9F00BF10BD /* MemoWriting */,
-				55DE0FEE28055EB400BF10BD /* MemoFolder */,
-				55DE0FF728055EC800BF10BD /* MemoMove */,
-				55DE100228055EE000BF10BD /* MemoMakingWidget */,
-				55DE100D28055EF600BF10BD /* MemoAddPicture */,
+				55DE105A2805D0EF00BF10BD /* Memo */,
 			);
-			path = Memo;
+			path = GuideSimulation;
 			sourceTree = "<group>";
 		};
-		55DE100F28055F0F00BF10BD /* Guide */ = {
+		55DE10502805CF9D00BF10BD /* MemoWritingVideo */ = {
 			isa = PBXGroup;
 			children = (
-				55DE100E28055F0400BF10BD /* Memo */,
+				55DE10522805CFF700BF10BD /* MemoWriting1.mov */,
+				55DE101A2805716700BF10BD /* MemoWriting2.mov */,
+				55DE101C2805716700BF10BD /* MemoWriting3.mov */,
 			);
-			path = Guide;
+			path = MemoWritingVideo;
+			sourceTree = "<group>";
+		};
+		55DE10542805D09400BF10BD /* MemoFolderVideo */ = {
+			isa = PBXGroup;
+			children = (
+				55DE1025280571E700BF10BD /* MemoFolder1.mov */,
+				55DE1022280571E700BF10BD /* MemoFolder2.mov */,
+				55DE1024280571E700BF10BD /* MemoFolder3.mov */,
+				55DE1023280571E700BF10BD /* MemoFolder4.mov */,
+				55DE1020280571E700BF10BD /* MemoFolder5.mov */,
+				55DE1021280571E700BF10BD /* MemoFolder6.mov */,
+			);
+			path = MemoFolderVideo;
+			sourceTree = "<group>";
+		};
+		55DE10552805D0A000BF10BD /* MemoMoveVideo */ = {
+			isa = PBXGroup;
+			children = (
+				55DE102F2805720600BF10BD /* MemoMove1.mov */,
+				55DE102D2805720600BF10BD /* MemoMove2.mov */,
+				55DE102C2805720600BF10BD /* MemoMove3.mov */,
+				55DE102E2805720600BF10BD /* MemoMove4.mov */,
+			);
+			path = MemoMoveVideo;
+			sourceTree = "<group>";
+		};
+		55DE10562805D0AA00BF10BD /* MemoMakingWidgetVideo */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10372805721B00BF10BD /* MemoMakingWidget1.mov */,
+				55DE10392805721B00BF10BD /* MemoMakingWidget2.mov */,
+				55DE10382805721B00BF10BD /* MemoMakingWidget3.mov */,
+				55DE10362805721A00BF10BD /* MemoMakingWidget4.mov */,
+				55DE10342805721A00BF10BD /* MemoMakingWidget5.mov */,
+			);
+			path = MemoMakingWidgetVideo;
+			sourceTree = "<group>";
+		};
+		55DE10572805D0B900BF10BD /* MemoAddPictureVideo */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10422805722D00BF10BD /* MemoAddPicture1.mov */,
+				55DE10442805722D00BF10BD /* MemoAddPicture2.mov */,
+				55DE10402805722D00BF10BD /* MemoAddPicture3.mov */,
+				55DE10432805722D00BF10BD /* MemoAddPicture4.mov */,
+				55DE10412805722D00BF10BD /* MemoAddPicture5.mov */,
+			);
+			path = MemoAddPictureVideo;
+			sourceTree = "<group>";
+		};
+		55DE10582805D0CD00BF10BD /* MemoVideo */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10502805CF9D00BF10BD /* MemoWritingVideo */,
+				55DE10542805D09400BF10BD /* MemoFolderVideo */,
+				55DE10552805D0A000BF10BD /* MemoMoveVideo */,
+				55DE10562805D0AA00BF10BD /* MemoMakingWidgetVideo */,
+				55DE10572805D0B900BF10BD /* MemoAddPictureVideo */,
+			);
+			path = MemoVideo;
+			sourceTree = "<group>";
+		};
+		55DE10592805D0D900BF10BD /* GuideVideo */ = {
+			isa = PBXGroup;
+			children = (
+				55DE10582805D0CD00BF10BD /* MemoVideo */,
+			);
+			path = GuideVideo;
+			sourceTree = "<group>";
+		};
+		55DE105A2805D0EF00BF10BD /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				55DE104A2805CF4D00BF10BD /* MemoWriting */,
+				55DE104B2805CF5600BF10BD /* MemoFolder */,
+				55DE104C2805CF5E00BF10BD /* MemoMove */,
+				55DE104D2805CF6600BF10BD /* MemoMakingWidget */,
+				55DE104E2805CF7100BF10BD /* MemoAddPicture */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 		7953082227FD7E78000D40DB = {
@@ -261,11 +363,11 @@
 				E901BB9728006915003AF610 /* HonorDetailView.swift */,
 				D4B55B2B28042318009BD1B4 /* DataTestView.swift */,
 				55DE0FDF28055E8F00BF10BD /* PlayerUI.swift */,
-				55DE100F28055F0F00BF10BD /* Guide */,
+				55DE104F2805CF8A00BF10BD /* GuideSimulation */,
+				55DE10592805D0D900BF10BD /* GuideVideo */,
 				79A06FEC28046E4C00EF1A34 /* DataStructS */,
 				79A06FEB28046DD000EF1A34 /* Json */,
 				552605E3280210860028C141 /* GuideGesture */,
-				55DE0FD628055C9500BF10BD /* Videos */,
 				798DC11A2802BD560064168B /* Cow-moo-sound.mp3 */,
 				7953083227FD7E79000D40DB /* Assets.xcassets */,
 				7953083427FD7E79000D40DB /* Preview Content */,
@@ -360,17 +462,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DE10312805720600BF10BD /* MemoMove2.mov in Resources */,
+				55DE10452805722D00BF10BD /* MemoAddPicture3.mov in Resources */,
+				55DE10302805720600BF10BD /* MemoMove3.mov in Resources */,
+				55DE10472805722D00BF10BD /* MemoAddPicture1.mov in Resources */,
+				55DE101D2805716700BF10BD /* MemoWriting2.mov in Resources */,
+				55DE10332805720600BF10BD /* MemoMove1.mov in Resources */,
+				55DE10462805722D00BF10BD /* MemoAddPicture5.mov in Resources */,
 				7953083627FD7E79000D40DB /* Preview Assets.xcassets in Resources */,
-				55DE0FD428055C3100BF10BD /* MemoMove in Resources */,
+				55DE1029280571E700BF10BD /* MemoFolder4.mov in Resources */,
+				55DE1028280571E700BF10BD /* MemoFolder2.mov in Resources */,
 				7953083327FD7E79000D40DB /* Assets.xcassets in Resources */,
 				79A06FE8280459D100EF1A34 /* GuideData.json in Resources */,
+				55DE1027280571E700BF10BD /* MemoFolder6.mov in Resources */,
+				55DE10532805CFF700BF10BD /* MemoWriting1.mov in Resources */,
 				D4DDA1732804567A002302F5 /* CategoryData.json in Resources */,
-				55DE0FD528055C3100BF10BD /* MemoAddPicture in Resources */,
+				55DE10482805722D00BF10BD /* MemoAddPicture4.mov in Resources */,
 				D4DDA17728045BEE002302F5 /* ClearData.json in Resources */,
-				55DE0FD328055C3100BF10BD /* MemoMakingWidget in Resources */,
-				55DE0FCF28055C2A00BF10BD /* MemoFolder in Resources */,
-				55DE0FCD28055C2100BF10BD /* MemoWriting in Resources */,
+				55DE102B280571E700BF10BD /* MemoFolder1.mov in Resources */,
+				55DE103D2805721B00BF10BD /* MemoMakingWidget1.mov in Resources */,
 				798DC11B2802BD560064168B /* Cow-moo-sound.mp3 in Resources */,
+				55DE103A2805721B00BF10BD /* MemoMakingWidget5.mov in Resources */,
+				55DE103E2805721B00BF10BD /* MemoMakingWidget3.mov in Resources */,
+				55DE103C2805721B00BF10BD /* MemoMakingWidget4.mov in Resources */,
+				55DE10322805720600BF10BD /* MemoMove4.mov in Resources */,
+				55DE102A280571E700BF10BD /* MemoFolder3.mov in Resources */,
+				55DE103F2805721B00BF10BD /* MemoMakingWidget2.mov in Resources */,
+				55DE10492805722D00BF10BD /* MemoAddPicture2.mov in Resources */,
+				55DE101F2805716700BF10BD /* MemoWriting3.mov in Resources */,
+				55DE1026280571E700BF10BD /* MemoFolder5.mov in Resources */,
 				D4B55B2628041E69009BD1B4 /* GradeData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

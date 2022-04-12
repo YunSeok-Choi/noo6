@@ -35,21 +35,22 @@ struct GuideView: View {
     @State var progressUp : Double = 1/Double(guidelists.count)
     @State var isGuideComplete : Bool = false
     
-    private let pages = guidelists.count
+    var guideId : Int
     
     var body: some View {
+        
+        let pages = guidelist[guideId].count
+        
             VStack{
                 VStack{ //guideView
                     TabView(selection: $currentPage){
-                        ForEach(guidelists){i in
+                        ForEach(guidelist[guideId]){i in
                             VStack{
                                 Text(i.explain)
                                     .font(.system(size: 30))
                                     .frame(width: 358, height: 120)
                                     .multilineTextAlignment(.center)
-                                Image(i.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+                                category[guideId]?[i.image]?
                                     .frame(height: 480)
                                     .cornerRadius(24)
                                     .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
@@ -122,7 +123,7 @@ struct GuideView: View {
                                     isGuideComplete = true
                                 }
                                 else{
-                                    progressUp += 1/Double(guidelists.count)
+                                    progressUp += 1/Double(guidelist[guideId].count)
                                     currentPage += 1
                                 }
                             }
@@ -154,15 +155,62 @@ struct GuideList: Identifiable, Hashable{//가이드리스트 구조체, 이미�
     let explain: String
 }
 
-let guidelists = [
-    GuideList(id: 0,image: "Test2",explain: "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest." ),
-    GuideList(id: 1,image: "image2",explain: "explain2." ),
-    GuideList(id: 2,image: "image3",explain: "explain3." ),
-    GuideList(id: 3,image: "dog",explain: "explain4." )
-    //똑같이 리스트로 추가
-]
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView()
+        GuideView(guideId: 0)
     }
 }
+let guidelist = [guidelists, guidelists1, guidelists2, guidelists3, guidelists4]
+
+let guidelists = [
+    GuideList(id: 0,image: "MemoWriting1", explain: "홈 화면에 있는 메모앱을 터치하세요." ),
+    GuideList(id: 1,image: "MemoWriting2", explain: "우측 하단의 작성버튼을 터치하세요." ),
+    GuideList(id: 2,image: "MemoWriting3", explain: "메모의 제목을 적은 다음 메모할 내용을 작성하세요." ),
+]
+
+let guidelists1 = [
+    GuideList(id: 0,image: "MemoFolder1",explain: "메모앱 좌측 상단의 '<폴더'를 터치하세요" ),
+    GuideList(id: 1,image: "MemoFolder2",explain: "좌측 하단의 아이콘을 터치하세요." ),
+    GuideList(id: 2,image: "MemoFolder3",explain: "'새로운 폴더'를 터치하세요." ),
+    GuideList(id: 3,image: "MemoFolder4",explain: "폴더 이름을 입력하신 후 저장을 눌러주세요" ),
+    GuideList(id: 4,image: "MemoFolder5",explain: "새로운 폴더를 터치하세면 해당 폴더로 이동합니다." ),
+    GuideList(id: 5,image: "MemoFolder6",explain: "새로운 폴더가 완성되었습니다. 메모를 작성해보세요!" )
+]
+
+let guidelists2 = [
+    GuideList(id: 0,image: "MemoMove1",explain: "다른 폴더로 이동시킬 메모에서 우측 상단의 􀍡를 터치하세요." ),
+    GuideList(id: 1,image: "MemoMove2",explain: "하단 메뉴의 '메모 이동'을 터치하세요." ),
+    GuideList(id: 2,image: "MemoMove3",explain: "이동시킬 폴더를 터치하세요."),
+    GuideList(id: 3,image: "MemoMove4",explain: "폴더를 확인하면 메모가 이동한 것을 확인할 수 있습니다.")
+]
+
+let guidelists3 = [
+    GuideList(id: 0,image: "MemoMakingWidget1",explain: "배경화면의 빈공간을 1초 이상 눌러주세요." ),
+    GuideList(id: 1,image: "MemoMakingWidget2",explain: "좌측 상단의 +버튼을 터치하세요." ),
+    GuideList(id: 2,image: "MemoMakingWidget3",explain: "메모앱 위젯을 터치해주세요." ),
+    GuideList(id: 3,image: "MemoMakingWidget4",explain: "사용에 맞게 메모 또는 폴더를 선택하고 위젯추가를 눌러주세요." ),
+    GuideList(id: 4,image: "MemoMakingWidget5",explain: "위젯을 원하는 위치로 옮긴 후 우측상단의 ‘완료’버튼을 터치하세요." )
+]
+
+let guidelists4 = [
+    GuideList(id: 0,image: "MemoAddPicture1",explain: "키보드 위에 있는 􀌞버튼을 터치해주세요" ),
+    GuideList(id: 1,image: "MemoAddPicture2",explain: "'사진 또는 비디오 선택'을 터치하세요'." ),
+    GuideList(id: 2,image: "MemoAddPicture3",explain: "원하는 사진 또는 비디오를 선택하세요." ),
+    GuideList(id: 3,image: "MemoAddPicture4",explain: "선택 후 '추가'를 눌러주세요." ),
+    GuideList(id: 4,image: "MemoAddPicture5", explain: "다음과 같이 사진이 추가되었습니다." )
+]
+
+//----------------------- GuideView ---------------------------
+
+let memoWriting: [String: AnyView] = ["MemoWriting1": AnyView(MemoWriting1()), "MemoWriting2": AnyView(MemoWriting2()), "MemoWriting3": AnyView(MemoWriting3())]
+
+let memoFolder: [String: AnyView] = ["MemoFolder1": AnyView(MemoFolder1()), "MemoFolder2": AnyView(MemoFolder2()), "MemoFolder3": AnyView(MemoFolder3()), "MemoFolder4": AnyView(MemoFolder4()), "MemoFolder5": AnyView(MemoFolder5()), "MemoFolder6": AnyView(MemoFolder6())]
+
+let memoMove: [String: AnyView] = ["MemoMove1": AnyView(MemoMove1()), "MemoMove2": AnyView(MemoMove2()), "MemoMove3": AnyView(MemoMove3()), "MemoMove4": AnyView(MemoMove4())]
+
+let memoWidget: [String: AnyView] = ["MemoMakingWidget1": AnyView(MemoMakingWidget1()), "MemoMakingWidget2": AnyView(MemoMakingWidget2()), "MemoMakingWidget3": AnyView(MemoMakingWidget3()), "MemoMakingWidget4": AnyView(MemoMakingWidget4()), "MemoMakingWidget5": AnyView(MemoMakingWidget5())]
+
+let memoPicture: [String: AnyView] = ["MemoAddPicture1" : AnyView(MemoAddPicture1()), "MemoAddPicture2" : AnyView(MemoAddPicture2()), "MemoAddPicture3" : AnyView(MemoAddPicture3()), "MemoAddPicture4" : AnyView(MemoAddPicture4()), "MemoAddPicture5" : AnyView(MemoAddPicture5())]
+
+//----------------------- Guide Category ----------------------
+let category: [Int: [String: AnyView]] = [0 : memoWriting, 1 : memoFolder, 2 : memoMove, 3: memoWidget, 4 : memoPicture]
