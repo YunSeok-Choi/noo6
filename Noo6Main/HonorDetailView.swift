@@ -20,8 +20,10 @@ struct HonorDetailView : View {
                 .frame(width: 300, height: 300)
                 .padding()
             Text("\(HonorDetialView1_1.text)")
-                .padding()
                 .font(.system(size: 20))
+                .frame(width: 358, height: 120)
+                .multilineTextAlignment(.center)
+                .lineSpacing(10)
             Spacer()
             ButtonView()
             Spacer()
@@ -39,7 +41,7 @@ struct HonorDetailInfo: Identifiable {
 }
 
 
-let HonorDetialView1_1 = HonorDetailInfo(title: "당신은 사진찍기 전문가!", image: "Test" , text: "어쩌구 저쩌구 설명 설명")
+let HonorDetialView1_1 = HonorDetailInfo(title: "당신은 사진찍기 전문가!", image: "Test" , text: "아이폰으로 사진 찍는 법을 전부 배웠습니다! 직접 소중한 사진들을 남겨보세요.")
 
 
 
