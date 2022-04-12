@@ -41,118 +41,119 @@ struct GuideView: View {
     private let pages = guidelists.count
     
     var body: some View {
-            VStack{
-                VStack{ //guideView
-                    TabView(selection: $currentPage){
-                        
-                        ForEach(guide.gideInfo[0]){i in
-                            VStack{
-                                Text(i.guideMessage[0])
-                                    .font(.system(size: 30))
-                                    .frame(width: 358, height: 120)
-                                    .multilineTextAlignment(.center)
-                                Image("\(i.guideView[0])")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: 480)
-                                    .cornerRadius(24)
-                                    .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
-                            }
-                            
-                        }
-                    }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
+        VStack{
+            VStack{ //guideView
+                TabView(selection: $currentPage){
                     
+                    ForEach(0..<guide.gideInfo[0].guideMessage.count){i in
+                        VStack(){
+                            Text("\(guide.gideInfo[0].guideMessage[i])")
+                                .font(.system(size: 30))
+                                .frame(width: 358, height: 120)
+                                .multilineTextAlignment(.center)
+                            Image("\(guide.gideInfo[0].guideView[i])")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 480)
+                                .cornerRadius(24)
+                                .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
+                        }
+                    }
+                    
+                }
+            }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
+                .animation(.easeInOut)
+        }
+        
+        VStack {    //BottomView
+            HStack{
+                Button(action: {
+                    if isSound { player?.stop() }
+                    isSound.toggle()
+                }){
+                    Image(systemName: isSound ? "speaker.wave.1.fill" : "speaker.slash.fill")
+                        .clipShape(Circle())
+                        .padding(5)
+                        .frame(width: 50, height: 50)
+                        .background(Color.white)
+                        .cornerRadius(350)
+                        .shadow(color: Color.gray, radius: 2, x: 0, y: 0)
+                        .imageScale(.large)
+                        .font(.title)
+                }.onAppear(){
+                    isSound = guide.isSound
+                    isSound ? playSound(sound: voice[0]) : player?.stop()
                 }
                 
-                VStack {    //BottomView
-                    HStack{
-                        Button(action: {
-                            if isSound { player?.stop() }
-                            isSound.toggle()
-                        }){
-                            Image(systemName: isSound ? "speaker.wave.1.fill" : "speaker.slash.fill")
-                                .clipShape(Circle())
-                                .padding(5)
-                                .frame(width: 50, height: 50)
-                                .background(Color.white)
-                                .cornerRadius(350)
-                                .shadow(color: Color.gray, radius: 2, x: 0, y: 0)
-                                .imageScale(.large)
-                                .font(.title)
-                        }.onAppear(){
-                            isSound = guide.isSound
-                            isSound ? playSound(sound: voice[0]) : player?.stop()
-                        }
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            isSound ? playSound(sound: voice[0]) : player?.stop()
-                        }){
-                            Image(systemName: "repeat")
-                                .clipShape(Circle())
-                                .padding(5)
-                                .frame(width: 50, height: 50)
-                                .background(Color.white)
-                                .cornerRadius(350)
-                                .shadow(color: Color.gray, radius: 2, x: 0, y: 0)
-                                .imageScale(.large)
-                                .font(.title)
-                        }
-                    }.padding(.horizontal)
-                    
-                    ProgressView(value: progressUp)
-                    
-                    HStack {
-                        // 현재 단계가 1 이상일 때만 이전 단계 작동
-                        Button("< 이전 단계") {
-                            if (currentPage > 0) {
-                                progressUp -= 1/Double(guidelists.count)
-                                currentPage -= 1
-                            }
-                        }
-                        .padding(.leading, 20.0)
-                        
-                        Spacer()
-                        Text("\(currentPage+1)")
-                        Text("/")
-                        Text("\(pages)")
-                        Spacer()
-                        
-                        // 다음단계 및 ClearView로 가는 Button
-                        NavigationLink(destination: ClearView(clear: cleardata[0]), isActive: $isGuideComplete){
-                            // 현재 가이드의 끝일 때에만 ClearView로 이동하도록 isActive
-                            Button("다음 단계 >") {
-                                if(progressUp >= 0.95){
-                                    isGuideComplete = true
-                                }
-                                else{
-                                    progressUp += 1/Double(guidelists.count)
-                                    currentPage += 1
-                                }
-                            }
-                            .padding(.trailing, 20.0)
-                        }
+                Spacer()
+                
+                Button(action: {
+                    isSound ? playSound(sound: voice[0]) : player?.stop()
+                }){
+                    Image(systemName: "repeat")
+                        .clipShape(Circle())
+                        .padding(5)
+                        .frame(width: 50, height: 50)
+                        .background(Color.white)
+                        .cornerRadius(350)
+                        .shadow(color: Color.gray, radius: 2, x: 0, y: 0)
+                        .imageScale(.large)
+                        .font(.title)
+                }
+            }.padding(.horizontal)
+            
+            ProgressView(value: progressUp)
+            
+            HStack {
+                // 현재 단계가 1 이상일 때만 이전 단계 작동
+                Button("< 이전 단계") {
+                    if (currentPage > 0) {
+                        progressUp -= 1/Double(guidelists.count)
+                        currentPage -= 1
                     }
                 }
-                NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
-                    //Text("맨 마지막에서 버튼")
-                    
-                }.navigationBarTitle("\(guide.guideTitle)",displayMode: .inline)
-                // 데이터 받아옴
-                    .toolbar{
-                        Button(action: {
-                            shareButton()
-                        }, label: {
-                            Image(systemName: "square.and.arrow.up")
-                        })
-                        
+                .padding(.leading, 20.0)
+                
+                Spacer()
+                Text("\(currentPage+1)")
+                Text("/")
+                Text("\(pages)")
+                Spacer()
+                
+                // 다음단계 및 ClearView로 가는 Button
+                NavigationLink(destination: ClearView(clear: cleardata[0]), isActive: $isGuideComplete){
+                    // 현재 가이드의 끝일 때에만 ClearView로 이동하도록 isActive
+                    Button("다음 단계 >") {
+                        if(progressUp >= 0.95){
+                            isGuideComplete = true
+                        }
+                        else{
+                            progressUp += 1/Double(guidelists.count)
+                            currentPage += 1
+                        }
                     }
+                    .padding(.trailing, 20.0)
+                }
             }
-        
-        
+        }
+        NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
+            //Text("맨 마지막에서 버튼")
+            
+        }.navigationBarTitle("\(guide.guideTitle)",displayMode: .inline)
+        // 데이터 받아옴
+            .toolbar{
+                Button(action: {
+                    shareButton()
+                }, label: {
+                    Image(systemName: "square.and.arrow.up")
+                })
+                
+            }
     }
+    
+    
 }
+
 
 struct GuideList: Identifiable, Hashable{//가이드리스트 구조체, 이미지와 설명넣기
     let id: Int

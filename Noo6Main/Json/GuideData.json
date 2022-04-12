@@ -6,35 +6,41 @@
         "gideInfo" : [
             {
                 "id" : 0,
-                "guideView" : ["Test2","image1","image2","image3"],
-                "guideMessage" : ["Message1","Message2","Message3","Message4"],
-                "totalPage" : 4,
-                "voice" : ["Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound"]
+                "guideView" : ["Test2","image1","image2"],
+                "guideMessage" : ["홈 화면에 있는 메모앱을 터치하세요.","우측 하단의 작성버튼을 터치하세요.","메모의 제목을 적은 다음 메모할 내용을 작성하세요."],
+                "totalPage" : 3,
+                "voice" : ["Cow-moo-sound","Cow-moo-sound","Cow-moo-sound"]
             },
             {
                 
                 "id" : 1,
-                "guideView" : ["Test","Image1"],
-                "guideMessage" : ["Message1","Message2"],
-                "totalPage" : 4,
-                "voice" : ["moo-sound-moo","moo-sound-moo"]
-                
+                "guideView" : ["Test","image1", "image2","image3","어르신짤1","Test"],
+                "guideMessage" : ["메모앱 좌측 상단의 ‘<폴더’를 터치하세요.","좌측 하단의 아이콘을 터치하세요.", "‘새로운 폴더’를 터치하세요.", "폴더 이름을 입력하신 후 저장을 눌러주세요.","새로운 폴더를 터치하면 해당 폴더로 이동합니다.", "새로운 폴더가 완성되었습니다. 메모를 작성해보세요!"],
+                "totalPage" : 6,
+                "voice" : ["Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound"]
+
             },
             {
                 "id" : 2,
-                "guideView" : ["Image1","Image2"],
-                "guideMessage" : ["Message1","Message2"],
-                "totalPage" : 4,
-                "voice" : ["moo-sound-moo","moo-sound-moo"]
+                "guideView" : ["Test","image1", "image2"],
+                "guideMessage" : ["다른 폴더로 이동시킬 메모에서 우측 상단의 􀍡를 터치하세요.","하단 메뉴의 ‘메모 이동’을 터치하세요.", "이동시킬 폴더를 터치하세요."],
+                "totalPage" : 3,
+                "voice" : ["Cow-moo-sound","Cow-moo-sound","Cow-moo-sound"]
                 
             },
             {
                 "id" : 3,
-                "guideView" : ["Image1","Image2"],
-                "guideMessage" : ["Message1","Message2"],
-                "totalPage" : 4,
-                "voice" : ["moo-sound-moo","moo-sound-moo"]
+                "guideView" : ["Test","image1", "image2"],
+                "guideMessage" : ["배경화면의 빈공간을 1초 이상 눌러주세요. ","좌측 상단의 +버튼을 터치하세요.", "메모앱 위젯을 터치해주세요.", "사용에 맞게 메모 또는 폴더를 선택하고 위젯추가를 눌러주세요.","위젯을 원하는 위치로 옮긴 후 우측상단의 ‘완료’버튼을 터치하세요."],
+                "totalPage" : 5,
+                "voice" : ["Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound"]
                 
+            },{
+                "id" : 4,
+                "guideView" : ["Test","image1", "image2"],
+                "guideMessage" : ["키보드 위에 있는 􀌞버튼을 터치해주세요.","‘사진 또는 비디오 선택’을 터치하세요.", "원하는 사진 또는 비디오를 선택하세요.", "선택 후 ‘추가’를 눌러주세요.","다음과 같이 사진이 추가되었습니다. "],
+                "totalPage" : 5,
+                "voice" : ["Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound","Cow-moo-sound"]
             }
         ]
         
