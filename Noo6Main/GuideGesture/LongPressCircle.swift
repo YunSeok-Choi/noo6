@@ -59,11 +59,11 @@ struct LongPressCircle: View {
         //원이 깜빡이는 애니메이션
             .overlay(
                 Circle()
-                    .stroke(Color.green, lineWidth: 2)
+                    .stroke(Color.blue, lineWidth: 2)
                     .scaleEffect(animationAmount)
                 //animationAmount가 1이면 불투명이 1이고, 2이면 불투명도가 0이다
                     .opacity(Double(2 - animationAmount))
-                    .animation(Animation.easeInOut(duration: 1)
+                    .animation(Animation.easeInOut(duration: 1.2)
                         .repeatForever(autoreverses: false))
                 //제스쳐를 따라하고나서는 애니메이션이 사라짐
                     .opacity(self.isLongPressed ? 0 : 1)
