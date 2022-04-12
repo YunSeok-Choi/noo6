@@ -7,15 +7,16 @@
 import SwiftUI
 
 //****************** 진행도 카운트하는 변수 ******************//
+var honorUseful = 0
 var honorBasic = 0
-var honorUseful = 2
 var honorPhoto = 0
 var honorCam = 0
+var honorMemo = 0
 var honorWidget = 0
 var honorCalender = 0
-var honorMemo = 0
 //CategoryData의 completedNumber를 이용하면 될듯 함.
 //****************** 업적뷰 구현 *******************//
+
 struct HonorView: View {
     
     let columns: [GridItem] = [
@@ -35,7 +36,7 @@ struct HonorView: View {
                 content: {
                     Section(header:
                                 Text("유용한 기능 \(honorUseful) / 6")
-                        .font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
@@ -45,7 +46,7 @@ struct HonorView: View {
                     }
                     Section(header:
                                 Text("아이폰 기초 \(honorBasic) / 4")
-                        .font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
@@ -55,7 +56,7 @@ struct HonorView: View {
                     }
                     Section(header:
                                 Text("사진 앱 \(honorPhoto) / 5")
-                        .font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
@@ -65,7 +66,7 @@ struct HonorView: View {
                     }
                     Section(header:
                                 Text("카메라 앱 \(honorCam) / 6")
-                        .font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
@@ -75,7 +76,7 @@ struct HonorView: View {
                     }
                     Section(header:
                                 Text("메모 앱 \(honorMemo) / 4")
-                        .font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
@@ -85,7 +86,7 @@ struct HonorView: View {
                     }
                     Section(header:
                                 Text("위젯 앱 \(honorWidget) / 6")
-                        .font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
@@ -95,7 +96,7 @@ struct HonorView: View {
                     }
                     Section(header:
                                 Text("캘린더 앱 \(honorCalender) / 6")
-                        .font(.title)
+                        .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
