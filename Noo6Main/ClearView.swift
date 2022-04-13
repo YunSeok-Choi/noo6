@@ -33,7 +33,7 @@ struct ClearView: View {
                 Button(action: {
                     print("가이드 카테고리로 갑니다.")
                 }, label: {
-                    NavigationLink(destination: CategoryView(guideName: "아이폰 초보자 가이드")){
+                    NavigationLink(destination: CategoryView(guideName: "아이폰 초보자 가이드", listInfos: categorydata[5].categoryInfo)){
                         Text("다른 가이드 배우기")
                             .foregroundColor(Color.white)
                     }
