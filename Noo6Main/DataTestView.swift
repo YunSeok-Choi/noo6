@@ -22,8 +22,6 @@ struct DataTestView: View {
     }
 }
 
-
-
 struct DataTestView_Previews: PreviewProvider {
     static var previews: some View {
         DataTestView()

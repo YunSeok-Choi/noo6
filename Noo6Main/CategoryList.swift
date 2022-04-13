@@ -10,14 +10,13 @@ import SwiftUI
 struct CategoryList: View {
     
     var body: some View {
-        List(guideInfos, id: \.id) { info in
+        List(categorydata, id: \.id) { info in
             // ZStack을 이용해 각각의 한 Row에 CatergoryRow와 NavigationLink를 올림
                 ZStack {
-                    CategoryRow(guideInfo: info)
+                    CategoryRow(categoryStorage: info)
                         .listRowBackground(Color.white)
-                    NavigationLink(destination: CategoryView(guideName: info.guideName)) {}
-                        .frame(width: 0)   // NavigationLink 화살표 제거를 위함 1
-                        .opacity(0)        // NavigationLink 화살표 제거를 위함 1
+                  
+                    NavigationLink(destination: CategoryView(guideName: info.categoryTitle, listInfos: info.categoryInfo)) {}
                 }
                 .padding(EdgeInsets(top: 5, leading: -20, bottom: 5, trailing: -20))
                 .listRowSeparator(.hidden)

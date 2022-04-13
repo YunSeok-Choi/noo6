@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 // 제스쳐 사용 예시 View
 struct LongPressTestView: View {
@@ -15,7 +16,7 @@ struct LongPressTestView: View {
         VStack {
             
             // LongPressCircle 사용예시
-            LongPressCircle(isLongPressed: $isLongPressed, width: 80, height: 80, opacity: 0.6)
+            LongPressCircle(isLongPressed: $isLongPressed, player: AVPlayer() ,width: 80, height: 80, opacity: 0.6)
             // LongPress 제스쳐 필요한 위치 및 애니메이션 위치
         }
     }
@@ -33,17 +34,21 @@ struct LongPressCircle: View {
     @Binding var isLongPressed: Bool
     @State private var animationAmount: CGFloat = 1
     
+    let player: AVPlayer?
     let width: CGFloat
     let height: CGFloat
     let opacity: Double // opacity 0 으로 설정시 터치작동 x (권장 opcaity = 0.01)
     
     var longPress: some Gesture {
-        LongPressGesture(minimumDuration: 2)
+        LongPressGesture(minimumDuration: 1)
             .updating($isDetectingLongPress) { currentState, gestureState, transaction in
                 gestureState = currentState
             }
             .onEnded { value in
                 isLongPressed = true
+                if let player = player {
+                    player.play()
+                }
             }
     }
     
@@ -59,11 +64,11 @@ struct LongPressCircle: View {
         //원이 깜빡이는 애니메이션
             .overlay(
                 Circle()
-                    .stroke(Color.green, lineWidth: 2)
+                    .stroke(Color.blue, lineWidth: 2)
                     .scaleEffect(animationAmount)
                 //animationAmount가 1이면 불투명이 1이고, 2이면 불투명도가 0이다
                     .opacity(Double(2 - animationAmount))
-                    .animation(Animation.easeInOut(duration: 1)
+                    .animation(Animation.easeInOut(duration: 1.2)
                         .repeatForever(autoreverses: false))
                 //제스쳐를 따라하고나서는 애니메이션이 사라짐
                     .opacity(self.isLongPressed ? 0 : 1)
