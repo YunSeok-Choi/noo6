@@ -24,6 +24,15 @@ struct HonorDetailView : View {
                 .padding()
             Spacer()
             ButtonView()
+            Button(action: shareButton){                        // 공유하는 버튼
+                Text("이미지를 다른 사람에게 공유하기")
+                    .foregroundColor(Color.white)
+            }
+            .frame(width: 352, height: 50)
+            .font(.system(size:20, weight: .regular))
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(12)
             Spacer()
         }
     }
