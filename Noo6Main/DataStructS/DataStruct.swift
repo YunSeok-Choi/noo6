@@ -53,10 +53,9 @@ struct GuideStorage : Codable, Identifiable{
 struct ClearStorage : Codable, Identifiable {
     let id : Int
     let clearInfo : Array<ClearInfo>
-    
-    struct ClearInfo : Codable, Identifiable {
-        let id : Int
-        let clearImage : String
-        let clearMessage : String
-    }
+}
+struct ClearInfo : Codable, Identifiable {
+    let id : Int
+    let clearImage : String
+    let clearMessage : String
 }

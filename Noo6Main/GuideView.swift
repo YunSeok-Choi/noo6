@@ -119,7 +119,7 @@ struct GuideView: View {
                 Spacer()
                 
                 // 다음단계 및 ClearView로 가는 Button
-                NavigationLink(destination: ClearView(clear: cleardata[0]), isActive: $isGuideComplete){
+                NavigationLink(destination: ClearView(clear: cleardata[0].clearInfo[2]), isActive: $isGuideComplete){
                     // 현재 가이드의 끝일 때에만 ClearView로 이동하도록 isActive
                     Button("다음 단계 >") {
                         if(progressUp >= 0.95){
