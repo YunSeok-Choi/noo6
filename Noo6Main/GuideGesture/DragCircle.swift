@@ -66,7 +66,7 @@ struct DragCircle: View {
         VStack {
             ZStack {
                 Circle()
-                    .fill(self.isMovedOnPoint ? Color.gray : Color.blue)
+                    .fill(self.isMovedOnPoint ? Color.gray.opacity(0) : Color.blue)
                     .frame(width: 50, height: 50)
                     .offset(x: offset.width, y: offset.height)
                     .opacity(startOpacity)
@@ -87,7 +87,7 @@ struct DragCircle: View {
 
                     }
                 Circle()
-                    .fill(self.isMovedOnPoint ? Color.gray : Color.blue)
+                    .fill(self.isMovedOnPoint ? Color.gray.opacity(0) : Color.blue)
                     .frame(width: 50, height: 50)
                     .opacity(endOpacity)
                     .offset(x: xPoint, y: yPoint)

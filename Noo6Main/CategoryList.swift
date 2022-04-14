@@ -18,7 +18,7 @@ struct CategoryList: View {
                   
                     NavigationLink(destination: CategoryView(guideName: info.categoryTitle, listInfos: info.categoryInfo)) {}
                 }
-                .padding(EdgeInsets(top: 5, leading: -20, bottom: 5, trailing: -20))
+                .padding(EdgeInsets(top: 5, leading: -10, bottom: 5, trailing: -10))
                 .listRowSeparator(.hidden)
             }
             .listStyle(.plain)

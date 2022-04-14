@@ -19,9 +19,11 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 20) {
                 Text(title)
                     .font(.system(size: 30.0, weight: .semibold))
-                // List 하단의 Row 잘리는 현상 해결필요
+                    .frame(width: 390, height: 75.0, alignment: .center)
+                
                 CategoryList()
-                    .padding(.trailing, -10)
+                    .frame(width: 390, height: 650, alignment: .center)
+                    .padding()
             }
             .padding()
 
@@ -36,6 +38,7 @@ struct HomeView: View {
                         })
             )
         }
+        .edgesIgnoringSafeArea(.horizontal)
         .navigationBarHidden(true)
     }
 }
