@@ -25,7 +25,7 @@ struct MemoMakingWidget4: View {
                         .onAppear()
                         .disabled(true)
                 
-                DragCircle(isMovedOnPoint: $isMovedOnPoint, player: player, xPoint: -100, yPoint: -0, gap: 50, startOpacity: 1, endOpacity: 1)
+                DragCircle(isMovedOnPoint: $isMovedOnPoint, player: player, xPoint: -100, yPoint: -0, gap: 50, startOpacity: 0.5, endOpacity: 0.5)
             }
         }
         
