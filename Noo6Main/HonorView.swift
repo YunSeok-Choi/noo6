@@ -94,16 +94,16 @@ struct HonorView: View {
                             ZStackView(clearInfoData: cleardata[5].clearInfo[index])
                         }
                     }
-                    /*Section(header:
+                    Section(header:
                                 Text("위젯 \(categorydata[6].completedNumber) / \(categorydata[6].allNumber)")
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
                     ) {
                         ForEach(0..<categorydata[6].allNumber) { index in
-                            ZStackView(clearThumbnail: cleardata[6].clearInfo[index].clearImage)
+                            ZStackView(clearInfoData: cleardata[6].clearInfo[index])
                         }
-                    }*/
+                    }
                 }
             )
         }

@@ -16,7 +16,7 @@ struct CategoryList: View {
                     CategoryRow(categoryStorage: info)
                         .listRowBackground(Color.white)
                   
-                    NavigationLink(destination: CategoryView(guideName: info.categoryTitle, listInfos: info.categoryInfo)) {}
+                    NavigationLink(destination: CategoryView(guideName: info.categoryTitle, listInfos: info)) {}
                 }
                 .padding(EdgeInsets(top: 5, leading: -10, bottom: 5, trailing: -10))
                 .listRowSeparator(.hidden)
