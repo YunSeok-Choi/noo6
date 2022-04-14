@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CategoryView : View {
     var guideName: String
+    var listInfos : [CategoryInfo]
 
     var body: some View{
         VStack {
@@ -22,10 +23,10 @@ struct CategoryView : View {
                         .multilineTextAlignment(.center)
                     
                     // 받은 리스트(contentInfos)의 정보에 따라 List에 이동할 버튼 생성
-                    List(contentInfos, id: \.id) {
+                    List(listInfos, id: \.id) {
                         info in
                         // 버튼 누를 시 임시로 EmptyView로 이동 -> merge 후 가이드뷰로 이동하도록 수정 필요
-                        NavigationLink(destination: GuideView()){
+                        NavigationLink(destination: GuideView(guide: guidedata[0])){
                             ContentList(contentInfo: info)
                                 .listRowBackground(Color.white)
                                 .listRowSeparator(.hidden)
@@ -62,11 +63,11 @@ let contentInfos = [
 
 // List에 들어갈 카테고리별 컨텐츠 목록 (버튼 + 체크아이콘)
 struct ContentList : View {
-    var contentInfo : ContentInfo
+    var contentInfo : CategoryInfo
     var body: some View{
         Button(action: {}){
             HStack{
-                Text("\(contentInfo.title)")
+                Text("\(contentInfo.guideName)")
                     .font(.system(size: 24))
                     .foregroundColor(.black)
                     .padding(.leading, 20)
@@ -88,6 +89,6 @@ struct ContentList : View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(guideName: "아이폰 초보자 가이드")
+        CategoryView(guideName: "아이폰 초보자 가이드", listInfos: categorydata[2].categoryInfo)
     }
 }
