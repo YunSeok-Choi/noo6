@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-func shareButton() {
+func shareButton() {                                             //공유 버튼 함수
         let url = URL(string: "https://developer.apple.com/kr/")
         let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
-
+    
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
 }
 
@@ -22,18 +22,18 @@ struct ClearView: View {
         NavigationView{
             VStack{
                 VStack{
-                    Text("\(clear.clearMessage)")
+                    Text("\(clear.clearMessage)")               // 클리어 메세지
                         .font(.title)
                         .multilineTextAlignment(.center)
                 }
                 
-                Image("\(clear.clearImage)")
+                Image("\(clear.clearImage)")                    // 클리어 이미지
                     .resizable()
                     .padding()
                     
                     
                 
-                Button(action: {
+                Button(action: {                                // 가이드 카테고리로 넘어가는 버튼
                     print("가이드 카테고리로 갑니다.")
                 }, label: {
                     NavigationLink(destination:CategoryView(guideName: categorydata[idData[0]].categoryTitle, listInfos: categorydata[idData[0]])){
@@ -46,7 +46,7 @@ struct ClearView: View {
                 .background(Color(red: 0, green: 0.5, blue: 1))
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
                 
-                Button(action: shareButton){
+                Button(action: shareButton){                        // 공유하는 버튼
                     Text("이미지를 다른 사람에게 공유하기")
                         .foregroundColor(Color.white)
                 }
@@ -55,7 +55,7 @@ struct ClearView: View {
                 .background(Color(red: 0, green: 0.5, blue: 1))
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
      
-                Button(action: {
+                Button(action: {                                    // 홈으로 가는 버튼
                     print("홈으로 갑니다.")
                 }, label: {
                     NavigationLink(destination: HomeView()){

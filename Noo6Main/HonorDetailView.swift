@@ -29,18 +29,14 @@ struct HonorDetailView : View {
     }
 }
 
-
+let image = UIImage(named: "Test")!
 
 //저장하기 버튼 뷰입니다
 struct ButtonView: View {
     var body: some View {
-        
             Button(action: {//사진 저장
-                let im = UIImage(named: "\(HonorDetialView1_1.image)")!
-                UIImageWriteToSavedPhotosAlbum(im, self,nil, nil)
-                }
-
-            ){Text("이미지 저장하기")
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            }){Text("이미지 저장하기")
                 .frame(width: 352, height: 50)
                 .font(.system(size:20, weight: .regular))
                 .foregroundColor(.white)
@@ -48,18 +44,8 @@ struct ButtonView: View {
                 .cornerRadius(12)
         }
     }
-    func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            let ac = UIAlertController(title: "ERROR OCCURS", message: error.localizedDescription, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "ok", style: .destructive))
-            ac.present(ac, animated: true)
-        }else{
-            let ac = UIAlertController(title: "", message: "PHOTO saved", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "ok", style: .default))
-            ac.present(ac,animated:true)
-        }
-    }
 }
+
 
 struct HonorDetailView_Previews: PreviewProvider {
     static var previews: some View {
