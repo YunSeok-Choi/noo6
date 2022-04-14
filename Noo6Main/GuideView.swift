@@ -50,8 +50,6 @@ struct GuideView: View {
                                 .multilineTextAlignment(.center)
                           
                             category[guideInfos.id]![guideInfos.guideView[i]]!
-                            //  Image("\(guideInfos.guideView[i])")
-                                
                                 .frame(height: 480)
                                 .cornerRadius(24)
                                 .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
