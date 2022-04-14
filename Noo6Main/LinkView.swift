@@ -8,7 +8,7 @@
 
 //HonorDetailView를 연결하기 위한 임시 뷰
 
-import SwiftUI
+/*import SwiftUI
 
 struct LinkView: View {
     var body: some View {
@@ -34,4 +34,4 @@ struct LinkView_Previews: PreviewProvider {
     static var previews: some View {
         LinkView()
     }
-}
+}*/
