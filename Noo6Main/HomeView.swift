@@ -19,8 +19,11 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 20) {
                 Text(title)
                     .font(.system(size: 30.0, weight: .semibold))
+                    .frame(height: 75.0, alignment: .center)
+//                    .offset(x: 0, y: -50)
                 // List 하단의 Row 잘리는 현상 해결필요
                 CategoryList()
+                    .frame(height: 650, alignment: .center)
                     .padding(.trailing, -10)
             }
             .padding()
