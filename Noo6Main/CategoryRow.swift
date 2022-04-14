@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CategoryRow: View {
+struct CategoryRow: View {                                  // 카테고리 UI 구성
     //var guideInfo: GuideInfo
-    var categoryStorage : CategoryStorage
+    @State var categoryStorage : CategoryStorage                   // 데이터 불러오는 변수
     
     var body: some View {
         HStack(spacing: 15.0) {
@@ -23,7 +23,7 @@ struct CategoryRow: View {
                     Text(categoryStorage.categoryTitle+"(\(categoryStorage.completedNumber)/\(categoryStorage.allNumber))")
                     //Text(" (\(categoryData.completedNumber)/\(categoryData.allNumber))")
                     // 가이드를 모두 완료했을 경우 왕관 이미지 생성됨
-                    if (categoryStorage.isAllCleared) {
+                    if (categoryStorage.completedNumber == categoryStorage.allNumber) {
                         Image(systemName: "crown")
                             .frame(width: 20.0, height: 20.0)
                             .foregroundColor(.blue)
