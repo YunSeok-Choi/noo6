@@ -37,17 +37,17 @@ struct GuideStorage : Codable, Identifiable{
     var id : Int
     var guideTitle : String
     var isSound : Bool
-    var gideInfo : [GideInfo]
+    var guideInfo : [GuideInfo]
     
-    struct GideInfo: Codable, Identifiable{
-        var id : Int
-        var guideView : [String]
-        var guideMessage : [String]
-        var totalPage : Double
-        var voice : [String]
-    }
 }
 
+struct GuideInfo: Codable, Identifiable{
+    var id : Int
+    var guideView : [String]
+    var guideMessage : [String]
+    var totalPage : Double
+    var voice : [String]
+}
 
 // ClearView에서 사용할 데이터
 struct ClearStorage : Codable, Identifiable {

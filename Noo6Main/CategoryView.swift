@@ -26,7 +26,7 @@ struct CategoryView : View {
                     List(listInfos, id: \.id) {
                         info in
                         // 버튼 누를 시 임시로 EmptyView로 이동 -> merge 후 가이드뷰로 이동하도록 수정 필요
-                        NavigationLink(destination: GuideView(guide: guidedata[0])){
+                        NavigationLink(destination: GuideView(guideStorage: guidedata[0], guideInfos: guidedata[0].guideInfo[info.id])){
                             ContentList(contentInfo: info)
                                 .listRowBackground(Color.white)
                                 .listRowSeparator(.hidden)
@@ -47,19 +47,20 @@ struct CategoryView : View {
 
 // List에 들어갈 Array의 구조
 struct ContentInfo: Identifiable {
-    let id = UUID()
+    let id : Int
     let title: String
     let isComplete: Bool
 
 }
  
 // List에 들어갈 Array에 Test 데이터 넣기
+/*
 let contentInfos = [
     ContentInfo(title: "잠금화면 제스처", isComplete: false),
     ContentInfo(title: "앱 페이지의 기본 제스처", isComplete: true),
     ContentInfo(title: "홈 화면의 기본 제스처", isComplete: false),
     ContentInfo(title: "홈 화면을 편집하는 방법", isComplete: false)
-]
+]*/
 
 // List에 들어갈 카테고리별 컨텐츠 목록 (버튼 + 체크아이콘)
 struct ContentList : View {

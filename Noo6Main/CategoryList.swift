@@ -29,8 +29,9 @@ struct CategoryList: View {
 }
 
 // 임시 가이드 정보 struct
+/*
 struct GuideInfo: Identifiable {
-    let id = UUID()
+    let id: Int
     let guideName: String
     let largeTitle: String
     let compledtedNumber: Int
@@ -48,7 +49,7 @@ let guideInfos = [
     GuideInfo(guideName: "카메라", largeTitle: "다양한 사진을 찍어볼까요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false),
     GuideInfo(guideName: "메모", largeTitle: "메모장이 필요하신가요?", compledtedNumber: 0, allNumber: 4, isAllCleared: false)
 ]
-
+*/
 struct CategoryList_Previews: PreviewProvider {
     static var previews: some View {
         CategoryList()

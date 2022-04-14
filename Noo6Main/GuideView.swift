@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 var player: AVAudioPlayer?
-var voice = ["Cow-moo-sound"]
+var voice = [""]
 
 func playSound(sound: String){
     
@@ -27,30 +27,31 @@ func playSound(sound: String){
 }
 
 struct GuideView: View {
-    var guide : GuideStorage
+    var guideStorage : GuideStorage
+    @State var guideInfos: GuideInfo
     
     @State private var currentPage: Int = 0
     @State var isSound: Bool = true
     
     // progressUp: progressView 게이지 상태
     // isGuideComplete : 가이드 끝 단계인지 알려주는 변수
-    @State var progressUp : Double = 1/Double(guidelists.count)
+    @State var progressUp : Double = 1
     @State var isGuideComplete : Bool = false
     
     var body: some View {
         VStack{
             VStack{ //guideView
                 TabView(selection: $currentPage){
-                    
-                    ForEach(0..<guide.gideInfo[0].guideMessage.count){i in
+                    ForEach(0..<Int(guideInfos.totalPage)){i in
                         VStack(){
-                            Text("\(guide.gideInfo[0].guideMessage[i])")
+                            Text("\(guideInfos.guideMessage[i])")
                                 .font(.system(size: 30))
                                 .frame(width: 358, height: 120)
                                 .multilineTextAlignment(.center)
-                            Image("\(guide.gideInfo[0].guideView[i])")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+                          
+                            category[guideInfos.id]![guideInfos.guideView[i]]!
+                            //  Image("\(guideInfos.guideView[i])")
+                                
                                 .frame(height: 480)
                                 .cornerRadius(24)
                                 .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
@@ -60,6 +61,9 @@ struct GuideView: View {
                 }
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
                 .animation(.easeInOut)
+        }.onAppear(){
+            voice = guideInfos.voice
+            progressUp = 1/Double(guideInfos.totalPage)
         }
         
         VStack {    //BottomView
@@ -78,14 +82,14 @@ struct GuideView: View {
                         .imageScale(.large)
                         .font(.title)
                 }.onAppear(){
-                    isSound = guide.isSound
-                    isSound ? playSound(sound: voice[0]) : player?.stop()
+                    isSound = guideStorage.isSound
+                    isSound ? playSound(sound: voice[currentPage]) : player?.stop()
                 }
-             
+                
                 Spacer()
                 
                 Button(action: {
-                    isSound ? playSound(sound: voice[0]) : player?.stop()
+                    isSound ? playSound(sound: voice[currentPage]) : player?.stop()
                 }){
                     Image(systemName: "repeat")
                         .clipShape(Circle())
@@ -105,7 +109,7 @@ struct GuideView: View {
                 // 현재 단계가 1 이상일 때만 이전 단계 작동
                 Button("< 이전 단계") {
                     if (currentPage > 0) {
-                        progressUp -= 1/Double(guidelists.count)
+                        progressUp -= 1/Double(guideInfos.totalPage)
                         currentPage -= 1
                     }
                 }
@@ -115,7 +119,7 @@ struct GuideView: View {
                 Text("\(currentPage+1)")
                 Text("/")
                 //TODO: 가이드 전체 페이지수 필요
-                Text("pages")
+                Text("\(Int(guideInfos.totalPage))")
                 Spacer()
                 
                 // 다음단계 및 ClearView로 가는 Button
@@ -126,7 +130,7 @@ struct GuideView: View {
                             isGuideComplete = true
                         }
                         else{
-                            progressUp += 1/Double(guidelists.count)
+                            progressUp += 1/Double(guideInfos.totalPage)
                             currentPage += 1
                         }
                     }
@@ -137,7 +141,7 @@ struct GuideView: View {
         NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
             //Text("맨 마지막에서 버튼")
             
-        }.navigationBarTitle("\(guide.guideTitle)",displayMode: .inline)
+        }.navigationBarTitle("\(guideStorage.guideTitle)",displayMode: .inline)
         // 데이터 받아옴
             .toolbar{
                 Button(action: {
@@ -153,6 +157,7 @@ struct GuideView: View {
 }
 
 
+/*
 struct GuideList: Identifiable, Hashable{//가이드리스트 구조체, 이미지와 설명넣기
     let id: Int
     let image: String
@@ -166,15 +171,15 @@ let guidelists = [
     GuideList(id: 3,image: "dog",explain: "explain4." )
     //똑같이 리스트로 추가
 ]
-
+*/
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView(guide: guidedata[0])
+        GuideView(guideStorage: guidedata[0], guideInfos: guidedata[0].guideInfo[0])
     }
 }
 
 // ---------------------- MemoGuide --------------------
-
+/*
 let guidelist = [memoList0, memoList1, memoList2, memoList3, memoList4]
 
 let memoList0 = [
@@ -213,7 +218,7 @@ let memoList4 = [
     GuideList(id: 2,image: "MemoAddPicture3",explain: "원하는 사진 또는 비디오를 선택하세요." ),
     GuideList(id: 3,image: "MemoAddPicture4",explain: "선택 후 '추가'를 눌러주세요." ),
     GuideList(id: 4,image: "MemoAddPicture5", explain: "다음과 같이 사진이 추가되었습니다." )
-]
+]*/
 
 //----------------------- SimulationViews ---------------------------
 
