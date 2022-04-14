@@ -28,6 +28,25 @@ struct ZStackView: View {
                         .shadow(color: .gray, radius: 3)
                         .padding(7)
                 }
+//                else{
+//                    Image("LockedRectangle")
+//                        .resizable()
+//                        .cornerRadius(12)
+//                        .frame(width: 100, height: 100)
+//                        .shadow(color: .gray, radius: 3)
+//                        .padding(7)
+//                }
+                
+            }.zIndex(1) // ZStack의 Depth 변경 임시로 1로 만들어 두었으나, Double형 인수를 CategoryData의 Bool형 인수인 isComplete로부터 가져와야함 형변환을 하던, 함수를 만들어서 새로운 인수를 반환하던 해야함.
+            
+                if(categorydata[iscleared[0]].categoryInfo[iscleared[1]].isComplete){
+                    Image(clearInfoData.clearImage)
+                        .resizable()
+                        .cornerRadius(12)
+                        .frame(width: 100, height: 100)
+                        .shadow(color: .gray, radius: 3)
+                        .padding(7)
+                }
                 else{
                     Image("LockedRectangle")
                         .resizable()
@@ -37,9 +56,9 @@ struct ZStackView: View {
                         .padding(7)
                 }
                 
-            }.zIndex(1) // ZStack의 Depth 변경 임시로 1로 만들어 두었으나, Double형 인수를 CategoryData의 Bool형 인수인 isComplete로부터 가져와야함 형변환을 하던, 함수를 만들어서 새로운 인수를 반환하던 해야함.
             
         }
+        
     }
     
 }
