@@ -3,7 +3,7 @@
         "id" : 0,
         "categoryTitle" : "아이폰 초보자 가이드",
         "categorySubTitle" : "아이폰이 처음이신가요?",
-        "categoryIcon" : "image1",
+        "categoryIcon" : "DefaultAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -31,7 +31,7 @@
         "id" : 1,
         "categoryTitle" : "알면 유용한 기능",
         "categorySubTitle" : "알림을 없애볼까요?",
-        "categoryIcon" : "image2",
+        "categoryIcon" : "DefaultAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -59,7 +59,7 @@
         "id" : 2,
         "categoryTitle" : "캘린더",
         "categorySubTitle" : "일정을 관리해볼까요?",
-        "categoryIcon" : "image1",
+        "categoryIcon" : "DefaultAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -87,7 +87,7 @@
         "id" : 3,
         "categoryTitle" : "사진",
         "categorySubTitle" : "사진을 편집해볼까요?",
-        "categoryIcon" : "image2",
+        "categoryIcon" : "AlbumAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -111,7 +111,7 @@
         "id" : 4,
         "categoryTitle" : "카메라",
         "categorySubTitle" : "다양한 사진을 찍어볼까요?",
-        "categoryIcon" : "image1",
+        "categoryIcon" : "CameraAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -139,7 +139,7 @@
         "id" : 5,
         "categoryTitle" : "메모",
         "categorySubTitle" : "메모장이 필요하신가요?",
-        "categoryIcon" : "image2",
+        "categoryIcon" : "MemoAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -171,7 +171,7 @@
         "id" : 6,
         "categoryTitle" : "위젯",
         "categorySubTitle" : "홈화면에 위젯을 추가해보세요!",
-        "categoryIcon" : "image2",
+        "categoryIcon" : "DefaultAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {

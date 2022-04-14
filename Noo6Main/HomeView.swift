@@ -19,11 +19,11 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 20) {
                 Text(title)
                     .font(.system(size: 30.0, weight: .semibold))
-                    .frame(height: 75.0, alignment: .center)
+                    .frame(width: 390, height: 75.0, alignment: .center)
                 
                 CategoryList()
-                    .frame(height: 650, alignment: .center)
-                    .padding(.trailing, -10)
+                    .frame(width: 390, height: 650, alignment: .center)
+                    .padding()
             }
             .padding()
 
@@ -38,6 +38,7 @@ struct HomeView: View {
                         })
             )
         }
+        .edgesIgnoringSafeArea(.horizontal)
         .navigationBarHidden(true)
     }
 }
