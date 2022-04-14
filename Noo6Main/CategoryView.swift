@@ -15,7 +15,6 @@ struct CategoryView : View {
     var body: some View{
         VStack {
                 VStack{
-                    // 임시 안내 문구 삽입 -> 데이터 받아온 후 데이터에 맞는 문구로 수정 필요
                     Text("\(guideName)에서 \n어떤 가이드를 받아 볼까요?")
                         .frame(width: 342)
                         .font(.system(size: 30))
@@ -45,14 +44,7 @@ struct CategoryView : View {
     
 }
 
-// List에 들어갈 Array의 구조
-struct ContentInfo: Identifiable {
-    let id : Int
-    let title: String
-    let isComplete: Bool
 
-}
- 
 // List에 들어갈 카테고리별 컨텐츠 목록 (버튼 + 체크아이콘)
 struct ContentList : View {
     var contentInfo : CategoryInfo
