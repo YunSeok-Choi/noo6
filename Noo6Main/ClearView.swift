@@ -30,6 +30,8 @@ struct ClearView: View {
                 Image("\(clear.clearImage)")                    // 클리어 이미지
                     .resizable()
                     .padding()
+                    
+                    
                 
                 Button(action: {                                // 가이드 카테고리로 넘어가는 버튼
                     print("가이드 카테고리로 갑니다.")
