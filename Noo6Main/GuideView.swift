@@ -13,7 +13,7 @@ var voice = [""]
 
 func playSound(sound: String){
     
-    guard let url = Bundle.main.url(forResource: sound, withExtension: ".mp3") else {
+    guard let url = Bundle.main.url(forResource: sound, withExtension: ".wav") else {
         return
     }
     
