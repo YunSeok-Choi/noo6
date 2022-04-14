@@ -15,6 +15,7 @@ struct ZStackView: View {
         ZStack{
             NavigationLink(destination: HonorDetailView(clearInfo: clearInfoData).toolbar{
                 Button(action: {
+                    shareButton()
                 }, label: {
                     Image(systemName: "square.and.arrow.up")
                     
