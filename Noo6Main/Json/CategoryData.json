@@ -170,7 +170,7 @@
     {
         "id" : 6,
         "categoryTitle" : "위젯",
-        "categorySubTitle" : "홈화면에 위젯을 추가해보세요!",
+        "categorySubTitle" : "위젯을 추가해보세요!",
         "categoryIcon" : "DefaultAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
