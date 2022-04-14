@@ -12,6 +12,7 @@
 		552605C028005F630028C141 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605BF28005F630028C141 /* HomeView.swift */; };
 		552605DC2801B2FC0028C141 /* LongPressCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605DB2801B2FC0028C141 /* LongPressCircle.swift */; };
 		552605E228020FE30028C141 /* DragCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552605E128020FE30028C141 /* DragCircle.swift */; };
+		712905AF280544BC00185D87 /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712905AE280544BC00185D87 /* ZStackView.swift */; };
 		55DE0FD828055CC700BF10BD /* TouchCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0FD728055CC700BF10BD /* TouchCircle.swift */; };
 		55DE0FDC28055E6E00BF10BD /* MemoWriting3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0FD928055E6E00BF10BD /* MemoWriting3.swift */; };
 		55DE0FDD28055E6E00BF10BD /* MemoWriting1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DE0FDA28055E6E00BF10BD /* MemoWriting1.swift */; };
@@ -86,6 +87,7 @@
 		552605BF28005F630028C141 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		552605DB2801B2FC0028C141 /* LongPressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressCircle.swift; sourceTree = "<group>"; };
 		552605E128020FE30028C141 /* DragCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragCircle.swift; sourceTree = "<group>"; };
+		712905AE280544BC00185D87 /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		55DE0FD728055CC700BF10BD /* TouchCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchCircle.swift; sourceTree = "<group>"; };
 		55DE0FD928055E6E00BF10BD /* MemoWriting3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoWriting3.swift; sourceTree = "<group>"; };
 		55DE0FDA28055E6E00BF10BD /* MemoWriting1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoWriting1.swift; sourceTree = "<group>"; };
@@ -358,10 +360,11 @@
 				D42F483727FED4C9009FECA0 /* CategoryView.swift */,
 				BF2CEDF928006ECB003401D6 /* GuideView.swift */,
 				79373AFE28006D7400CDAD04 /* ClearView.swift */,
-				E901BB9428006550003AF610 /* HonorView.swift */,
 				E901BB9628006915003AF610 /* LinkView.swift */,
 				E901BB9728006915003AF610 /* HonorDetailView.swift */,
 				D4B55B2B28042318009BD1B4 /* DataTestView.swift */,
+				E901BB9428006550003AF610 /* HonorView.swift */,
+				712905AE280544BC00185D87 /* ZStackView.swift */,
 				55DE0FDF28055E8F00BF10BD /* PlayerUI.swift */,
 				552605E3280210860028C141 /* GuideGesture */,
 				55DE104F2805CF8A00BF10BD /* GuideSimulation */,
@@ -516,6 +519,7 @@
 				79EB4B4C28053CA500F06C17 /* ModelData.swift in Sources */,
 				55DE0FF428055EC500BF10BD /* MemoMove1.swift in Sources */,
 				552605BC27FED8EE0028C141 /* CategoryRow.swift in Sources */,
+				712905AF280544BC00185D87 /* ZStackView.swift in Sources */,
 				7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */,
 				552605C028005F630028C141 /* HomeView.swift in Sources */,
 				552605DC2801B2FC0028C141 /* LongPressCircle.swift in Sources */,
