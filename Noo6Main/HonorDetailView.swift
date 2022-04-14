@@ -29,12 +29,11 @@ struct HonorDetailView : View {
     }
 }
 
-
-
 //저장하기 버튼 뷰입니다
 struct ButtonView: View {
     var body: some View {
             Button(action: {//사진 저장
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             }){Text("이미지 저장하기")
                 .frame(width: 352, height: 50)
                 .font(.system(size:20, weight: .regular))

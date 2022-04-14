@@ -156,6 +156,7 @@
 		55DE10442805722D00BF10BD /* MemoAddPicture2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoAddPicture2.mov; sourceTree = "<group>"; };
 		55DE10522805CFF700BF10BD /* MemoWriting1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoWriting1.mov; sourceTree = "<group>"; };
 		712905AE280544BC00185D87 /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
+		712905B0280857A900185D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		79373AFE28006D7400CDAD04 /* ClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearView.swift; sourceTree = "<group>"; };
 		7946E50E28081BBE005E4123 /* audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav"; sourceTree = "<group>"; };
 		7946E50F28081BBE005E4123 /* audio_137__새로운_폴더_를_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_137__새로운_폴더_를_터치하세요_.wav"; sourceTree = "<group>"; };
@@ -433,6 +434,7 @@
 		7953082D27FD7E78000D40DB /* Noo6Main */ = {
 			isa = PBXGroup;
 			children = (
+				712905B0280857A900185D87 /* Info.plist */,
 				7953082E27FD7E78000D40DB /* Noo6MainApp.swift */,
 				552605BF28005F630028C141 /* HomeView.swift */,
 				552605BD27FF17FE0028C141 /* CategoryList.swift */,
@@ -774,6 +776,8 @@
 				DEVELOPMENT_TEAM = 8B3RT7D582;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Noo6Main/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "당신의 라이브러리에 사진을 저장하려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -803,6 +807,8 @@
 				DEVELOPMENT_TEAM = 8B3RT7D582;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Noo6Main/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "당신의 라이브러리에 사진을 저장하려고 합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
