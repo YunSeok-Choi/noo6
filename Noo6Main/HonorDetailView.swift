@@ -29,6 +29,8 @@ struct HonorDetailView : View {
     }
 }
 
+let image = UIImage(named: "Test")!
+
 //저장하기 버튼 뷰입니다
 struct ButtonView: View {
     var body: some View {
