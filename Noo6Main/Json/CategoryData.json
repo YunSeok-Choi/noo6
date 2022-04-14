@@ -9,7 +9,7 @@
             {
                 "id" : 0,
                 "guideName" : "잠금화면 제스처",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 1,
                 "guideName" : "앱 페이지의 기본 제스처",
@@ -24,7 +24,7 @@
                 "isComplete" : false
             }
         ],
-        "completedNumber" : 0,
+        "completedNumber" : 1,
         "allNumber" : 4
     },
     {
