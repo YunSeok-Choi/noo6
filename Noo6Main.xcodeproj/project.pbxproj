@@ -62,6 +62,30 @@
 		55DE10532805CFF700BF10BD /* MemoWriting1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 55DE10522805CFF700BF10BD /* MemoWriting1.mov */; };
 		712905AF280544BC00185D87 /* ZStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712905AE280544BC00185D87 /* ZStackView.swift */; };
 		79373AFF28006D7400CDAD04 /* ClearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79373AFE28006D7400CDAD04 /* ClearView.swift */; };
+		7946E52628081BBE005E4123 /* audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E50E28081BBE005E4123 /* audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav */; };
+		7946E52728081BBE005E4123 /* audio_137__새로운_폴더_를_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E50F28081BBE005E4123 /* audio_137__새로운_폴더_를_터치하세요_.wav */; };
+		7946E52828081BBE005E4123 /* audio_134_메모의_제목을_적은_다음_메모할_내용을_작성하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51028081BBE005E4123 /* audio_134_메모의_제목을_적은_다음_메모할_내용을_작성하세요_.wav */; };
+		7946E52928081BBE005E4123 /* audio_139_새로운_폴더를_터치하면_해당_폴더로_이동합니다_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51128081BBE005E4123 /* audio_139_새로운_폴더를_터치하면_해당_폴더로_이동합니다_.wav */; };
+		7946E52A28081BBE005E4123 /* audio_138_폴더_이름을_입력하신_후_저장을_눌러주세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51228081BBE005E4123 /* audio_138_폴더_이름을_입력하신_후_저장을_눌러주세요_.wav */; };
+		7946E52B28081BBE005E4123 /* audio_136_좌측_하단의_아이콘을_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51328081BBE005E4123 /* audio_136_좌측_하단의_아이콘을_터치하세요_.wav */; };
+		7946E52C28081BBE005E4123 /* audio_145_배경화면의_빈공간을_1초_이상_눌러주세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51428081BBE005E4123 /* audio_145_배경화면의_빈공간을_1초_이상_눌러주세요_.wav */; };
+		7946E52D28081BBE005E4123 /* audio_132_홈_화면에_있는_메모앱을_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51528081BBE005E4123 /* audio_132_홈_화면에_있는_메모앱을_터치하세요_.wav */; };
+		7946E52E28081BBE005E4123 /* audio_149_위젯을_원하는_위치로_옮긴_후_우측상단의__완료_버튼~.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51628081BBE005E4123 /* audio_149_위젯을_원하는_위치로_옮긴_후_우측상단의__완료_버튼~.wav */; };
+		7946E52F28081BBE005E4123 /* audio_140_새로운_폴더가_완성되었습니다_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51728081BBE005E4123 /* audio_140_새로운_폴더가_완성되었습니다_.wav */; };
+		7946E53028081BBE005E4123 /* audio_153_선택_후__추가_를_눌러주세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51828081BBE005E4123 /* audio_153_선택_후__추가_를_눌러주세요_.wav */; };
+		7946E53128081BBE005E4123 /* audio_142_다른_폴더로_이동시킬_메모에서_우측_상단의_더보기_버~.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51928081BBE005E4123 /* audio_142_다른_폴더로_이동시킬_메모에서_우측_상단의_더보기_버~.wav */; };
+		7946E53228081BBE005E4123 /* audio_135_메모앱_좌측_상단의__폴더_를_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51A28081BBE005E4123 /* audio_135_메모앱_좌측_상단의__폴더_를_터치하세요_.wav */; };
+		7946E53328081BBE005E4123 /* audio_151__사진_또는_비디오_선택_을_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51B28081BBE005E4123 /* audio_151__사진_또는_비디오_선택_을_터치하세요_.wav */; };
+		7946E53428081BBE005E4123 /* audio_147_메모앱_위젯을_터치해주세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51C28081BBE005E4123 /* audio_147_메모앱_위젯을_터치해주세요_.wav */; };
+		7946E53528081BBE005E4123 /* audio_150_키보드_위에_있는_카메라_버튼을_터치해주세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51D28081BBE005E4123 /* audio_150_키보드_위에_있는_카메라_버튼을_터치해주세요_.wav */; };
+		7946E53628081BBE005E4123 /* audio_133_우측_하단의_작성버튼을_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51E28081BBE005E4123 /* audio_133_우측_하단의_작성버튼을_터치하세요_.wav */; };
+		7946E53728081BBE005E4123 /* audio_141_메모를_작성해보세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E51F28081BBE005E4123 /* audio_141_메모를_작성해보세요_.wav */; };
+		7946E53828081BBE005E4123 /* audio_154_다음과_같이_사진이_추가되었습니다_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E52028081BBE005E4123 /* audio_154_다음과_같이_사진이_추가되었습니다_.wav */; };
+		7946E53928081BBE005E4123 /* audio_144_1_이동시킬_폴더를_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E52128081BBE005E4123 /* audio_144_1_이동시킬_폴더를_터치하세요_.wav */; };
+		7946E53A28081BBE005E4123 /* audio_148_사용에_맞게_메모_또는_폴더를_선택하고_위젯추가를_눌~.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E52228081BBE005E4123 /* audio_148_사용에_맞게_메모_또는_폴더를_선택하고_위젯추가를_눌~.wav */; };
+		7946E53B28081BBE005E4123 /* audio_146_좌측_상단의_플러스_버튼을_터치하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E52328081BBE005E4123 /* audio_146_좌측_상단의_플러스_버튼을_터치하세요_.wav */; };
+		7946E53C28081BBE005E4123 /* audio_152_원하는_사진_또는_비디오를_선택하세요_.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E52428081BBE005E4123 /* audio_152_원하는_사진_또는_비디오를_선택하세요_.wav */; };
+		7946E53D28081BBE005E4123 /* audio_144_2_폴더를_확인하면_메모가_이동한_것을_확인할_수_있습니~.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7946E52528081BBE005E4123 /* audio_144_2_폴더를_확인하면_메모가_이동한_것을_확인할_수_있습니~.wav */; };
 		7953082F27FD7E78000D40DB /* Noo6MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953082E27FD7E78000D40DB /* Noo6MainApp.swift */; };
 		7953083327FD7E79000D40DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7953083227FD7E79000D40DB /* Assets.xcassets */; };
 		7953083627FD7E79000D40DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7953083527FD7E79000D40DB /* Preview Assets.xcassets */; };
@@ -137,6 +161,30 @@
 		55DE10522805CFF700BF10BD /* MemoWriting1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = MemoWriting1.mov; sourceTree = "<group>"; };
 		712905AE280544BC00185D87 /* ZStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackView.swift; sourceTree = "<group>"; };
 		79373AFE28006D7400CDAD04 /* ClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearView.swift; sourceTree = "<group>"; };
+		7946E50E28081BBE005E4123 /* audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E50F28081BBE005E4123 /* audio_137__새로운_폴더_를_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_137__새로운_폴더_를_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E51028081BBE005E4123 /* audio_134_메모의_제목을_적은_다음_메모할_내용을_작성하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_134_메모의_제목을_적은_다음_메모할_내용을_작성하세요_.wav"; sourceTree = "<group>"; };
+		7946E51128081BBE005E4123 /* audio_139_새로운_폴더를_터치하면_해당_폴더로_이동합니다_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_139_새로운_폴더를_터치하면_해당_폴더로_이동합니다_.wav"; sourceTree = "<group>"; };
+		7946E51228081BBE005E4123 /* audio_138_폴더_이름을_입력하신_후_저장을_눌러주세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_138_폴더_이름을_입력하신_후_저장을_눌러주세요_.wav"; sourceTree = "<group>"; };
+		7946E51328081BBE005E4123 /* audio_136_좌측_하단의_아이콘을_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_136_좌측_하단의_아이콘을_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E51428081BBE005E4123 /* audio_145_배경화면의_빈공간을_1초_이상_눌러주세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_145_배경화면의_빈공간을_1초_이상_눌러주세요_.wav"; sourceTree = "<group>"; };
+		7946E51528081BBE005E4123 /* audio_132_홈_화면에_있는_메모앱을_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_132_홈_화면에_있는_메모앱을_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E51628081BBE005E4123 /* audio_149_위젯을_원하는_위치로_옮긴_후_우측상단의__완료_버튼~.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_149_위젯을_원하는_위치로_옮긴_후_우측상단의__완료_버튼~.wav"; sourceTree = "<group>"; };
+		7946E51728081BBE005E4123 /* audio_140_새로운_폴더가_완성되었습니다_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_140_새로운_폴더가_완성되었습니다_.wav"; sourceTree = "<group>"; };
+		7946E51828081BBE005E4123 /* audio_153_선택_후__추가_를_눌러주세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_153_선택_후__추가_를_눌러주세요_.wav"; sourceTree = "<group>"; };
+		7946E51928081BBE005E4123 /* audio_142_다른_폴더로_이동시킬_메모에서_우측_상단의_더보기_버~.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_142_다른_폴더로_이동시킬_메모에서_우측_상단의_더보기_버~.wav"; sourceTree = "<group>"; };
+		7946E51A28081BBE005E4123 /* audio_135_메모앱_좌측_상단의__폴더_를_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_135_메모앱_좌측_상단의__폴더_를_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E51B28081BBE005E4123 /* audio_151__사진_또는_비디오_선택_을_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_151__사진_또는_비디오_선택_을_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E51C28081BBE005E4123 /* audio_147_메모앱_위젯을_터치해주세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_147_메모앱_위젯을_터치해주세요_.wav"; sourceTree = "<group>"; };
+		7946E51D28081BBE005E4123 /* audio_150_키보드_위에_있는_카메라_버튼을_터치해주세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_150_키보드_위에_있는_카메라_버튼을_터치해주세요_.wav"; sourceTree = "<group>"; };
+		7946E51E28081BBE005E4123 /* audio_133_우측_하단의_작성버튼을_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_133_우측_하단의_작성버튼을_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E51F28081BBE005E4123 /* audio_141_메모를_작성해보세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_141_메모를_작성해보세요_.wav"; sourceTree = "<group>"; };
+		7946E52028081BBE005E4123 /* audio_154_다음과_같이_사진이_추가되었습니다_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_154_다음과_같이_사진이_추가되었습니다_.wav"; sourceTree = "<group>"; };
+		7946E52128081BBE005E4123 /* audio_144_1_이동시킬_폴더를_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_144_1_이동시킬_폴더를_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E52228081BBE005E4123 /* audio_148_사용에_맞게_메모_또는_폴더를_선택하고_위젯추가를_눌~.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_148_사용에_맞게_메모_또는_폴더를_선택하고_위젯추가를_눌~.wav"; sourceTree = "<group>"; };
+		7946E52328081BBE005E4123 /* audio_146_좌측_상단의_플러스_버튼을_터치하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_146_좌측_상단의_플러스_버튼을_터치하세요_.wav"; sourceTree = "<group>"; };
+		7946E52428081BBE005E4123 /* audio_152_원하는_사진_또는_비디오를_선택하세요_.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_152_원하는_사진_또는_비디오를_선택하세요_.wav"; sourceTree = "<group>"; };
+		7946E52528081BBE005E4123 /* audio_144_2_폴더를_확인하면_메모가_이동한_것을_확인할_수_있습니~.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "audio_144_2_폴더를_확인하면_메모가_이동한_것을_확인할_수_있습니~.wav"; sourceTree = "<group>"; };
 		7953082B27FD7E78000D40DB /* Noo6Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Noo6Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7953082E27FD7E78000D40DB /* Noo6MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noo6MainApp.swift; sourceTree = "<group>"; };
 		7953083227FD7E79000D40DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -334,6 +382,46 @@
 			path = Memo;
 			sourceTree = "<group>";
 		};
+		7946E50C28081BA3005E4123 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				7946E50D28081BBE005E4123 /* 메모음성만 */,
+				798DC11A2802BD560064168B /* Cow-moo-sound.mp3 */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
+		7946E50D28081BBE005E4123 /* 메모음성만 */ = {
+			isa = PBXGroup;
+			children = (
+				7946E50E28081BBE005E4123 /* audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav */,
+				7946E50F28081BBE005E4123 /* audio_137__새로운_폴더_를_터치하세요_.wav */,
+				7946E51028081BBE005E4123 /* audio_134_메모의_제목을_적은_다음_메모할_내용을_작성하세요_.wav */,
+				7946E51128081BBE005E4123 /* audio_139_새로운_폴더를_터치하면_해당_폴더로_이동합니다_.wav */,
+				7946E51228081BBE005E4123 /* audio_138_폴더_이름을_입력하신_후_저장을_눌러주세요_.wav */,
+				7946E51328081BBE005E4123 /* audio_136_좌측_하단의_아이콘을_터치하세요_.wav */,
+				7946E51428081BBE005E4123 /* audio_145_배경화면의_빈공간을_1초_이상_눌러주세요_.wav */,
+				7946E51528081BBE005E4123 /* audio_132_홈_화면에_있는_메모앱을_터치하세요_.wav */,
+				7946E51628081BBE005E4123 /* audio_149_위젯을_원하는_위치로_옮긴_후_우측상단의__완료_버튼~.wav */,
+				7946E51728081BBE005E4123 /* audio_140_새로운_폴더가_완성되었습니다_.wav */,
+				7946E51828081BBE005E4123 /* audio_153_선택_후__추가_를_눌러주세요_.wav */,
+				7946E51928081BBE005E4123 /* audio_142_다른_폴더로_이동시킬_메모에서_우측_상단의_더보기_버~.wav */,
+				7946E51A28081BBE005E4123 /* audio_135_메모앱_좌측_상단의__폴더_를_터치하세요_.wav */,
+				7946E51B28081BBE005E4123 /* audio_151__사진_또는_비디오_선택_을_터치하세요_.wav */,
+				7946E51C28081BBE005E4123 /* audio_147_메모앱_위젯을_터치해주세요_.wav */,
+				7946E51D28081BBE005E4123 /* audio_150_키보드_위에_있는_카메라_버튼을_터치해주세요_.wav */,
+				7946E51E28081BBE005E4123 /* audio_133_우측_하단의_작성버튼을_터치하세요_.wav */,
+				7946E51F28081BBE005E4123 /* audio_141_메모를_작성해보세요_.wav */,
+				7946E52028081BBE005E4123 /* audio_154_다음과_같이_사진이_추가되었습니다_.wav */,
+				7946E52128081BBE005E4123 /* audio_144_1_이동시킬_폴더를_터치하세요_.wav */,
+				7946E52228081BBE005E4123 /* audio_148_사용에_맞게_메모_또는_폴더를_선택하고_위젯추가를_눌~.wav */,
+				7946E52328081BBE005E4123 /* audio_146_좌측_상단의_플러스_버튼을_터치하세요_.wav */,
+				7946E52428081BBE005E4123 /* audio_152_원하는_사진_또는_비디오를_선택하세요_.wav */,
+				7946E52528081BBE005E4123 /* audio_144_2_폴더를_확인하면_메모가_이동한_것을_확인할_수_있습니~.wav */,
+			);
+			path = "메모음성만";
+			sourceTree = "<group>";
+		};
 		7953082227FD7E78000D40DB = {
 			isa = PBXGroup;
 			children = (
@@ -371,7 +459,7 @@
 				55DE10592805D0D900BF10BD /* GuideVideo */,
 				79A06FEC28046E4C00EF1A34 /* DataStructS */,
 				79A06FEB28046DD000EF1A34 /* Json */,
-				798DC11A2802BD560064168B /* Cow-moo-sound.mp3 */,
+				7946E50C28081BA3005E4123 /* sound */,
 				7953083227FD7E79000D40DB /* Assets.xcassets */,
 				7953083427FD7E79000D40DB /* Preview Content */,
 			);
@@ -465,35 +553,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7946E53B28081BBE005E4123 /* audio_146_좌측_상단의_플러스_버튼을_터치하세요_.wav in Resources */,
+				7946E52628081BBE005E4123 /* audio_143_하단_메뉴의__메모_이동_을_터치하세요_.wav in Resources */,
+				7946E53728081BBE005E4123 /* audio_141_메모를_작성해보세요_.wav in Resources */,
+				7946E53128081BBE005E4123 /* audio_142_다른_폴더로_이동시킬_메모에서_우측_상단의_더보기_버~.wav in Resources */,
+				7946E53028081BBE005E4123 /* audio_153_선택_후__추가_를_눌러주세요_.wav in Resources */,
+				7946E52F28081BBE005E4123 /* audio_140_새로운_폴더가_완성되었습니다_.wav in Resources */,
 				55DE10312805720600BF10BD /* MemoMove2.mov in Resources */,
 				55DE10452805722D00BF10BD /* MemoAddPicture3.mov in Resources */,
 				55DE10302805720600BF10BD /* MemoMove3.mov in Resources */,
 				55DE10472805722D00BF10BD /* MemoAddPicture1.mov in Resources */,
 				55DE101D2805716700BF10BD /* MemoWriting2.mov in Resources */,
+				7946E53928081BBE005E4123 /* audio_144_1_이동시킬_폴더를_터치하세요_.wav in Resources */,
 				55DE10332805720600BF10BD /* MemoMove1.mov in Resources */,
+				7946E52E28081BBE005E4123 /* audio_149_위젯을_원하는_위치로_옮긴_후_우측상단의__완료_버튼~.wav in Resources */,
 				55DE10462805722D00BF10BD /* MemoAddPicture5.mov in Resources */,
+				7946E53528081BBE005E4123 /* audio_150_키보드_위에_있는_카메라_버튼을_터치해주세요_.wav in Resources */,
 				7953083627FD7E79000D40DB /* Preview Assets.xcassets in Resources */,
 				55DE1029280571E700BF10BD /* MemoFolder4.mov in Resources */,
+				7946E52928081BBE005E4123 /* audio_139_새로운_폴더를_터치하면_해당_폴더로_이동합니다_.wav in Resources */,
+				7946E53828081BBE005E4123 /* audio_154_다음과_같이_사진이_추가되었습니다_.wav in Resources */,
+				7946E53228081BBE005E4123 /* audio_135_메모앱_좌측_상단의__폴더_를_터치하세요_.wav in Resources */,
 				55DE1028280571E700BF10BD /* MemoFolder2.mov in Resources */,
+				7946E53328081BBE005E4123 /* audio_151__사진_또는_비디오_선택_을_터치하세요_.wav in Resources */,
 				7953083327FD7E79000D40DB /* Assets.xcassets in Resources */,
 				79A06FE8280459D100EF1A34 /* GuideData.json in Resources */,
 				55DE1027280571E700BF10BD /* MemoFolder6.mov in Resources */,
+				7946E53C28081BBE005E4123 /* audio_152_원하는_사진_또는_비디오를_선택하세요_.wav in Resources */,
 				55DE10532805CFF700BF10BD /* MemoWriting1.mov in Resources */,
 				D4DDA1732804567A002302F5 /* CategoryData.json in Resources */,
 				55DE10482805722D00BF10BD /* MemoAddPicture4.mov in Resources */,
 				D4DDA17728045BEE002302F5 /* ClearData.json in Resources */,
+				7946E53D28081BBE005E4123 /* audio_144_2_폴더를_확인하면_메모가_이동한_것을_확인할_수_있습니~.wav in Resources */,
 				55DE102B280571E700BF10BD /* MemoFolder1.mov in Resources */,
 				55DE103D2805721B00BF10BD /* MemoMakingWidget1.mov in Resources */,
+				7946E52C28081BBE005E4123 /* audio_145_배경화면의_빈공간을_1초_이상_눌러주세요_.wav in Resources */,
 				798DC11B2802BD560064168B /* Cow-moo-sound.mp3 in Resources */,
+				7946E52728081BBE005E4123 /* audio_137__새로운_폴더_를_터치하세요_.wav in Resources */,
 				55DE103A2805721B00BF10BD /* MemoMakingWidget5.mov in Resources */,
 				55DE103E2805721B00BF10BD /* MemoMakingWidget3.mov in Resources */,
 				55DE103C2805721B00BF10BD /* MemoMakingWidget4.mov in Resources */,
 				55DE10322805720600BF10BD /* MemoMove4.mov in Resources */,
 				55DE102A280571E700BF10BD /* MemoFolder3.mov in Resources */,
+				7946E52D28081BBE005E4123 /* audio_132_홈_화면에_있는_메모앱을_터치하세요_.wav in Resources */,
 				55DE103F2805721B00BF10BD /* MemoMakingWidget2.mov in Resources */,
+				7946E53428081BBE005E4123 /* audio_147_메모앱_위젯을_터치해주세요_.wav in Resources */,
 				55DE10492805722D00BF10BD /* MemoAddPicture2.mov in Resources */,
+				7946E52B28081BBE005E4123 /* audio_136_좌측_하단의_아이콘을_터치하세요_.wav in Resources */,
+				7946E53A28081BBE005E4123 /* audio_148_사용에_맞게_메모_또는_폴더를_선택하고_위젯추가를_눌~.wav in Resources */,
 				55DE101F2805716700BF10BD /* MemoWriting3.mov in Resources */,
 				55DE1026280571E700BF10BD /* MemoFolder5.mov in Resources */,
+				7946E52A28081BBE005E4123 /* audio_138_폴더_이름을_입력하신_후_저장을_눌러주세요_.wav in Resources */,
+				7946E52828081BBE005E4123 /* audio_134_메모의_제목을_적은_다음_메모할_내용을_작성하세요_.wav in Resources */,
+				7946E53628081BBE005E4123 /* audio_133_우측_하단의_작성버튼을_터치하세요_.wav in Resources */,
 				D4B55B2628041E69009BD1B4 /* GradeData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
