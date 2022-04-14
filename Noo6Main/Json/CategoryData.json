@@ -59,7 +59,7 @@
         "id" : 2,
         "categoryTitle" : "캘린더",
         "categorySubTitle" : "일정을 관리해볼까요?",
-        "categoryIcon" : "DefaultAppIcon",
+        "categoryIcon" : "CalendarAppIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -171,7 +171,7 @@
         "id" : 6,
         "categoryTitle" : "위젯",
         "categorySubTitle" : "위젯을 추가해보세요!",
-        "categoryIcon" : "DefaultAppIcon",
+        "categoryIcon" : "WidgetIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
