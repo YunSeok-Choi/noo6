@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 var player: AVAudioPlayer?
-var voice = [""]
+var voice = [String]()
 
 func playSound(sound: String){
     
