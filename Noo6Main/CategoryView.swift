@@ -44,6 +44,7 @@ struct CategoryView : View {
     
 }
 
+
 // List에 들어갈 카테고리별 컨텐츠 목록 (버튼 + 체크아이콘)
 struct ContentList : View {
     var contentInfo : CategoryInfo

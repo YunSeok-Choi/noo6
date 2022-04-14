@@ -10,18 +10,16 @@ import SwiftUI
 struct ZStackView: View {
     var clearInfoData : ClearInfo
     var iscleared = [Int]()
+    @State var isOpen = false
     var body: some View {
         ZStack{
-            
-            
             NavigationLink(destination: HonorDetailView(clearInfo: clearInfoData).toolbar{
                 Button(action: {
-                    //공유하기 기능
                 }, label: {
                     Image(systemName: "square.and.arrow.up")
                     
                 })
-            }) {
+            }, isActive: $isOpen) {
                 if(categorydata[iscleared[0]].categoryInfo[iscleared[1]].isComplete){
                     Image(clearInfoData.clearImage)
                         .resizable()
