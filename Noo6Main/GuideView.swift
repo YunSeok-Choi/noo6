@@ -11,7 +11,7 @@ import AVKit
 var player: AVAudioPlayer?
 var voice = [String]()
 
-func playSound(sound: String){
+func playSound(sound: String){                  //          음악 변환 함수
     
     guard let url = Bundle.main.url(forResource: sound, withExtension: ".wav") else {
         return
@@ -40,7 +40,7 @@ struct GuideView: View {
     @State var progressUp : Double = 1
     @State var isGuideComplete : Bool = false
     
-    var body: some View {
+    var body: some View {                                   //가이드 설명, 제스쳐 뷰
         VStack{
             VStack{ //guideView
                 TabView(selection: $currentPage){
@@ -65,9 +65,9 @@ struct GuideView: View {
             progressUp = 1/Double(guideInfos.totalPage)
         }
         
-        VStack {    //BottomView
+        VStack {
             HStack{
-                Button(action: {
+                Button(action: {                                    // 소리 상태 버튼
                     if isSound { player?.stop() }
                     isSound.toggle()
                 }){
@@ -87,7 +87,7 @@ struct GuideView: View {
                 
                 Spacer()
                 
-                Button(action: {
+                Button(action: {                                     // 소리 반복 버튼
                     isSound ? playSound(sound: voice[currentPage]) : player?.stop()
                 }){
                     Image(systemName: "repeat")
@@ -102,11 +102,11 @@ struct GuideView: View {
                 }
             }.padding(.horizontal)
             
-            ProgressView(value: progressUp)
+            ProgressView(value: progressUp)                           // 진행 상태 바
             
             HStack {
                 // 현재 단계가 1 이상일 때만 이전 단계 작동
-                Button("< 이전 단계") {
+                Button("< 이전 단계") {                                 // 단계 변경 버튼
                     if (currentPage > 0) {
                         progressUp -= 1/Double(guideInfos.totalPage)
                         currentPage -= 1
@@ -138,7 +138,7 @@ struct GuideView: View {
                 }
             }
         }
-        NavigationLink(destination: EmptyView()){//가이끝 뷰로 넘기기
+        NavigationLink(destination: EmptyView()){               //가이끝 뷰로 넘기기
             //Text("맨 마지막에서 버튼")
             
         }.navigationBarTitle("\(guideStorage.guideTitle)",displayMode: .inline)
@@ -165,7 +165,7 @@ struct GuideView_Previews: PreviewProvider {
     }
 }
 
-//----------------------- SimulationViews ---------------------------
+//----------------------- SimulationViews ---------------------------       
 
 let memoWriting: [String: AnyView] = ["MemoWriting1": AnyView(MemoWriting1()), "MemoWriting2": AnyView(MemoWriting2()), "MemoWriting3": AnyView(MemoWriting3())]
 

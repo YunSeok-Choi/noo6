@@ -13,26 +13,26 @@ struct HomeView: View {
 안녕하세요,
 어떤 도움이 필요하신가요?
 """
-        
+    // 홈뷰
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 20) {
-                Text(title)
+                Text(title)                                 // 안녕하세요, 어떤 도움이 필요하신가요?
                     .font(.system(size: 30.0, weight: .semibold))
                     .frame(width: 390, height: 75.0, alignment: .center)
                 
-                CategoryList()
+                CategoryList()                              // 각 가이드 카테고리 리스트 뷰
                     .frame(width: 390, height: 650, alignment: .center)
                     .padding()
             }
             .padding()
 
-            .navigationBarItems(
+            .navigationBarItems(                            // 네비게이션 바 업적 뷰 이동
                 trailing:
                     NavigationLink(
                         destination: HonorView(),
                         label:{
-                            Image(systemName: "archivebox")
+                            Image(systemName: "archivebox") // 업적 뷰 이미지
                                 .resizable()
                                 .frame(width: 30, height: 30)
                         })
