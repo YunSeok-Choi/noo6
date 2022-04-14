@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 var player: AVAudioPlayer?
-var voice = [""]
+var voice = [String]()
 
 func playSound(sound: String){
     
@@ -62,7 +62,6 @@ struct GuideView: View {
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
                 .animation(.easeInOut)
         }.onAppear(){
-            voice = guideInfos.voice
             progressUp = 1/Double(guideInfos.totalPage)
         }
         
@@ -152,74 +151,19 @@ struct GuideView: View {
                 })
                 
             }
+            .onAppear(){
+                voice = guideInfos.voice
+            }
     }
     
     
 }
 
-
-/*
-struct GuideList: Identifiable, Hashable{//가이드리스트 구조체, 이미지와 설명넣기
-    let id: Int
-    let image: String
-    let explain: String
-}
-
-let guidelists = [
-    GuideList(id: 0,image: "Test2",explain: "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest." ),
-    GuideList(id: 1,image: "image2",explain: "explain2." ),
-    GuideList(id: 2,image: "image3",explain: "explain3." ),
-    GuideList(id: 3,image: "dog",explain: "explain4." )
-    //똑같이 리스트로 추가
-]
-*/
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
         GuideView(guideStorage: guidedata[0], guideInfos: guidedata[0].guideInfo[0])
     }
 }
-
-// ---------------------- MemoGuide --------------------
-/*
-let guidelist = [memoList0, memoList1, memoList2, memoList3, memoList4]
-
-let memoList0 = [
-    GuideList(id: 0,image: "MemoWriting1", explain: "홈 화면에 있는 메모앱을 터치하세요." ),
-    GuideList(id: 1,image: "MemoWriting2", explain: "우측 하단의 작성버튼을 터치하세요." ),
-    GuideList(id: 2,image: "MemoWriting3", explain: "메모의 제목을 적은 다음 메모할 내용을 작성하세요." ),
-]
-
-let memoList1 = [
-    GuideList(id: 0,image: "MemoFolder1",explain: "메모앱 좌측 상단의 '<폴더'를 터치하세요" ),
-    GuideList(id: 1,image: "MemoFolder2",explain: "좌측 하단의 아이콘을 터치하세요." ),
-    GuideList(id: 2,image: "MemoFolder3",explain: "'새로운 폴더'를 터치하세요." ),
-    GuideList(id: 3,image: "MemoFolder4",explain: "폴더 이름을 입력하신 후 저장을 눌러주세요" ),
-    GuideList(id: 4,image: "MemoFolder5",explain: "새로운 폴더를 터치하세면 해당 폴더로 이동합니다." ),
-    GuideList(id: 5,image: "MemoFolder6",explain: "새로운 폴더가 완성되었습니다. 메모를 작성해보세요!" )
-]
-
-let memoList2 = [
-    GuideList(id: 0,image: "MemoMove1",explain: "다른 폴더로 이동시킬 메모에서 우측 상단의 􀍡를 터치하세요." ),
-    GuideList(id: 1,image: "MemoMove2",explain: "하단 메뉴의 '메모 이동'을 터치하세요." ),
-    GuideList(id: 2,image: "MemoMove3",explain: "이동시킬 폴더를 터치하세요."),
-    GuideList(id: 3,image: "MemoMove4",explain: "폴더를 확인하면 메모가 이동한 것을 확인할 수 있습니다.")
-]
-
-let memoList3 = [
-    GuideList(id: 0,image: "MemoMakingWidget1",explain: "배경화면의 빈공간을 1초 이상 눌러주세요." ),
-    GuideList(id: 1,image: "MemoMakingWidget2",explain: "좌측 상단의 +버튼을 터치하세요." ),
-    GuideList(id: 2,image: "MemoMakingWidget3",explain: "메모앱 위젯을 터치해주세요." ),
-    GuideList(id: 3,image: "MemoMakingWidget4",explain: "사용에 맞게 메모 또는 폴더를 선택하고 위젯추가를 눌러주세요." ),
-    GuideList(id: 4,image: "MemoMakingWidget5",explain: "위젯을 원하는 위치로 옮긴 후 우측상단의 ‘완료’버튼을 터치하세요." )
-]
-
-let memoList4 = [
-    GuideList(id: 0,image: "MemoAddPicture1",explain: "키보드 위에 있는 􀌞버튼을 터치해주세요" ),
-    GuideList(id: 1,image: "MemoAddPicture2",explain: "'사진 또는 비디오 선택'을 터치하세요'." ),
-    GuideList(id: 2,image: "MemoAddPicture3",explain: "원하는 사진 또는 비디오를 선택하세요." ),
-    GuideList(id: 3,image: "MemoAddPicture4",explain: "선택 후 '추가'를 눌러주세요." ),
-    GuideList(id: 4,image: "MemoAddPicture5", explain: "다음과 같이 사진이 추가되었습니다." )
-]*/
 
 //----------------------- SimulationViews ---------------------------
 
