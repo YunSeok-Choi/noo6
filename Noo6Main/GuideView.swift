@@ -29,7 +29,9 @@ func playSound(sound: String){
 struct GuideView: View {
     var guideStorage : GuideStorage
     @State var guideInfos: GuideInfo
+    var idDatas = [Int]()
     
+
     @State private var currentPage: Int = 0
     @State var isSound: Bool = true
     
@@ -116,12 +118,11 @@ struct GuideView: View {
                 Spacer()
                 Text("\(currentPage+1)")
                 Text("/")
-                //TODO: 가이드 전체 페이지수 필요
                 Text("\(Int(guideInfos.totalPage))")
                 Spacer()
                 
                 // 다음단계 및 ClearView로 가는 Button
-                NavigationLink(destination: ClearView(clear: cleardata[0].clearInfo[2]), isActive: $isGuideComplete){
+                NavigationLink(destination: ClearView(clear: cleardata[idDatas[0]].clearInfo[idDatas[1]], idData: idDatas), isActive: $isGuideComplete){
                     // 현재 가이드의 끝일 때에만 ClearView로 이동하도록 isActive
                     Button("다음 단계 >") {
                         if(progressUp >= 0.95){
