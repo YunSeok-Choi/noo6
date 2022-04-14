@@ -166,6 +166,34 @@
         ],
         "completedNumber" : 0,
         "allNumber" : 5
+    },
+    {
+        "id" : 6,
+        "categoryTitle" : "위젯",
+        "categorySubTitle" : "홈화면에 위젯을 추가해보세요!",
+        "categoryIcon" : "image2",
+        "isAllCleared" : false,
+        "categoryInfo" : [
+            {
+                "id" : 0,
+                "guideName" : "위젯화면에서 위젯추가",
+                "isComplete" : false
+            },{
+                "id" : 1,
+                "guideName" : "위젯화면에서 위젯삭제",
+                "isComplete" : false
+            },{
+                "id" : 2,
+                "guideName" : "홈화면에서 위젯추가",
+                "isComplete" : false
+            },{
+                "id" : 3,
+                "guideName" : "홈화면에서 위젯삭제",
+                "isComplete" : false
+            }
+        ],
+        "completedNumber" : 0,
+        "allNumber" : 4
     }
 ]
 
