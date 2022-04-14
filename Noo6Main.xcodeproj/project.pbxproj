@@ -94,9 +94,7 @@
 		79EB4B4C28053CA500F06C17 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB4B4B28053CA500F06C17 /* ModelData.swift */; };
 		BF2CEDFA28006ECB003401D6 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CEDF928006ECB003401D6 /* GuideView.swift */; };
 		D42F483827FED4C9009FECA0 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F483727FED4C9009FECA0 /* CategoryView.swift */; };
-		D4B55B2628041E69009BD1B4 /* GradeData.json in Resources */ = {isa = PBXBuildFile; fileRef = D4B55B2528041E69009BD1B4 /* GradeData.json */; };
 		D4B55B2828041F02009BD1B4 /* DataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B55B2728041F02009BD1B4 /* DataStruct.swift */; };
-		D4B55B2A280420B7009BD1B4 /* DataLoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B55B29280420B7009BD1B4 /* DataLoadModel.swift */; };
 		D4B55B2C28042318009BD1B4 /* DataTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B55B2B28042318009BD1B4 /* DataTestView.swift */; };
 		D4DDA1732804567A002302F5 /* CategoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = D4DDA1722804567A002302F5 /* CategoryData.json */; };
 		D4DDA17728045BEE002302F5 /* ClearData.json in Resources */ = {isa = PBXBuildFile; fileRef = D4DDA17628045BEE002302F5 /* ClearData.json */; };
@@ -193,9 +191,7 @@
 		79EB4B4B28053CA500F06C17 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		BF2CEDF928006ECB003401D6 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		D42F483727FED4C9009FECA0 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		D4B55B2528041E69009BD1B4 /* GradeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GradeData.json; sourceTree = "<group>"; };
 		D4B55B2728041F02009BD1B4 /* DataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStruct.swift; sourceTree = "<group>"; };
-		D4B55B29280420B7009BD1B4 /* DataLoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadModel.swift; sourceTree = "<group>"; };
 		D4B55B2B28042318009BD1B4 /* DataTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTestView.swift; sourceTree = "<group>"; };
 		D4DDA1722804567A002302F5 /* CategoryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CategoryData.json; sourceTree = "<group>"; };
 		D4DDA17628045BEE002302F5 /* ClearData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ClearData.json; sourceTree = "<group>"; };
@@ -476,7 +472,6 @@
 			children = (
 				D4DDA17628045BEE002302F5 /* ClearData.json */,
 				D4DDA1722804567A002302F5 /* CategoryData.json */,
-				D4B55B2528041E69009BD1B4 /* GradeData.json */,
 				79A06FE7280459D100EF1A34 /* GuideData.json */,
 			);
 			path = Json;
@@ -485,7 +480,6 @@
 		79A06FEC28046E4C00EF1A34 /* DataStructS */ = {
 			isa = PBXGroup;
 			children = (
-				D4B55B29280420B7009BD1B4 /* DataLoadModel.swift */,
 				79EB4B4B28053CA500F06C17 /* ModelData.swift */,
 				D4B55B2728041F02009BD1B4 /* DataStruct.swift */,
 			);
@@ -603,7 +597,6 @@
 				7946E52A28081BBE005E4123 /* audio_138_폴더_이름을_입력하신_후_저장을_눌러주세요_.wav in Resources */,
 				7946E52828081BBE005E4123 /* audio_134_메모의_제목을_적은_다음_메모할_내용을_작성하세요_.wav in Resources */,
 				7946E53628081BBE005E4123 /* audio_133_우측_하단의_작성버튼을_터치하세요_.wav in Resources */,
-				D4B55B2628041E69009BD1B4 /* GradeData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,7 +615,6 @@
 				55DE100A28055EF400BF10BD /* MemoAddPicture3.swift in Sources */,
 				55DE0FDD28055E6E00BF10BD /* MemoWriting1.swift in Sources */,
 				79373AFF28006D7400CDAD04 /* ClearView.swift in Sources */,
-				D4B55B2A280420B7009BD1B4 /* DataLoadModel.swift in Sources */,
 				55DE0FF328055EC500BF10BD /* MemoMove4.swift in Sources */,
 				55DE0FF628055EC500BF10BD /* MemoMove3.swift in Sources */,
 				79EB4B4C28053CA500F06C17 /* ModelData.swift in Sources */,
