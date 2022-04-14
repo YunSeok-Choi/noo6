@@ -15,9 +15,8 @@ struct CategoryList: View {
                 ZStack {
                     CategoryRow(categoryStorage: info)
                         .listRowBackground(Color.white)
+                  
                     NavigationLink(destination: CategoryView(guideName: info.categoryTitle, listInfos: info.categoryInfo)) {}
-                        .frame(width: 0)   // NavigationLink 화살표 제거를 위함 1
-                        .opacity(0)        // NavigationLink 화살표 제거를 위함 1
                 }
                 .padding(EdgeInsets(top: 5, leading: -20, bottom: 5, trailing: -20))
                 .listRowSeparator(.hidden)
