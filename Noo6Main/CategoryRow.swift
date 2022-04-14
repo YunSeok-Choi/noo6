@@ -13,7 +13,6 @@ struct CategoryRow: View {                                  // 카테고리 UI �
     
     var body: some View {
         HStack(spacing: 15.0) {
-//          Category별 이미지 확정 시 데이터를 받아 이미지를 얻도록 변경 필요
             Image(categoryStorage.categoryIcon)
                 .resizable()
                 .frame(width: 75.0, height: 75.0)
@@ -21,7 +20,6 @@ struct CategoryRow: View {                                  // 카테고리 UI �
             VStack(alignment: .leading, spacing: 10.0) {
                 HStack {
                     Text(categoryStorage.categoryTitle+"(\(categoryStorage.completedNumber)/\(categoryStorage.allNumber))")
-                    //Text(" (\(categoryData.completedNumber)/\(categoryData.allNumber))")
                     // 가이드를 모두 완료했을 경우 왕관 이미지 생성됨
                     if (categoryStorage.completedNumber == categoryStorage.allNumber) {
                         Image(systemName: "crown")
