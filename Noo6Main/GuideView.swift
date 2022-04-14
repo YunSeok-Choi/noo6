@@ -37,8 +37,6 @@ struct GuideView: View {
     @State var progressUp : Double = 1/Double(guidelists.count)
     @State var isGuideComplete : Bool = false
     
-    var guideId : Int
-    
     var body: some View {
         VStack{
             VStack{ //guideView
@@ -116,7 +114,8 @@ struct GuideView: View {
                 Spacer()
                 Text("\(currentPage+1)")
                 Text("/")
-                Text("\(pages)")
+                //TODO: 가이드 전체 페이지수 필요
+                Text("pages")
                 Spacer()
                 
                 // 다음단계 및 ClearView로 가는 Button
