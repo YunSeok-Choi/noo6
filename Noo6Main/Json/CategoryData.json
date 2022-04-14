@@ -37,22 +37,22 @@
             {
                 "id" : 0,
                 "guideName" : "알림 설정하기",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 1,
                 "guideName" : "아이폰 물리 버튼 조작하기",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 2,
                 "guideName" : "제어센터 활용하기",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 3,
                 "guideName" : "키보드 설정 및 사용하기",
                 "isComplete" : false
             }
         ],
-        "completedNumber" : 0,
+        "completedNumber" : 3,
         "allNumber" : 4
     },
     {
@@ -121,18 +121,18 @@
             },{
                 "id" : 1,
                 "guideName" : "더 잘 찍으려면?",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 2,
                 "guideName" : "색다르게 찍어보자",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 3,
                 "guideName" : "연속사진과 동영상 찍기",
                 "isComplete" : false
             }
         ],
-        "completedNumber" : 0,
+        "completedNumber" : 2,
         "allNumber" : 4
     },
     {
@@ -140,31 +140,31 @@
         "categoryTitle" : "메모",
         "categorySubTitle" : "메모장이 필요하신가요?",
         "categoryIcon" : "MemoAppIcon",
-        "isAllCleared" : false,
+        "isAllCleared" : true,
         "categoryInfo" : [
             {
                 "id" : 0,
                 "guideName" : "메모 작성",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 1,
                 "guideName" : "메모 정리",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 2,
                 "guideName" : "메모 폴더 이동",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 3,
                 "guideName" : "메모 위젯 사용",
-                "isComplete" : false
+                "isComplete" : true
             },{
                 "id" : 4,
                 "guideName" : "메모 사진 추가",
-                "isComplete" : false
+                "isComplete" : true
             }
         ],
-        "completedNumber" : 0,
+        "completedNumber" : 5,
         "allNumber" : 5
     },
     {
