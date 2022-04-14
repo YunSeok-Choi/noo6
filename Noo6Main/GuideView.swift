@@ -109,6 +109,7 @@ struct GuideView: View {
                     if (currentPage > 0) {
                         progressUp -= 1/Double(guideInfos.totalPage)
                         currentPage -= 1
+                        isSound ? playSound(sound: voice[currentPage]) : player?.stop()
                     }
                 }
                 .padding(.leading, 20.0)
@@ -130,6 +131,7 @@ struct GuideView: View {
                         else{
                             progressUp += 1/Double(guideInfos.totalPage)
                             currentPage += 1
+                            isSound ? playSound(sound: voice[currentPage]) : player?.stop()
                         }
                     }
                     .padding(.trailing, 20.0)
