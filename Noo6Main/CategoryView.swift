@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CategoryView : View {
     var guideName: String
-    var listInfos : [CategoryInfo]
+    var listInfos : CategoryStorage
 
     var body: some View{
         VStack {
@@ -23,10 +23,10 @@ struct CategoryView : View {
                         .multilineTextAlignment(.center)
                     
                     // 받은 리스트(contentInfos)의 정보에 따라 List에 이동할 버튼 생성
-                    List(listInfos, id: \.id) {
+                    List(listInfos.categoryInfo, id: \.id) {
                         info in
                         // 버튼 누를 시 임시로 EmptyView로 이동 -> merge 후 가이드뷰로 이동하도록 수정 필요
-                        NavigationLink(destination: GuideView(guide: guidedata[0])){
+                        NavigationLink(destination: GuideView(guideStorage: guidedata[0], guideInfos: guidedata[0].guideInfo[info.id], idDatas: [listInfos.id, info.id])){
                             ContentList(contentInfo: info)
                                 .listRowBackground(Color.white)
                                 .listRowSeparator(.hidden)
@@ -47,19 +47,20 @@ struct CategoryView : View {
 
 // List에 들어갈 Array의 구조
 struct ContentInfo: Identifiable {
-    let id = UUID()
+    let id : Int
     let title: String
     let isComplete: Bool
 
 }
  
 // List에 들어갈 Array에 Test 데이터 넣기
+/*
 let contentInfos = [
     ContentInfo(title: "잠금화면 제스처", isComplete: false),
     ContentInfo(title: "앱 페이지의 기본 제스처", isComplete: true),
     ContentInfo(title: "홈 화면의 기본 제스처", isComplete: false),
     ContentInfo(title: "홈 화면을 편집하는 방법", isComplete: false)
-]
+]*/
 
 // List에 들어갈 카테고리별 컨텐츠 목록 (버튼 + 체크아이콘)
 struct ContentList : View {
@@ -89,6 +90,6 @@ struct ContentList : View {
 
 struct CategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView(guideName: "아이폰 초보자 가이드", listInfos: categorydata[2].categoryInfo)
+        CategoryView(guideName: "아이폰 초보자 가이드", listInfos: categorydata[2])
     }
 }

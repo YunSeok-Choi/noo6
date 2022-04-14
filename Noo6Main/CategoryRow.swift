@@ -17,7 +17,7 @@ struct CategoryRow: View {
             Image(categoryStorage.categoryIcon)
                 .resizable()
                 .frame(width: 75.0, height: 75.0)
-                .cornerRadius(15)
+                .cornerRadius(20)
             VStack(alignment: .leading, spacing: 10.0) {
                 HStack {
                     Text(categoryStorage.categoryTitle+"(\(categoryStorage.completedNumber)/\(categoryStorage.allNumber))")
@@ -41,8 +41,9 @@ struct CategoryRow: View {
 struct CategoryRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CategoryRow(categoryStorage: categorydata[0])
-            CategoryRow(categoryStorage : categorydata[1])
+            CategoryRow(categoryStorage: categorydata[3])
+            CategoryRow(categoryStorage : categorydata[4])
+            CategoryRow(categoryStorage : categorydata[5])
         }
         .previewLayout(.fixed(width: 400, height: 100))
     }

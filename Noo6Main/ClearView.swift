@@ -15,17 +15,20 @@ func shareButton() {
 }
 
 struct ClearView: View {
-    var clear: ClearStorage
+    var clear: ClearInfo
+    var idData = [Int]()
     
     var body: some View {
         NavigationView{
             VStack{
                 VStack{
-                    Text("\(clear.clearInfo[0].clearMessage)")
+                    Text("\(clear.clearMessage)")
                         .font(.title)
+                        .multilineTextAlignment(.center)
                 }
                 
-                Image("\(clear.clearInfo[0].clearImage)")
+                Image("\(clear.clearImage)")
+                    .resizable()
                     .padding()
                     
                     
@@ -33,7 +36,7 @@ struct ClearView: View {
                 Button(action: {
                     print("가이드 카테고리로 갑니다.")
                 }, label: {
-                    NavigationLink(destination: CategoryView(guideName: "아이폰 초보자 가이드", listInfos: categorydata[5].categoryInfo)){
+                    NavigationLink(destination:CategoryView(guideName: categorydata[idData[0]].categoryTitle, listInfos: categorydata[idData[0]])){
                         Text("다른 가이드 배우기")
                             .foregroundColor(Color.white)
                     }
@@ -69,6 +72,6 @@ struct ClearView: View {
 
 struct ClearView_Previews: PreviewProvider {
     static var previews: some View {
-        ClearView(clear: cleardata[0] )
+        ClearView(clear: cleardata[0].clearInfo[1] )
     }
 }
