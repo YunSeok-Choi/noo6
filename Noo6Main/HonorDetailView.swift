@@ -9,21 +9,26 @@
 import SwiftUI
 
 struct HonorDetailView : View {
+    // clearInfo 를 받자!
+    var clearInfo : ClearInfo
+    // clearInfo[index].clearMessage
+    // clearInfo[index].clearImage
     var body: some View{
         VStack{
-            Text("\(HonorDetialView1_1.title)")
+            Text("\(clearInfo.clearMessage)")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
-            Image("\(HonorDetialView1_1.image)")
+            Image("\(clearInfo.clearImage)")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 300)
                 .padding()
-            Text("\(HonorDetialView1_1.text)")
+            /* 시간이 없어서 밑에 설명 텍스트 삭제
+             Text("\(HonorDetialView1_1.text)")
                 .font(.system(size: 20))
                 .frame(width: 358, height: 120)
                 .multilineTextAlignment(.center)
-                .lineSpacing(10)
+                .lineSpacing(10)*/
             Spacer()
             ButtonView()
             Spacer()
@@ -62,6 +67,6 @@ struct ButtonView: View {
 
 struct HonorDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HonorDetailView()
+        HonorDetailView(clearInfo: cleardata[0].clearInfo[3])
     }
 }

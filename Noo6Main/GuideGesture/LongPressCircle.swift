@@ -56,7 +56,7 @@ struct LongPressCircle: View {
         Circle()
             .fill(self.isDetectingLongPress ?
                   Color.green:
-                    (self.isLongPressed ? Color.gray : Color.blue))
+                    (self.isLongPressed ? Color.gray.opacity(0) : Color.blue))
             .frame(width: 50, height: 50, alignment: .center)
             .gesture(longPress)
             .padding(5.0)

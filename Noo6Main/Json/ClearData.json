@@ -5,24 +5,148 @@
             {
                 "id" : 0,
                 "clearImage" : "어르신짤1",
-                "clearMessage" : "축하합니다! 당신은 이제 일정 이동의 고수!"
+                "clearMessage" : "축하합니다! 당신은 잠금화면 제스처의 달인!"
             },
             {
                 "id": 1,
                 "clearImage": "image2",
-                "clearMessage": "축하합니다! 당신은 일정 추가의 고수"
+                "clearMessage": "축하합니다! 당신은 기본 제스처를 조종하는 흑마법사!"
             },
             {
                 "id": 2,
                 "clearImage" : "image3",
-                "clearMessage" : "축하합니다! 당신은 일정 알림의 고수!!"
+                "clearMessage" : "축하합니다! 당신은 홈 화면을 순간이동할 수 있습니다!"
             },
             {
                 "id" : 3,
                 "clearImage" : "image1",
-                "clearMessage" : "축하링"
+                "clearMessage" : "축하합니다! 당신은 홈 화면의 파괴자!"
             }
         ]
-    
+    },
+    {
+        "id" : 1,
+        "clearInfo" : [
+            {
+                "id" : 0,
+                "clearImage" : "Test",
+                "clearMessage" : "축하합니다! 당신은 알림 무시의 달인!"
+            },
+            {
+                "id": 1,
+                "clearImage": "image2",
+                "clearMessage": "축하합니다! 당신은 물리 버튼을 조종하는 흑마법사!"
+            },
+            {
+                "id": 2,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 당신은 제어센터를 활용하는 멋쟁이!"
+            },
+            {
+                "id" : 3,
+                "clearImage" : "image1",
+                "clearMessage" : "축하합니다! 당신은 키보드와 한 발자국 가까워졌습니다!"
+            }
+        ]
+    },
+    {
+        "id" : 2,
+        "clearInfo" : [
+            {
+                "id" : 0,
+                "clearImage" : "어르신짤1",
+                "clearMessage" : "축하합니다! 당신은 일정 미루기의 달인!"
+            },
+            {
+                "id": 1,
+                "clearImage": "image2",
+                "clearMessage": "축하합니다! 당신은 일정을 추가하는 인싸!"
+            },
+            {
+                "id": 2,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 당신은 보기 싫은 일정의 알림을 끌 수 있습니다!"
+            },
+            {
+                "id" : 3,
+                "clearImage" : "image1",
+                "clearMessage" : "축하합니다! 당신은 일정을 반복하는 개미!"
+            }
+        ]
+    },
+    {
+        "id" : 3,
+        "clearInfo" : [
+            {
+                "id" : 0,
+                "clearImage" : "어르신짤1",
+                "clearMessage" : "축하합니다! 당신은 사진 정리의 달인!"
+            },
+            {
+                "id": 1,
+                "clearImage": "image2",
+                "clearMessage": "축하합니다! 당신은 사진을 조종하는 흑마법사!"
+            },
+            {
+                "id": 2,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 당신은 간편하게 사진을 찾을 수 있습니다!"
+            }
+        ]
+    },
+    {
+        "id" : 4,
+        "clearInfo" : [
+            {
+                "id" : 0,
+                "clearImage" : "어르신짤1",
+                "clearMessage" : "축하합니다! 당신은 카메라 찍기의 초보자!"
+            },
+            {
+                "id": 1,
+                "clearImage": "image2",
+                "clearMessage": "축하합니다! 당신은 사진 찍기의 고수!"
+            },
+            {
+                "id": 2,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 당신은 갬성있는 사진가!"
+            },
+            {
+                "id": 3,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 당신은 무려 연속사진과 동영상까지 마스터!"
+            }
+        ]
+    },
+    {
+        "id" : 5,
+        "clearInfo" : [
+            {
+                "id" : 0,
+                "clearImage" : "어르신짤1",
+                "clearMessage" : "축하합니다! 당신은 메모 작성의 초보자!"
+            },
+            {
+                "id": 1,
+                "clearImage": "image2",
+                "clearMessage": "축하합니다! 당신은 메모 정리의 고수!"
+            },
+            {
+                "id": 2,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 메모를 이동시키는 흑마법사!"
+            },
+            {
+                "id": 3,
+                "clearImage" : "image3",
+                "clearMessage" : "축하합니다! 당신은 메모를 홈에서 간편하게!"
+            },
+            {
+                "id": 4,
+                "clearImage" : "Test",
+                "clearMessage" : "축하합니다! 당신은 사진까지 메모할 수 있습니다!"
+            }
+        ]
     }
 ]
