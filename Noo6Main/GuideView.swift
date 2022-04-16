@@ -179,3 +179,4 @@ let memoPicture: [String: AnyView] = ["MemoAddPicture1" : AnyView(MemoAddPicture
 
 //----------------------- Guide Category ----------------------
 let category: [Int: [String: AnyView]] = [0 : memoWriting, 1 : memoFolder, 2 : memoMove, 3: memoWidget, 4 : memoPicture]
+// guideId
