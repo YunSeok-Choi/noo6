@@ -3,7 +3,7 @@
         "id" : 0,
         "categoryTitle" : "아이폰 초보자 가이드",
         "categorySubTitle" : "아이폰이 처음이신가요?",
-        "categoryIcon" : "DefaultAppIcon",
+        "categoryIcon" : "IphoneGuideIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
@@ -31,7 +31,7 @@
         "id" : 1,
         "categoryTitle" : "알면 유용한 기능",
         "categorySubTitle" : "알림을 없애볼까요?",
-        "categoryIcon" : "DefaultAppIcon",
+        "categoryIcon" : "UsefulFunctionIcon",
         "isAllCleared" : false,
         "categoryInfo" : [
             {
