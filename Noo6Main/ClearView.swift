@@ -31,8 +31,8 @@ struct ClearView: View {
                 Image("\(clear.clearImage)")                    // 클리어 이미지
                     .resizable()
                     .padding()
-                    
-                    
+                
+                
                 
                 Button(action: {                                // 가이드 카테고리로 넘어가는 버튼
                     print("가이드 카테고리로 갑니다.")
@@ -55,7 +55,7 @@ struct ClearView: View {
                 .padding()
                 .background(Color(red: 0, green: 0.5, blue: 1))
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
-     
+                
                 Button(action: {                                    // 홈으로 가는 버튼
                     print("홈으로 갑니다.")
                 }, label: {
