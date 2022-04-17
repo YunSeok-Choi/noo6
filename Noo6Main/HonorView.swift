@@ -25,17 +25,25 @@ struct HonorView: View {
         
         ScrollView {
             VStack{
+                
+                // 전체 카테고리 수 만큼 반복문
                 ForEach(0..<categorydata.count){ i in
                     VStack{
+                        
+                        // 현재 카테고리 제목 표시
                         Text("\(categorydata[i].categoryTitle) \(categorydata[i].completedNumber) / \(categorydata[i].allNumber)")
                             .font(.system(size: 20))
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity)
                             .padding(.bottom, 10)
                         
-                        HStack{
+                        HStack{ // 3개까지 하나의 HStack 안에 넣어 이미지 목록을 구성
                             ForEach(0..<categorydata[i].allNumber) { index in
+                                
+                                // 이미지 목록에서 id 값이 0~2인 이미지 한줄에 ZStackView로 구현
                                 if (index <= 2){
+                                    // i: 카테고리의 번호, index: 카테고리 안의 가이드 번호
+                                    // cleardata[i].clearInfo[index]: 현재 카테고리의 가이드 넘버의 정보 넘겨줌(사진, 클리어 메시지)
                                     ZStackView(clearInfoData: cleardata[i].clearInfo[index], iscleared: [i, index])
                                 }
                             }
@@ -44,14 +52,15 @@ struct HonorView: View {
                         
                         HStack{
                             ForEach(0..<categorydata[i].allNumber) { index in
+                                
+                                // 이미지 목록에서 id 값이 3이상인 이미지 한줄에 ZStackView로 구현
                                 if (index >= 3){
                                     ZStackView(clearInfoData: cleardata[i].clearInfo[index], iscleared: [i, index])
                                         .frame(alignment: .leading)
                                 }
                             }
-                            Spacer()
+                            Spacer()    // 두번째 HStack에서 왼쪽 정렬을 하기 위해 공백 삽입
                         }
-                        .frame(alignment: .leading)
                         .padding()
                         
                         
