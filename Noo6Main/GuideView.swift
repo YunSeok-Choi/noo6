@@ -53,7 +53,7 @@ struct GuideView: View {
                                 .frame(width: 358, height: 120)
                                 .multilineTextAlignment(.center)
                             
-                            category[guideInfos.id]![guideInfos.guideView[i]]!
+                            category[guideInfos.id]![guideInfos.guideView[i]]!  //카테고리 이중 dictionary [][]로 들어감
                                 .frame(height: 480)
                                 .cornerRadius(24)
                                 .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
