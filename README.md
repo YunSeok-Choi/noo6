@@ -26,13 +26,12 @@ Insert gif or link to demo
 
 
 ## :fireworks: Screenshots
-
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
-![App Screenshot](https://dummyimage.com/250x500/000/fff.png)
+![image](https://user-images.githubusercontent.com/66102708/163712745-711795ab-bc3f-4fd5-bf22-14408d84b2ee.png)
+![image1](https://user-images.githubusercontent.com/66102708/163712748-4c4332fb-7689-4af7-bd98-0c491ca0ceae.png)
+![image2](https://user-images.githubusercontent.com/66102708/163712750-d879a1df-b70a-4c0f-8a2a-333d8cb5a02d.png)
+![image3](https://user-images.githubusercontent.com/66102708/163712752-608b6da9-d113-42dc-bfc3-2d94f19ec339.png)
+![image4](https://user-images.githubusercontent.com/66102708/163712757-0dffc2be-b952-41a7-b771-f7c554c70a97.png)
+![image5](https://user-images.githubusercontent.com/66102708/163712760-989fd898-9c0d-415d-bdeb-0501e5a099cf.png)
 
 
 ## :sparkles: Skills & Tech Stack
