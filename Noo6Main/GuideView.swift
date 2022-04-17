@@ -6,34 +6,36 @@
 //
 
 import SwiftUI
-import AVKit
+import AVKit            //플랫폼의 기본 재생 환경과 일치하는 앱용 플레이어 인터페이스를 쉽게 제공
 
 var player: AVAudioPlayer?
-var voice = [String]()
+var voice = [String]()  //정식문법: Array<String> = ["정식", "문법"] ,단축문법: [String]()
 
-func playSound(sound: String){                  //          음악 변환 함수
-    
+
+func playSound(sound: String){                  //음악 변환 함수
+    //guard let 은 else와 return이 꼭 와야함, 값이 올지 안올지 정확히 알 수 없을 때 Optional 타입의 변수 사용 (변수명?), unwrap하기 -> 1. (변수!)로 강제로 2. if let or guard let
+    //bundle은 실행 가능한 코드와 그 코드가 사용하는 자원을 포함하고 있는 디렉토리(전체, main은 현재,url을 통해 파일 이름과 확장자를 받아옴,(이름이 틀리면 확장자가 같은 첫번째 파일, 확장자가 다르면 이름이 같은 첫번째를 가져옴)
     guard let url = Bundle.main.url(forResource: sound, withExtension: ".wav") else {
         return
     }
-    
+    //try = 오류 발생할 수 있어도 실행해봄, do-catch로 감싸서 error발생시 catch에서 print함
     do{
-        player = try AVAudioPlayer(contentsOf: url)
-        player?.play()
+        player = try AVAudioPlayer(contentsOf: url)     //player에 url을 넣어줌
+        player?.play()      // 플레이어 실행(비동기적)
         
     }catch let error {
-        print("재생 오류 \(error.localizedDescription)")
+        print("재생 오류 \(error.localizedDescription)")    //지역에 맞게 에러를 표시해줌
     }
 }
 
 struct GuideView: View {
-    var guideStorage : GuideStorage
-    @State var guideInfos: GuideInfo
-    var idDatas = [Int]()
+    var guideStorage : GuideStorage //GuideStorage구조체를 가져옴
+    @State var guideInfos: GuideInfo    //GuideInfo구조체를 가져옴
+    var idDatas = [Int]()           //Int형 배열 idDatas
     
-
-    @State private var currentPage: Int = 0
-    @State var isSound: Bool = true
+    
+    @State private var currentPage: Int = 0     //현재 페이지 변수 currentPage
+    @State var isSound: Bool = false             //소리 판단 변수 isSound
     
     // progressUp: progressView 게이지 상태
     // isGuideComplete : 가이드 끝 단계인지 알려주는 변수
@@ -44,34 +46,36 @@ struct GuideView: View {
         VStack{
             VStack{ //guideView
                 TabView(selection: $currentPage){
-                    ForEach(0..<Int(guideInfos.totalPage)){i in
+                    ForEach(0..<guideInfos.totalPage){i in
                         VStack(){
                             Text("\(guideInfos.guideMessage[i])")
                                 .font(.system(size: 30))
                                 .frame(width: 358, height: 120)
                                 .multilineTextAlignment(.center)
-                          
-                            category[guideInfos.id]![guideInfos.guideView[i]]!
+                            
+                            category[guideInfos.id]![guideInfos.guideView[i]]//! //이부분 !의 의미는?
                                 .frame(height: 480)
                                 .cornerRadius(24)
                                 .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
                         }
+                        
                     }
                     
                 }
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))  //page처럼 구현 + ...을 안보이게함
-                .animation(.easeInOut)
-        }.onAppear(){
-            progressUp = 1/Double(guideInfos.totalPage)
+                .animation(.easeInOut(duration: 1.5))   //천천히 슬라이드 애니메이션
+        }.onAppear(){   //onAppear(){action: } 위 화면이 로드되면 action을 진행함
+            progressUp = 1/Double(guideInfos.totalPage)    // 1을 총 페이지로 나눠서 1틱을 설정
+            voice = guideInfos.voice    //voice에 GuideDate의 guideinfo의 voice 배열을 넣어줌
         }
         
         VStack {
             HStack{
                 Button(action: {                                    // 소리 상태 버튼
-                    if isSound { player?.stop() }
-                    isSound.toggle()
+                    if isSound { player?.stop() }   //isSound(소리가 켜져있을 때) 누르면 소리 멈춤
+                    isSound.toggle()                //isSound 소리 상태 바꾸기
                 }){
-                    Image(systemName: isSound ? "speaker.wave.1.fill" : "speaker.slash.fill")
+                    Image(systemName: isSound ? "speaker.wave.1.fill" : "speaker.slash.fill")   //아이콘 이미지
                         .clipShape(Circle())
                         .padding(5)
                         .frame(width: 50, height: 50)
@@ -81,8 +85,10 @@ struct GuideView: View {
                         .imageScale(.large)
                         .font(.title)
                 }.onAppear(){
-                    isSound = guideStorage.isSound
+                    //isSound = guideStorage.isSound   //isSound를 받아오기,true를 받아옴.. 굳이..?
+                    //isSound가 true면 현재 페이지에 맞춰 playSound에 url넘겨줌, false면 멈춤
                     isSound ? playSound(sound: voice[currentPage]) : player?.stop()
+                    
                 }
                 
                 Spacer()
@@ -125,8 +131,8 @@ struct GuideView: View {
                 NavigationLink(destination: ClearView(clear: cleardata[idDatas[0]].clearInfo[idDatas[1]], idData: idDatas), isActive: $isGuideComplete){
                     // 현재 가이드의 끝일 때에만 ClearView로 이동하도록 isActive
                     Button("다음 단계 >") {
-                        if(progressUp >= 0.95){
-                            isGuideComplete = true
+                        if(progressUp >= 0.95){     //충분히 높은값 0.95를 넘으면
+                            isGuideComplete = true  //단계 완료!
                         }
                         else{
                             progressUp += 1/Double(guideInfos.totalPage)
@@ -141,7 +147,7 @@ struct GuideView: View {
         NavigationLink(destination: EmptyView()){               //가이끝 뷰로 넘기기
             //Text("맨 마지막에서 버튼")
             
-        }.navigationBarTitle("\(guideStorage.guideTitle)",displayMode: .inline)
+        }.navigationBarTitle("\(guideStorage.guideTitle)",displayMode: .inline) //inline형식: 최상단 중간에 작게 제목
         // 데이터 받아옴
             .toolbar{
                 Button(action: {
@@ -151,9 +157,7 @@ struct GuideView: View {
                 })
                 
             }
-            .onAppear(){
-                voice = guideInfos.voice
-            }
+            
     }
     
     

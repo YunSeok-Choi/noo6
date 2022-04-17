@@ -11,7 +11,7 @@ import SwiftUI
 struct Noo6MainApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView()          //HomeView()를 가장 첫 화면으로 보여줌
         }
     }
 }
