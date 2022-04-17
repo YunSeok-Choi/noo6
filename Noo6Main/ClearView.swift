@@ -8,10 +8,16 @@
 import SwiftUI
 
 func shareButton() {                                             //공유 버튼 함수
+<<<<<<< HEAD
         let url = URL(string: "https://developer.apple.com/kr/")    // 공유 할 링크, 꼭 링크가 아니여도 [Any] 타입으로
         // 공유 기능 컨트롤러
         let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
         // 공유 기능이 나오는 부분
+=======
+        let url = URL(string: "https://developer.apple.com/kr/")
+        let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
+    
+>>>>>>> parent of 1cb94f4 (GuideView 주석 추가)
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
 }
 
@@ -31,8 +37,8 @@ struct ClearView: View {
                 Image("\(clear.clearImage)")                    // 클리어 이미지
                     .resizable()
                     .padding()
-                
-                
+                    
+                    
                 
                 Button(action: {                                // 가이드 카테고리로 넘어가는 버튼
                     print("가이드 카테고리로 갑니다.")
@@ -55,7 +61,7 @@ struct ClearView: View {
                 .padding()
                 .background(Color(red: 0, green: 0.5, blue: 1))
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .circular))
-                
+     
                 Button(action: {                                    // 홈으로 가는 버튼
                     print("홈으로 갑니다.")
                 }, label: {
