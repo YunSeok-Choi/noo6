@@ -31,7 +31,7 @@ struct CategoryInfo : Codable, Identifiable {       // Category.siwft 에 들어
     let guideName : String
     let isComplete : Bool
 }
-
+// *********************************************
 
 struct GuideStorage : Codable, Identifiable{        // 가이드 뷰에 들어가는 데이터            ex) 가이드 타이틀, 소리 발생 유무
     var id : Int
@@ -48,6 +48,7 @@ struct GuideInfo: Codable, Identifiable{            // 가이드 상세 페이�
     var voice : [String]
 }
 
+// *********************************************
 
 struct ClearStorage : Codable, Identifiable {       // 클리어 뷰 에 들어가는 데이터
     let id : Int

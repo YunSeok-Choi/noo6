@@ -52,8 +52,9 @@ struct GuideView: View {
                                 .font(.system(size: 30))
                                 .frame(width: 358, height: 120)
                                 .multilineTextAlignment(.center)
+
                             
-                            category[guideInfos.id]![guideInfos.guideView[i]]!  //카테고리 이중 dictionary [][]로 들어감
+                            category[guideInfos.id]![guideInfos.guideView[i]]!  //카테고리 이중 dictionary [][]로 들어감 
                                 .frame(height: 480)
                                 .cornerRadius(24)
                                 .shadow(color: Color.gray, radius: 5, x: 0, y: 0)
@@ -168,7 +169,16 @@ struct GuideView_Previews: PreviewProvider {
     }
 }
 
-//----------------------- SimulationViews ---------------------------       
+// 포기하면 편해,,,
+// 딕셔너리 2번 참조, 가이드의 id 를 받고, 받은 id에 맞는 카테고리를 참조,
+// 그 후, 175 라인 참조
+//----------------------- Guide Category ----------------------
+let category: [Int: [String: AnyView]] = [0 : memoWriting, 1 : memoFolder, 2 : memoMove, 3: memoWidget, 4 : memoPicture]
+
+
+// 가이드 뷰의 이름(String)을 받아와 무슨 뷰인지 찾은 후, AnyView 타입으로 변환시켜 반환
+//----------------------- SimulationViews ---------------------------
+
 
 let memoWriting: [String: AnyView] = ["MemoWriting1": AnyView(MemoWriting1()), "MemoWriting2": AnyView(MemoWriting2()), "MemoWriting3": AnyView(MemoWriting3())]
 
@@ -180,6 +190,3 @@ let memoWidget: [String: AnyView] = ["MemoMakingWidget1": AnyView(MemoMakingWidg
 
 let memoPicture: [String: AnyView] = ["MemoAddPicture1" : AnyView(MemoAddPicture1()), "MemoAddPicture2" : AnyView(MemoAddPicture2()), "MemoAddPicture3" : AnyView(MemoAddPicture3()), "MemoAddPicture4" : AnyView(MemoAddPicture4()), "MemoAddPicture5" : AnyView(MemoAddPicture5())]
 
-//----------------------- Guide Category ----------------------
-let category: [Int: [String: AnyView]] = [0 : memoWriting, 1 : memoFolder, 2 : memoMove, 3: memoWidget, 4 : memoPicture]
-// guideId
