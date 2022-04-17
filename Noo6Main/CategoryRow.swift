@@ -19,7 +19,9 @@ struct CategoryRow: View {                                  // 카테고리 UI �
                 .cornerRadius(20)
             VStack(alignment: .leading, spacing: 10.0) {
                 HStack {
+                    // (현재 완료한 가이드 수 / 전체 가이드 수) 표시
                     Text(categoryStorage.categoryTitle+"(\(categoryStorage.completedNumber)/\(categoryStorage.allNumber))")
+                    
                     // 가이드를 모두 완료했을 경우 왕관 이미지 생성됨
                     if (categoryStorage.completedNumber == categoryStorage.allNumber) {
                         Image(systemName: "crown")
@@ -27,6 +29,7 @@ struct CategoryRow: View {                                  // 카테고리 UI �
                             .foregroundColor(.blue)
                     }
                 }
+                // 각 카테고리 별 부연 설명 표시
                 Text(categoryStorage.categorySubTitle)
                     .font(.system(size: 24, weight: .semibold))
             }

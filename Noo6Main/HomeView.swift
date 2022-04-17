@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     // 2줄의 title을 편하게 구성하기 위함
     let title: String = """
 안녕하세요,
@@ -21,12 +22,12 @@ struct HomeView: View {
                     .font(.system(size: 30.0, weight: .semibold))
                     .frame(width: 390, height: 75.0, alignment: .center)
                 
-                CategoryList()                              // 각 가이드 카테고리 리스트 뷰
+                // 각 카테고리를 List로 표시하기 위한 View 호출
+                CategoryList()
                     .frame(width: 390, height: 650, alignment: .center)
                     .padding()
             }
             .padding()
-
             .navigationBarItems(                            // 네비게이션 바 업적 뷰 이동
                 trailing:
                     NavigationLink(
