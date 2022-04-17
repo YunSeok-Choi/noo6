@@ -20,10 +20,6 @@
 - [@bee712](https://github.com/bee712) | [@erabhre](https://github.com/erabhre) | [@hurdasol98](https://github.com/hurdasol98) | [@JaewoongLee-swift](https://github.com/JaewoongLee-swift) | [@uudquark](https://github.com/uudquark) | [@YunSeok-Choi](https://github.com/YunSeok-Choi)
 
 
-## :framed_picture: Demo
-
-Insert gif or link to demo
-
 
 ## :fireworks: Screenshots
 ![image](https://user-images.githubusercontent.com/66102708/163712745-711795ab-bc3f-4fd5-bf22-14408d84b2ee.png)
@@ -40,7 +36,7 @@ AVKit
 
 ## :books: Documentation
 
-[Documentation](https://linktodocumentation)
+[Documentation](https://developer.apple.com/xcode/swiftui/)
 
 
 ## :lock_with_ink_pen: License
