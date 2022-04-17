@@ -44,7 +44,7 @@ struct GuideInfo: Codable, Identifiable{            // 가이드 상세 페이�
     var id : Int
     var guideView : [String]
     var guideMessage : [String]
-    var totalPage : Double
+    var totalPage : Int
     var voice : [String]
 }
 
