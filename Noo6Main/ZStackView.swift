@@ -10,7 +10,7 @@ import SwiftUI
 struct ZStackView: View {
     var clearInfoData : ClearInfo   // 각 가이드 별 이미지(짤방)와 클리어메시지를 담은 ClearInfo 받아옴
     var iscleared = [Int]()         // 이미지를 가져오고 HonorDetailView로 카테고리,가이드 번호를 넘겨주기 위한
-                                    // id 정보를 담은 Array 생성 iscleared-> [카테고리id값, 가이드id값]
+    // id 정보를 담은 Array 생성 iscleared-> [카테고리id값, 가이드id값]
     
     var body: some View {
         
@@ -42,11 +42,11 @@ struct ZStackView: View {
             // 조건문에서 가이드가 완료되지 않았다면 잠금 이미지 표시
             if(!categorydata[iscleared[0]].categoryInfo[iscleared[1]].isComplete){
                 Image("LockedRectangle")
-                .resizable()
-                .cornerRadius(12)
-                .frame(width: 100, height: 100)
-                .shadow(color: .gray, radius: 3)
-                .padding(7)
+                    .resizable()
+                    .cornerRadius(12)
+                    .frame(width: 100, height: 100)
+                    .shadow(color: .gray, radius: 3)
+                    .padding(7)
             }
             
             

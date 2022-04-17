@@ -31,7 +31,7 @@ struct GuideView: View {
     @State var guideInfos: GuideInfo
     var idDatas = [Int]()
     
-
+    
     @State private var currentPage: Int = 0
     @State var isSound: Bool = true
     
@@ -50,7 +50,7 @@ struct GuideView: View {
                                 .font(.system(size: 30))
                                 .frame(width: 358, height: 120)
                                 .multilineTextAlignment(.center)
-                          
+                            
                             category[guideInfos.id]![guideInfos.guideView[i]]!
                                 .frame(height: 480)
                                 .cornerRadius(24)
