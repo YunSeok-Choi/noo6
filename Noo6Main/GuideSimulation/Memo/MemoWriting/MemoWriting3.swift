@@ -16,6 +16,7 @@ struct MemoWriting3: View {
     
     var body: some View {
         let player = AVPlayer(url: Bundle.main.url(forResource: videoName, withExtension: "mov")!)
+        
         VStack {
             ZStack {
                 PlayerView(player: player)

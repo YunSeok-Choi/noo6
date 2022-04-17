@@ -8,10 +8,10 @@
 import SwiftUI
 
 func shareButton() {                                             //공유 버튼 함수
-        let url = URL(string: "https://developer.apple.com/kr/")
-        let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
+    let url = URL(string: "https://developer.apple.com/kr/")
+    let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
     
-        UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+    UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
 }
 
 struct ClearView: View {
