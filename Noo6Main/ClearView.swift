@@ -13,6 +13,7 @@ func shareButton() {                                             //공유 버튼
                     // 공유 기능 컨트롤러
         let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
                     // 공유버튼 클릭시 공유 뷰가 나오는 부분
+
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
 }
 
