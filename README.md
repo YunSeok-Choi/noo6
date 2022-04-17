@@ -4,15 +4,15 @@
 
 # :iphone: Project Title
 
-A brief description of what this project does and who it's for
+장년층을 위한 아이폰 가이드
 
 
 ## :pushpin: Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- 음성 가이드
+- 제스쳐 가이드
+- 사진 저장 기능
+- 공유 기능
 
 
 ## :people_hugging: Authors
@@ -35,7 +35,8 @@ Insert gif or link to demo
 
 
 ## :sparkles: Skills & Tech Stack
-swiftUI ...
+swiftUI
+AVKit
 
 ## :books: Documentation
 
