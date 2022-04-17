@@ -1,5 +1,5 @@
 
-![배너임](https://user-images.githubusercontent.com/66102708/163713195-19cc5601-98f4-4d2b-82a8-8077708e8863.png)
+![Web 1920 – 1](https://user-images.githubusercontent.com/66102708/163713253-d21445e7-ca62-49d1-85ce-d032901636a7.png)
 
 
 # :iphone: Project Title
