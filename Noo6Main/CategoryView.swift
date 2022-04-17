@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct CategoryView : View {
+    // Text()에 현재 카테고리를 나타내기 위한 변수
     var guideName: String
     var listInfos : CategoryStorage
 
@@ -21,14 +22,14 @@ struct CategoryView : View {
                         .padding(.bottom, 40)
                         .multilineTextAlignment(.center)
                     
-                    // 받은 리스트(contentInfos)의 정보에 따라 List에 이동할 버튼 생성
+                    // 받은 카테고리의 가이드 제목(listInfos)에 따라 List에 이동할 버튼 생성
                     List(listInfos.categoryInfo, id: \.id) {
                         info in
-                        // 버튼 누를 시 임시로 EmptyView로 이동 -> merge 후 가이드뷰로 이동하도록 수정 필요
+                        // 버튼 누를 시 GuideView로 이동, 가이드의 컨텐츠를 담은 뷰의 이름을 넘겨줌
+                        // 컨텐츠를 담은 View가 일부만 만들어져서 현재는 guidedata[0]로 고정
                         NavigationLink(destination: GuideView(guideStorage: guidedata[0], guideInfos: guidedata[0].guideInfo[info.id], idDatas: [listInfos.id, info.id])){
                             ContentList(contentInfo: info)
                                 .listRowBackground(Color.white)
-                                .listRowSeparator(.hidden)
                         }
                         .listRowSeparator(.hidden)
                         
@@ -36,7 +37,6 @@ struct CategoryView : View {
                     .listStyle(.plain)
                     .background(Color.white)
                     
-                    Spacer() // 화면 상단에 List를 보여주기 위해 공백 삽입
                 }
             
         }.padding([.leading, .trailing], 16)
@@ -45,19 +45,22 @@ struct CategoryView : View {
 }
 
 
-// List에 들어갈 카테고리별 컨텐츠 목록 (버튼 + 체크아이콘)
+// List에 들어갈 카테고리별 가이드 목록 (버튼 + 체크아이콘)
 struct ContentList : View {
-    var contentInfo : CategoryInfo
+    var contentInfo : CategoryInfo // CategoryInfo: id, guideName, isComplete
     
     var body: some View{
         Button(action: {}){
             HStack{
+                // 버튼에 가이드 제목 표시
                 Text("\(contentInfo.guideName)")
                     .font(.system(size: 24))
                     .foregroundColor(.black)
                     .padding(.leading, 20)
                 Spacer()
-                if contentInfo.isComplete{  // 해당 컨텐츠를 이전에 끝까지 완료했는지 확인
+                // 해당 컨텐츠를 이전에 끝까지 완료했는지 확인
+                if contentInfo.isComplete{
+                    // 완료했으면 체크 이미지 표시
                     Image(systemName: "checkmark.circle")
                         .resizable()
                         .frame(width: 30, height: 30)
