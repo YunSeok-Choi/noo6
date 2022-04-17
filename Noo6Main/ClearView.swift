@@ -8,9 +8,10 @@
 import SwiftUI
 
 func shareButton() {                                             //공유 버튼 함수
-        let url = URL(string: "https://developer.apple.com/kr/")
+        let url = URL(string: "https://developer.apple.com/kr/")    // 공유 할 링크
+        // 공유 기능 컨트롤러
         let activityController = UIActivityViewController(activityItems: [url!], applicationActivities: nil)
-    
+        // 공유 기능이 나오는 부분
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
 }
 
