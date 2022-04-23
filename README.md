@@ -4,7 +4,7 @@
 
 # :iphone: Project Title
 
-장년층을 위한 아이폰 가이드
+장년층을 위한 아이폰 가이드 IGuide
 
 
 ## :pushpin: Features
