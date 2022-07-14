@@ -17,7 +17,7 @@
 
 ## :people_hugging: Authors
 
-- [@bee712](https://github.com/bee712) | [@erabhre](https://github.com/erabhre) | [@hurdasol98](https://github.com/hurdasol98) | [@JaewoongLee-swift](https://github.com/JaewoongLee-swift) | [@uudquark](https://github.com/uudquark) | [@YunSeok-Choi](https://github.com/YunSeok-Choi)
+- [@bee712](https://github.com/bee712) | [@erabhre](https://github.com/erabhre) | [@hurdasol98](https://github.com/hurdasol98) | [@JaewoongLee-swift](https://github.com/JaewoongLee-swift) | [@Tempnixk](https://github.com/Tempnixk) | [@YunSeok-Choi](https://github.com/YunSeok-Choi)
 
 
 
